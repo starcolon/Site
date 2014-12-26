@@ -14,7 +14,7 @@ var sk = {};
 
 		// Initialize toolkits
 		(function initToolkits(){
-			sk = skrollr.init();
+			sk = skrollr.init({ forceHeight: false});
 			console.log('--> skrollr initialized ...');
 		})();
 
@@ -23,6 +23,11 @@ var sk = {};
 			$(window).scroll(function(){
 				console.log('Pos Y: ' + $(document).scrollTop());	
 			});
+		})();
+
+		// Stretch misc bottom panel
+		(function stretchMiscBottom(){
+			$('#BOTTOM-MISC').height(window.screen.height*.8);
 		})();
 
 	})
