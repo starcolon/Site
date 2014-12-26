@@ -18,6 +18,12 @@ var sk = {};
 			console.log('--> skrollr initialized ...');
 		})();
 
+		// Monitor vertical scroll position
+		(function bindScrollMonitor(){
+			$(window).scroll(function(){
+				console.log('Pos Y: ' + $(document).scrollTop());	
+			});
+		})();
 
 	})
 	
