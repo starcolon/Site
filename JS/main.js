@@ -5,10 +5,20 @@
 /*	by StarColon Projects
 /*======================================*/
 
+var sk = {};
+
 (function init(){
 
-	alert('hey');
+	// Generate sample text
+	$(document).ready(function(){
 
-	// TAOTODO:Initialize the parallax scroller toolkit
+		// Initialize toolkits
+		(function initToolkits(){
+			sk = skrollr.init();
+			console.log('--> skrollr initialized ...');
+		})();
 
+
+	})
+	
 })();
