@@ -66,12 +66,14 @@ header#window-header > div[data-elem='backhome']
 	float:left;
 	left:10px;
 	top:10px;
-	width: 180px;
-	height:32px;
-	border:1px solid rgba(0,0,10,0.66);
+	width: 50px;
+	height:26px;
+	font-size:10pt;
 	border-radius:6px 6px;
-	background-color:rgba(8,15,63,0.66);
+	cursor:pointer;
+	line-height: 2em;
 }
+
 
 
 /*--------------------- COMMON CLASSES -------------------------------------*/
