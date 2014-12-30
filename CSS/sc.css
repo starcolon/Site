@@ -59,6 +59,20 @@ header#window-header > .social-panel
 	border: 1px solid black;
 }
 
+header#window-header > div[data-elem='backhome']
+{
+	display: block;
+	position: fixed;
+	float:left;
+	left:10px;
+	top:10px;
+	width: 180px;
+	height:32px;
+	border:1px solid rgba(0,0,10,0.66);
+	border-radius:6px 6px;
+	background-color:rgba(8,15,63,0.66);
+}
+
 
 /*--------------------- COMMON CLASSES -------------------------------------*/
 
@@ -81,6 +95,11 @@ h1
 	left:0;
 	right:0;
 	margin:0 auto;
+}
+
+.link
+{
+	cursor: pointer;
 }
 
 
