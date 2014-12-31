@@ -301,6 +301,11 @@ ul.icon li:hover
 	background-color: rgba(0,220,250,0.15);
 }
 
+ul.smalltext li
+{
+	font-size: 89%;
+}
+
 ul.gap li
 {
 	padding-top:5px;
@@ -385,5 +390,12 @@ button:hover
 	transition-duration:0.31s;
 }
 
+
+.note-box
+{
+	padding:12px 12px;
+	background-color:rgba(0,0,0,0.55);
+	color:white;
+}
 
 
