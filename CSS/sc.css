@@ -124,6 +124,11 @@ h2
 	color:orange;
 }
 
+.black
+{
+	color:black;
+}
+
 .smalltext
 {
 	font-size:89%;
@@ -398,4 +403,36 @@ button:hover
 	color:white;
 }
 
+.scroll-down-note
+{
+	bottom:80px;
+	width:100%;
+	text-align:center;
+	-webkit-animation-name: hopping;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: hopping;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: hopping;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes hopping {  
+    0% { bottom:80px; }
+    66% { bottom:70px; }
+    100% { bottom:80px; }
+}
+
+@-webkit-keyframes hopping {  
+    0% { bottom:80px; }
+    66% { bottom:70px; }
+    100% { bottom:80px; }
+}
 
