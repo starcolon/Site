@@ -114,6 +114,22 @@ h2
 	cursor: pointer;
 }
 
+.white-bordered-box
+{
+	border-left:1px solid white;
+	border-right:1px solid white;
+	border-top:8px solid white;
+	border-bottom:8px solid white;
+	padding: 15px 10px;
+	color:white;
+}
+
+.black-bordered-box
+{
+	border:1px solid black;
+	padding:15px 10px;
+}
+
 .gray
 {
 	color:gray;
@@ -124,19 +140,39 @@ h2
 	color:orange;
 }
 
-.black
+.yellow
+{
+	color:yellow;
+}
+
+.black, .black *
 {
 	color:black;
 }
 
-.white
+.white, .white *
 {
 	color:white;
 }
 
-.smalltext
+.cyan, .cyan *
+{
+	color:cyan;
+}
+
+.smalltext, .smalltext *
 {
 	font-size:89%;
+}
+
+.smalltext-box, .smalltext-box *
+{
+	font-size:11pt;
+}
+
+.minitext, .minitext *
+{
+	font-size:76%;
 }
 
 .blackshadow
@@ -206,6 +242,13 @@ h2
 .free-float
 {
 	position: fixed;
+}
+
+.left-float-fixed
+{
+	float:left;
+	margin-top:36px;
+	margin-left:50px;
 }
 
 div.inline
@@ -328,6 +371,16 @@ section.centered > div
 
 /*------------------------ SPECIFIC ELEMENTS -----------------------*/
 
+input[type="text"]
+{
+	background-color: rgba(0,25,65,0.85);
+	padding:8px;
+	margin:5px;
+	border:1px solid #003065;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.65);
+	color:rgba(0,165,225,0.8);
+}
+
 .bullet-link
 {
 	width:56px;
@@ -344,6 +397,16 @@ section.centered > div
 	margin-left:8px;
 	width:58px;
 	height:58px;
+}
+
+ul.nodot
+{
+	list-style-type: none;
+}
+
+ul.leftsnap
+{
+	padding-left: 10px;
 }
 
 ul.inline
@@ -463,6 +526,11 @@ button:hover
 	transition-duration:0.31s;
 }
 
+table td
+{
+	vertical-align: middle;
+}
+
 .circle-box
 {
 	border-radius: 50%;
@@ -489,6 +557,29 @@ button:hover
 	color:white;
 }
 
+
+li span.attr
+{
+	float:left;
+	border:1px solid black;
+	background-color: #863000;
+	color:orange;
+	text-shadow:-1px 0 2px black;
+	padding:5px;
+	margin-right:15px;
+	font-size: 12pt;
+}
+
+li span.value
+{
+	font-size: 11pt;
+}
+
+li span.minivalue
+{
+	font-size:9pt;
+}
+
 .scroll-down-note
 {
 	bottom:37px;
@@ -511,14 +602,14 @@ button:hover
 }
 
 @-moz-keyframes hopping {  
-    0% { bottom:80px; }
-    66% { bottom:70px; }
-    100% { bottom:80px; }
+    0% { bottom:40px; }
+    66% { bottom:30px; }
+    100% { bottom:40px; }
 }
 
 @-webkit-keyframes hopping {  
-    0% { bottom:80px; }
-    66% { bottom:70px; }
-    100% { bottom:80px; }
+    0% { bottom:40px; }
+    66% { bottom:30px; }
+    100% { bottom:40px; }
 }
 
