@@ -33,3 +33,11 @@ var sk = {};
 	})
 	
 })();
+
+
+// UTILITY FUNCTION
+function scrollScreenTo(offset){
+	$('html, body').animate({
+        scrollTop: offset
+    }, 1036);
+}
