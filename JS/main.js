@@ -1,11 +1,11 @@
 /*========================================
-/*	StarColon Site 2014
+/*	StarColon Site 2015
 /*	Main js
 /*
 /*	by StarColon Projects
 /*======================================*/
 
-var sk = {};
+var sk = {}; // skrollr object
 
 (function init(){
 
