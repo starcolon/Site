@@ -247,6 +247,11 @@ h2
 	filter:flipV;
 }
 
+.hide-overflow
+{
+	overflow: hidden;
+}
+
 
 /*----------------------- LAYOUT CLASSES ------------------------------------*/
 .free-float
