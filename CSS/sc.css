@@ -114,6 +114,12 @@ h2
 	cursor: pointer;
 }
 
+.link-limelight:hover
+{
+	text-shadow:0 0 8px lime;
+	cursor:pointer;
+}
+
 .white-bordered-box
 {
 	border-left:1px solid white;
@@ -572,6 +578,16 @@ table td
 	color:white;
 }
 
+.note-box-round
+{
+	padding: 10px 10px;
+	background-color:rgba(0,0,0,0.55);
+	color:white;
+	border:1px solid rgba(0,0,0,0.75);
+	box-shadow: 0 0 2px rgba(0,0,0,0.34);
+	border-radius: 14px 14px;
+}
+
 
 li span.attr
 {
@@ -622,6 +638,12 @@ div.catalog-elem > div:nth-of-type(2)
 	height:52px;
 	width:auto;
 	vertical-align: middle;
+}
+
+.fullwidth-band
+{
+	width:100%;
+	text-align:center;
 }
 
 .scroll-down-note
