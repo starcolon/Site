@@ -518,8 +518,8 @@ div.screenshot img
 
 div.screenshot-mega
 {
-	width:1080px;
-	height: 667px;
+	width:900x;
+	height: 562px;
 	border:1px solid rgba(0,0,0,0.88);
 	box-shadow: 0 0 4px rgba(0,0,0,0.59)
 }
@@ -527,8 +527,8 @@ div.screenshot-mega
 div.screenshot-mega img
 {
 	margin:1px 1px;
-	width: 1078px;
-	height:665px;
+	width: 897px;
+	height:559px;
 }
 
 
