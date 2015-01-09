@@ -51,12 +51,22 @@ header#window-header > .social-panel
 	float: right;
 	right: 10px;
 	top: 6px;
-	width: 127px;
 	height: 27px;
 	box-shadow: inset 1px 1px 3px rgba(0,0,0,0.35);
 	background-color:#181818;
 	font-size: 8pt;
 	border: 1px solid black;
+}
+
+.social-panel > div.social-box
+{
+	display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+	display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-self: auto;
+	height:27px;
 }
 
 header#window-header > div[data-elem='backhome']

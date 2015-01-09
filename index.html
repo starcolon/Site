@@ -22,8 +22,20 @@
 		  ga('send', 'pageview');
 
 		</script>
+		<script type="text/javascript">
+		window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+		</script>
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 	</head>
 	<body>
+		<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=362320777191713&version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
 		<header id="window-header" class="black-translucent" style="box-shadow:0 1px 3px rgba(0,0,0,0.33)" data-400="opacity:0" data-450="opacity:1">
 			<div class="content-container" 
 			data-0="background-color:rgb(0,0,0);color:rgba(251,251,251,0)"
@@ -31,7 +43,18 @@
 				˚StarColon Projects
 			</div>
 			<div class="social-panel" style="font-size:10pt">
-				social plugins go here
+				<div class="fb-like social-box" 
+					data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" 	data-action="like" data-show-faces="false" data-share="false">
+				</div>
+				<div class="g-plusone social-box" data-size="medium" data-expandTo="right" data-count="true">
+				</div>
+				<div class="social-box">
+					<a class="twitter-share-button"
+					  href="https://twitter.com/share"
+					  data-via="twitterdev">
+						Tweet
+					</a>
+				</div>
 			</div>
 		</header>
 		<section style="height:620px;background-color:#208CEE;color:white">
