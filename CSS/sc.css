@@ -232,6 +232,16 @@ h2
 	color:cyan;
 }
 
+.lime, .lime *
+{
+	color:lime;
+}
+
+.aqua, .aqua *
+{
+	color:mediumaquamarine;
+}
+
 .smalltext, .smalltext *
 {
 	font-size:89%;
@@ -319,7 +329,7 @@ h2
 	filter:flipV;
 }
 
-.hide-overflow
+.clip-content
 {
 	overflow: hidden;
 }
@@ -368,6 +378,16 @@ h2
 div.inline
 {
 	display:inline-block;
+}
+
+div.snaptop
+{
+	vertical-align: top;
+}
+
+div.snapmiddle
+{
+	vertical-align: middle;
 }
 
 .ads-big
