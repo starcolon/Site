@@ -340,10 +340,25 @@ h2
 	height: 100%;
 }
 
-.fullwidth-band
+.fullwidth
 {
 	width:100%;
 	text-align:center;
+}
+
+.halfwidth
+{
+	width:50%;
+}
+
+.floatleft
+{
+	float:left;
+}
+
+.floatright
+{
+	float:right;
 }
 
 
@@ -373,6 +388,12 @@ h2
 	position: relative;
 	margin-top: 36px;
 	margin-left: 90px;
+}
+
+.float-inside
+{
+	float:left;
+	position: relative;;
 }
 
 div.inline
