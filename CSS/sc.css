@@ -207,12 +207,17 @@ h2
 	color:gray;
 }
 
-.orange
+.orange, .orange *
 {
 	color:orange;
 }
 
-.yellow
+.brick, .brick *
+{
+	color:peru;
+}
+
+.yellow, .yellow *
 {
 	color:yellow;
 }
@@ -387,6 +392,14 @@ h2
 	float:left;
 	position: relative;
 	margin-top: 66px;
+	margin-left: 90px;
+}
+
+.left-float-free
+{
+	float:left;
+	position: absolute;
+	margin-top:66px;
 	margin-left: 90px;
 }
 
@@ -712,6 +725,7 @@ button:hover:not(.wireframe)
 
 button.solid
 {
+	border-color: black;
 	background-color: orange;
 	color:black;
 }
