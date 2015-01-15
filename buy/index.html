@@ -132,7 +132,7 @@
 				<h2 id="paypal">Pay via PayPal <img src="../IMG/logo-paypal.png" height="22px" style="margin-top:10px"/></h2>
 			</div>
 			<div class="free-float white-bordered-box" 
-			style="float:left;top:155px;color:white;left:150px;width:470px;height:298px;background-color:#000A16"
+			style="float:left;top:155px;color:white;left:150px;width:570px;height:298px;background-color:#001A36"
 			data-1310="left:-700px;opacity:0" data-1500="left:150px;opacity:1"
 			data-1700="left:150px;opacity:1" data-2000="left:-700px;opacity:0">
 				Buy iCommerce serial code via PayPal at only $9.25
@@ -144,10 +144,10 @@
                             <tbody><tr>
                                 <td style="width:150px">
                                     <input type="hidden" name="on0" value="MachineID">
-                                    <span class="highlight">Machine ID: </span>
+                                    <span class="highlight">Your Machine ID: </span>
                                 </td>
                                 <td>
-                                    <input type="text" name="os0" maxlength="200">
+                                    <input id="machineid_paypal" type="text" name="os0" maxlength="200">
                                 </td>
                             </tr>
                             <tr>
@@ -217,7 +217,7 @@
 					  <tbody><tr>
 						<td width="27%" align="left" valign="top">Machine ID.</td>
 						<td width="auto" align="left" valign="top"><label>
-						  <input name="mid" type="text" id="mid" maxlength="16">
+						  <input id="machineid_bank" name="mid" type="text" id="mid" maxlength="16">
 						  <input name="f" type="hidden" id="f" value="invoice">
 						</label></td>
 					  </tr>
@@ -272,5 +272,14 @@
 		function scrollToTransfer(){
 			scrollScreenTo(2404);
 		}
+		$(window).scroll(function (event) {
+		    var Y = $(document).scrollTop();
+		    if (Y>=1488 && Y<=1815){
+		    	$("#machineid_paypal").focus();
+		    }
+		    else if (Y>=2289 && Y<=2584){
+		    	$("#machineid_bank").focus();
+		    }
+		});
 	</script>
 </html>
