@@ -710,6 +710,18 @@ button:hover:not(.wireframe)
 	transition-duration:0.31s;
 }
 
+button.solid
+{
+	background-color: orange;
+	color:black;
+}
+
+button.solid:hover
+{
+	background-color:yellow;
+	color:black;
+}
+
 table td
 {
 	vertical-align: middle;
