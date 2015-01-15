@@ -488,7 +488,7 @@ div.snapmiddle
 {
 	width:100%;
 	background-color: rgba(10,20,60,0.82);
-	background-image: url('../PATTERN/blue-dots.png');
+	background-image: url('../PATTERN/gray-horz.png');
 	background-size:100% auto;
 	border-bottom:1px solid black;
 	display: block;
