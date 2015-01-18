@@ -90,8 +90,8 @@
 		</section>
 		<section class="black white" style="height:2300px">
 			<!-- BACKGROUND SCREENSHOT ---->
-			<div class="stretch">
-				<img src="" alt="project finibus" class="stretch placeholder" />
+			<div id="background-ss" class="fullwidth black free-float" style="align:center">
+				<img src="" alt="project finibus" class="placeholder center" width="1000px" height="778px"/>
 			</div>
 			<!-- AD WORDS ---------------->
 			<div class="free-float fullwidth blackshadow" style="font-size:15pt" data-800="bottom:-20%" 
@@ -107,7 +107,57 @@
 				Increase capability of empire by building more powerful buildings
 			</div>
 		</section>
-		<section class="black white" style="height:500px">
+		<section class="black" style="height:500px;background-image:url('../PATTERN/black-mesh.jpg')">
+			<!-- FINAL SPECS AND INFO -------------->
+			<div class="fullwidth orange">
+				<h1 style="color:orange;margin-top:0;font-size:13pt;background-color:#402500">
+					Project Finibus was available in 2014
+				</h1>
+			</div>
+			<div class="fullwidth" style="height:64px">
+				<!-- PADDING ---->
+			</div>
+			<div class="fullwidth orange">
+				<div style="width:450px" class="center">
+					Project Finibus was developed and published to public players in the middle of 2014. 
+					The project itself was a prototype of an idea which has been later developed into 
+					"Planet of Cells" in early 2015.
+				</div>
+				<div style="width:450px;height:25px">
+					<!-- PADDING -->
+				</div>
+				<div style="width:450px" class="brick center">
+					"We would like to say thank you from our deepest mind to all players who participated 
+					in the project as beta players. Without you all, we would never have developed and refined 
+					our ideas into the next project."
+					<p class="minitext white" style="text-align:right">
+						Tao P. Ruangyam<br/>
+						Lead developer of StarColon Projects
+					</p>
+				</div>
+			</div>
 		</section>
 	</body>
+	<script>
+		$(window).scroll(function(e){
+			// Detach and attach the background screenshot when scrolling to certain positions
+			var posY = $(document).scrollTop();
+			var negativeFullHeight = -(fullheight*1.18) + 'px';
+			if (posY<=1082) 
+				$('#background-ss').css('position','static');
+			else if(posY<=2665) {
+				if ($('#background-ss').css('position','static')) // on scrolling downward
+					$('#background-ss').css('position','fixed').css('top','0').attr('data-attached','yes');
+				else // on scrolling upword
+					if ($('#background-ss').attr('data-attached')!='yes')
+						$('#background-ss').animate({'top':'0px'}).attr('data-attached','yes');
+			}
+			else {
+				if ($('#background-ss').attr('data-attached')=='yes'){
+					console.log('detaching!');
+					$('#background-ss').animate({'top':negativeFullHeight}).attr('data-attached','no');
+				}
+			}
+		});
+	</script>
 </html>

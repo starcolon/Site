@@ -6,6 +6,8 @@
 /*======================================*/
 
 var sk = {}; // skrollr object
+var fullwidth = window.screen.availWidth;
+var fullheight = window.screen.availHeight;
 
 (function init(){
 
