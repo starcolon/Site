@@ -197,9 +197,15 @@ h2
 	padding:15px 10px;
 }
 
+
 .black-thick-border
 {
 	border:3px solid #151515;
+}
+
+.thick-darken-border
+{
+	border:3px solid rgba(0,0,0,0.21);
 }
 
 .gray
@@ -305,6 +311,25 @@ h2
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f48230', endColorstr='#85000000',GradientType=0 ); /* IE6-9 */
 }
 
+.transparent-black-gradient-invert
+{
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.51) 76%, rgba(0,0,0,0.33) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(76%,rgba(0,0,0,0.51)), color-stop(100%,rgba(0,0,0,0.33))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.51) 76%,rgba(0,0,0,0.33) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.51) 76%,rgba(0,0,0,0.33) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.51) 76%,rgba(0,0,0,0.33) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.51) 76%,rgba(0,0,0,0.33) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#54000000',GradientType=0 ); /* IE6-9 */
+}
+
+.orange-radial-gradient
+{
+	background-image:radial-gradient(center center, ellipse cover, rgba(200,70,0,0.77), rgba(0,0,0,0.1));
+	background-image:-o-radial-gradient(center center, ellipse cover, rgba(200,70,0,0.77), rgba(0,0,0,0.1));
+	background-image:-moz-radial-gradient(center center, ellipse cover, rgba(200,70,0,0.77), rgba(0,0,0,0.1));
+	background-image:-webkit-radial-gradient(center center, ellipse cover, rgba(200,70,0,0.77), rgba(0,0,0,0.1));
+}
+
 .black-translucent
 {
 	background-color: rgba(0,0,0,0.77);
@@ -364,6 +389,13 @@ h2
 .floatright
 {
 	float:right;
+}
+
+.marked
+{
+	padding:5px 15px;
+	border:1px solid turquoise;
+	color: turquoise;
 }
 
 
@@ -741,7 +773,7 @@ table td
 	vertical-align: middle;
 }
 
-.circle-box
+.circle
 {
 	border-radius: 50%;
 }
