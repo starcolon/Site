@@ -225,12 +225,13 @@
 			data-2000="left:-1000px;opacity:0" data-2300="left:500px;opacity:1"
 			data-2600="left:500px;opacity:1" data-2800="left:-1000px;">
 				<div class="note-box gray" style="margin:15px 10px;left:0;right:0">
+					<form id="pay" action='./send.php' method="POST" target="_blank">
 					<span>แจ้งรับรหัส serial key หลังชำระเงินที่นี่</span>
 					<table class="smalltext-box cyan" width="100%" border="0" cellspacing="5" cellpadding="4">
 					  <tbody><tr>
 						<td width="27%" align="left" valign="top">Machine ID.</td>
 						<td width="auto" align="left" valign="top"><label>
-						  <input id="machineid_bank" name="mid" type="text" id="mid" maxlength="16">
+						  <input id="machine_id" name="mid" type="text" id="mid" maxlength="16">
 						  <input name="f" type="hidden" id="f" value="invoice">
 						</label></td>
 					  </tr>
@@ -246,20 +247,21 @@
 					  </tr>
 					  <tr>
 						<td align="left" valign="top">วัน/เวลาที่ชำระ</td>
-						<td align="left" valign="top"><input name="timestamp" type="text" id="timestamp" value="วันนี้ 12:00" maxlength="22"></td>
+						<td align="left" valign="top"><input name="date" type="text" id="timestamp" value="วันนี้ 12:00" maxlength="22"></td>
 					  </tr>
 					  <tr>
 						<td align="left" valign="top">อีเมลของคุณ <span class="minitext gray">(เพื่อรับ serial key)</span></td>
-						<td align="left" valign="top"><input name="email" type="text" id="email" value="" maxlength="64"></td>
+						<td align="left" valign="top"><input name="customer_email" type="text" id="email" value="" maxlength="64"></td>
 					  </tr>
 					  <tr>
 						<td align="left" valign="top">&nbsp;</td>
 						<td align="left" valign="top">
-							<button class="solid">Submit !</button>
+							<button class="solid" onclick="$('pay').submit()">Submit !</button>
 						</td>
 					  </tr>
 					</tbody>
 					</table>
+				</form>
 				</div>
 			</div>
 		</section>
