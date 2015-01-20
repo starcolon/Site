@@ -248,6 +248,11 @@ h2
 	color:lime;
 }
 
+.green, .green *
+{
+	color:springgreen;
+}
+
 .aqua, .aqua *
 {
 	color:mediumaquamarine;
