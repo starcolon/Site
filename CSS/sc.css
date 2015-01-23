@@ -258,6 +258,11 @@ h2
 	color:mediumaquamarine;
 }
 
+.lightaqua, .lightaqua *
+{
+	color: turquoise;
+}
+
 .smalltext, .smalltext *
 {
 	font-size:89%;
