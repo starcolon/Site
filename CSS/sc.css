@@ -895,6 +895,16 @@ div.catalog-elem > div:nth-of-type(2)
 }
 
 
+.circle-label
+{
+	line-height: 8;
+	text-align: center;
+	font-size: 23pt;
+	color: rgba(0,0,0,0.43);
+	text-shadow: none;
+}
+
+
 .scroll-down-note
 {
 	bottom:37px;

@@ -104,7 +104,7 @@
 				</div>
 				<div class="float-ads-image" style="top:65px"
 				data-300="right:-125%;filter:sepia(1) blur(9px)" data-400="right:9%;filter:sepia(0) blur(0px)" data-1190="right:9%;filter:sepia(0.3) blur(0px)" data-1250="right:-125%;filter:sepia(1) blur(9px)">
-					<img src="" alt="planet of cells" class="placeholder stretch"/>
+					<img src="./IMG/ARTWORK/home-ads-planet.png" alt="planet of cells" class="stretch"/>
 				</div>
 			</div>
 		</section>
@@ -119,7 +119,7 @@
 			<div class="float-ads-image" style="top:65px"
 				data-1000="right:-125%;filter:sepia(1) blur(9px)" data-1250="right:9%;filter:sepia(0) blur(0px)" 
 				data-1900="right:9%;filter:sepia(0.3) blur(0px)" data-2120="right:-125%;filter:sepia(1) blur(9px)">
-					<img src="" alt="project zero cell" class="placeholder stretch"/>
+					<img src="./IMG/ARTWORK/home-ads-0cell.png" alt="project zero cell" class="stretch"/>
 				</div>
 		</section>
 		<section class="black green ads-link" style="height:855px;background-image:url('./PATTERN/darkgreen-bar.jpg');background-size:cover" 
@@ -134,7 +134,7 @@
 			</div>
 			<div class="float-ads-image" style="top:65px"
 				data-1800="right:-125%;filter:sepia(1) blur(9px)" data-2000="right:9%;filter:sepia(0) blur(0px)" data-2650="right:9%;filter:sepia(0.3) blur(0px)" data-2730="right:-125%;filter:sepia(1) blur(9px)">
-					<img src="" alt="icommerce" class="placeholder stretch"/>
+					<img src="./IMG/ARTWORK/home-ads-icommerce.png" alt="icommerce" class="stretch"/>
 				</div>
 		</section>
 		<section class="black white" style="height:400px">
@@ -178,21 +178,46 @@
 			<div class="free-float circle blackshadow thick-darken-border link-box clip-content" 
 			style="top:130px;width:250px;height:250px" 
 			onclick="document.location='./3dface/index.html'"
-			data-3500="right:-900px" data-3900="right:400px">
-				<img class="stretch placeholder" alt="3d face"/>
+			data-3500="right:-900px" data-3900="right:400px"
+			onmouseover="hoverCircleLink(this)" onmouseout="hideCircleLabel(this)">
+				<div class="stretch circle-label">3D Face project</div>
+				<img class="stretch placeholder" alt="3d face" src="./IMG/ARTWORK/home-ads-3dface.png"/>
 			</div>
 			<div class="free-float circle blackshadow thick-darken-border link-box clip-content" 
-			style="top:346px;width:250px;height:250px" 
+			style="top:358px;width:250px;height:250px" 
 			onclick="document.location='./finibus/index.html'"
-			data-3500="right:-900px" data-3900="right:300px">
-				<img class="stretch placeholder" alt="project finibus"/>
+			data-3500="right:-900px" data-3900="right:500px"
+			onmouseover="hoverCircleLink(this)" onmouseout="hideCircleLabel(this)">
+				<div class="stretch circle-label">Project Finibus</div>
+				<img class="stretch" alt="project finibus" src="./IMG/ARTWORK/home-ads-finibus.png"/>
 			</div>
 			<div class="free-float circle blackshadow thick-darken-border link-box clip-content" 
 			style="top:230px;width:250px;height:250px" 
 			onclick="document.location='./dental-nerve-inspector/index.html'"
-			data-3500="right:-900px" data-3900="right:150px">
+			data-3500="right:-900px" data-3900="right:150px"
+			onmouseover="hoverCircleLink(this)" onmouseout="hideCircleLabel(this)">
+				<div class="stretch circle-label">Dental nerve detector</div>
 				<img class="stretch placeholder" alt="dental nerve automated inspector"/>
 			</div>
 		</section>
 	</body>
 </html>
+<script type="text/javascript">
+function hoverCircleLink(el){
+	var circleLabel = $(el).children()[0];
+	$(circleLabel).animate({'height':'100%'});
+}
+
+function hideCircleLabel(el){
+	var circleLabel = $(el).children()[0];
+	$(circleLabel).animate({'height':'0%'});
+}
+
+function hideCircleLabels(){
+	$('.circle-label').each(function(i,el){
+		$(el).animate({'height': '0%'});
+	});
+}
+
+hideCircleLabels();
+</script>
