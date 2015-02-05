@@ -684,8 +684,8 @@ img.placeholder, img[data-image="placeholder"]
 .float-ads-image /* USUALLY TRANSPARENT-BACKGROUND IMAGE */
 {
 	position: fixed;
-	width: 650px;
-	height:406px;	
+	width: auto;
+	height:100%;	
 }
 
 
