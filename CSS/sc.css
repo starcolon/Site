@@ -10,7 +10,7 @@ body
 	padding:0;
 	margin:0;
 	width:100%;
-	background-image: url('../PATTERN/silver-mesh.jpg');
+	/*background-image: url('../PATTERN/silver-mesh.jpg');*/
 	background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x:hidden;
