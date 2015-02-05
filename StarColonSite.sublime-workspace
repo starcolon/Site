@@ -407,7 +407,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 11094,
+				"buffer_size": 11113,
 				"line_ending": "Unix",
 				"name": "<html>"
 			}
@@ -424,7 +424,7 @@
 			"file": "zerocell/index.html",
 			"settings":
 			{
-				"buffer_size": 9427,
+				"buffer_size": 9924,
 				"line_ending": "Unix"
 			}
 		},
@@ -432,7 +432,7 @@
 			"file": "3dface/index.html",
 			"settings":
 			{
-				"buffer_size": 9666,
+				"buffer_size": 9884,
 				"line_ending": "Unix"
 			}
 		},
@@ -466,7 +466,7 @@
 			"file": "planet-of-cells/index.html",
 			"settings":
 			{
-				"buffer_size": 11182,
+				"buffer_size": 11189,
 				"line_ending": "Unix"
 			}
 		},
@@ -482,7 +482,7 @@
 			"file": "icommerce/index.html",
 			"settings":
 			{
-				"buffer_size": 10526,
+				"buffer_size": 10703,
 				"line_ending": "Unix"
 			}
 		},
@@ -490,7 +490,7 @@
 			"file": "buy/index.html",
 			"settings":
 			{
-				"buffer_size": 14974,
+				"buffer_size": 15029,
 				"line_ending": "Unix"
 			}
 		}
@@ -561,6 +561,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"candid",
+			"place",
+			"placeholder",
 			"height:281px;border:solid 1px white\">",
 			".scree",
 			"placeholder",
@@ -678,7 +681,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -686,15 +689,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 11094,
+						"buffer_size": 11113,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9801,
-								9801
+								7657,
+								7657
 							]
 						],
 						"settings":
@@ -704,7 +707,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3919.0,
+						"translation.y": 2778.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -721,8 +724,8 @@
 						"selection":
 						[
 							[
-								9701,
-								9701
+								2341,
+								2341
 							]
 						],
 						"settings":
@@ -731,7 +734,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3397.0,
+						"translation.y": 2964.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -741,15 +744,15 @@
 					"file": "zerocell/index.html",
 					"settings":
 					{
-						"buffer_size": 9427,
+						"buffer_size": 9924,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4226,
-								4226
+								9788,
+								9788
 							]
 						],
 						"settings":
@@ -758,7 +761,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1383.0,
+						"translation.y": 3449.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -768,15 +771,15 @@
 					"file": "3dface/index.html",
 					"settings":
 					{
-						"buffer_size": 9666,
+						"buffer_size": 9884,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5195,
-								5195
+								6041,
+								6041
 							]
 						],
 						"settings":
@@ -785,7 +788,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2201.0,
+						"translation.y": 2246.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -802,8 +805,8 @@
 						"selection":
 						[
 							[
-								440,
-								440
+								310,
+								310
 							]
 						],
 						"settings":
@@ -813,7 +816,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 155.0,
+						"translation.y": 79.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -840,7 +843,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13860.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -857,8 +860,8 @@
 						"selection":
 						[
 							[
-								277,
-								277
+								310,
+								310
 							]
 						],
 						"settings":
@@ -868,7 +871,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 390.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -878,15 +881,15 @@
 					"file": "planet-of-cells/index.html",
 					"settings":
 					{
-						"buffer_size": 11182,
+						"buffer_size": 11189,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9676,
-								9676
+								3925,
+								3925
 							]
 						],
 						"settings":
@@ -895,7 +898,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3950.0,
+						"translation.y": 196.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -932,15 +935,15 @@
 					"file": "icommerce/index.html",
 					"settings":
 					{
-						"buffer_size": 10526,
+						"buffer_size": 10703,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7264,
-								7264
+								5166,
+								5166
 							]
 						],
 						"settings":
@@ -949,7 +952,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1633.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -959,15 +962,15 @@
 					"file": "buy/index.html",
 					"settings":
 					{
-						"buffer_size": 14974,
+						"buffer_size": 15029,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4166,
-								3925
+								3584,
+								3584
 							]
 						],
 						"settings":
@@ -976,7 +979,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 994.0,
+						"translation.y": 1225.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
