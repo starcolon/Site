@@ -407,7 +407,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 11113,
+				"buffer_size": 11287,
 				"line_ending": "Unix",
 				"name": "<html>"
 			}
@@ -416,7 +416,7 @@
 			"file": "dental-nerve-inspector/index.html",
 			"settings":
 			{
-				"buffer_size": 10103,
+				"buffer_size": 10118,
 				"line_ending": "Unix"
 			}
 		},
@@ -424,7 +424,7 @@
 			"file": "zerocell/index.html",
 			"settings":
 			{
-				"buffer_size": 9924,
+				"buffer_size": 9939,
 				"line_ending": "Unix"
 			}
 		},
@@ -432,7 +432,7 @@
 			"file": "3dface/index.html",
 			"settings":
 			{
-				"buffer_size": 9884,
+				"buffer_size": 9899,
 				"line_ending": "Unix"
 			}
 		},
@@ -449,7 +449,7 @@
 			"file": "CSS/sc.css",
 			"settings":
 			{
-				"buffer_size": 16834,
+				"buffer_size": 16836,
 				"line_ending": "Unix"
 			}
 		},
@@ -466,7 +466,7 @@
 			"file": "planet-of-cells/index.html",
 			"settings":
 			{
-				"buffer_size": 11189,
+				"buffer_size": 11226,
 				"line_ending": "Unix"
 			}
 		},
@@ -474,7 +474,7 @@
 			"file": "finibus/index.html",
 			"settings":
 			{
-				"buffer_size": 7906,
+				"buffer_size": 8167,
 				"line_ending": "Unix"
 			}
 		},
@@ -482,7 +482,7 @@
 			"file": "icommerce/index.html",
 			"settings":
 			{
-				"buffer_size": 10703,
+				"buffer_size": 10718,
 				"line_ending": "Unix"
 			}
 		},
@@ -490,7 +490,7 @@
 			"file": "buy/index.html",
 			"settings":
 			{
-				"buffer_size": 15029,
+				"buffer_size": 15142,
 				"line_ending": "Unix"
 			}
 		}
@@ -519,8 +519,10 @@
 	},
 	"file_history":
 	[
-		"/Users/pataoengineer/Sites/MyToyStore/Dendrite/.gitignore",
+		"/Applications/Notes.app/Contents/Resources/en.lproj/DefaultFonts.plist",
 		"/Users/pataoengineer/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/pataoengineer/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/pataoengineer/Sites/MyToyStore/Dendrite/.gitignore",
 		"/Users/pataoengineer/Sites/MyToyStore/Dendrite/.bash_profile",
 		"/Users/pataoengineer/.bash_profile",
 		"/Users/pataoengineer/.bashprofile",
@@ -530,7 +532,6 @@
 		"/Users/pataoengineer/Sites/StarColon/Site/3dface/index.html",
 		"/Users/pataoengineer/Sites/StarColon/Site/planet-of-cells/index.html",
 		"/Users/pataoengineer/Sites/StarColon/Site/icommerce/index.html",
-		"/Users/pataoengineer/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/pataoengineer/Sites/StarColon/Site/CSS/MyFontsWebfontsKit.css",
 		"/Users/pataoengineer/Sites/StarColon/Site/icommerce/icommerce.html",
 		"/Users/pataoengineer/Sites/StarColon/Site/icommerce.html",
@@ -549,7 +550,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"",
@@ -561,6 +562,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".jpg",
+			".png",
+			"{TAOTODO:}",
+			"place",
+			" blur(0px)",
+			"blur(9px)",
+			"float-ads-image",
+			"float-ads-ima",
+			"right:9%;",
+			"finibus-bk-mega.jpg\nfinibus-head-bk.png\nhome-ads-0cell.png\nhome-ads-icommerce.png\nhome-ads-planet.png\n\"right:9%;",
 			"candid",
 			"place",
 			"placeholder",
@@ -643,6 +654,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"../IMG/starcolon-logo.png",
+			"",
+			"right:0%;",
+			"\"right:0%;",
 			"height:281px\">",
 			"border",
 			"right:9%",
@@ -681,7 +696,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -689,15 +704,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 11113,
+						"buffer_size": 11287,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7657,
-								7657
+								7382,
+								7382
 							]
 						],
 						"settings":
@@ -707,7 +722,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2778.0,
+						"translation.y": 2216.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -717,15 +732,15 @@
 					"file": "dental-nerve-inspector/index.html",
 					"settings":
 					{
-						"buffer_size": 10103,
+						"buffer_size": 10118,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2341,
-								2341
+								2356,
+								2356
 							]
 						],
 						"settings":
@@ -734,7 +749,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2964.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -744,15 +759,15 @@
 					"file": "zerocell/index.html",
 					"settings":
 					{
-						"buffer_size": 9924,
+						"buffer_size": 9939,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9788,
-								9788
+								3491,
+								3491
 							]
 						],
 						"settings":
@@ -761,7 +776,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3449.0,
+						"translation.y": 1055.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -771,15 +786,15 @@
 					"file": "3dface/index.html",
 					"settings":
 					{
-						"buffer_size": 9884,
+						"buffer_size": 9899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6041,
-								6041
+								6056,
+								6056
 							]
 						],
 						"settings":
@@ -788,7 +803,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2246.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -805,8 +820,8 @@
 						"selection":
 						[
 							[
-								310,
-								310
+								395,
+								395
 							]
 						],
 						"settings":
@@ -816,7 +831,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 79.0,
+						"translation.y": 200.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -826,15 +841,15 @@
 					"file": "CSS/sc.css",
 					"settings":
 					{
-						"buffer_size": 16834,
+						"buffer_size": 16836,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13128,
-								13164
+								589,
+								589
 							]
 						],
 						"settings":
@@ -860,8 +875,8 @@
 						"selection":
 						[
 							[
-								310,
-								310
+								1255,
+								1255
 							]
 						],
 						"settings":
@@ -871,7 +886,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 390.0,
+						"translation.y": 335.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -881,15 +896,15 @@
 					"file": "planet-of-cells/index.html",
 					"settings":
 					{
-						"buffer_size": 11189,
+						"buffer_size": 11226,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3925,
-								3925
+								3715,
+								3715
 							]
 						],
 						"settings":
@@ -898,7 +913,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 196.0,
+						"translation.y": 1049.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -908,15 +923,42 @@
 					"file": "finibus/index.html",
 					"settings":
 					{
-						"buffer_size": 7906,
+						"buffer_size": 8167,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7781,
-								7781
+								6012,
+								6012
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1643.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "icommerce/index.html",
+					"settings":
+					{
+						"buffer_size": 10718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5181,
+								5181
 							]
 						],
 						"settings":
@@ -931,46 +973,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "icommerce/index.html",
-					"settings":
-					{
-						"buffer_size": 10703,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5166,
-								5166
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1633.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 10,
 					"file": "buy/index.html",
 					"settings":
 					{
-						"buffer_size": 15029,
+						"buffer_size": 15142,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3584,
-								3584
+								10298,
+								10298
 							]
 						],
 						"settings":
@@ -979,7 +994,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1225.0,
+						"translation.y": 4132.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
