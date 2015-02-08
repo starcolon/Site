@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"customer",
+				"customer_email"
+			],
+			[
+				"con",
+				"contentClose"
+			],
+			[
+				"smt",
+				"smtpinfo"
+			],
+			[
 				"circl",
 				"circleLabel"
 			],
@@ -34,10 +46,6 @@
 			[
 				"conten",
 				"contentClose"
-			],
-			[
-				"con",
-				"contentOpen"
 			],
 			[
 				"fu",
@@ -407,7 +415,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 11287,
+				"buffer_size": 11315,
 				"line_ending": "Unix",
 				"name": "<html>"
 			}
@@ -416,7 +424,7 @@
 			"file": "dental-nerve-inspector/index.html",
 			"settings":
 			{
-				"buffer_size": 10118,
+				"buffer_size": 10046,
 				"line_ending": "Unix"
 			}
 		},
@@ -432,7 +440,7 @@
 			"file": "3dface/index.html",
 			"settings":
 			{
-				"buffer_size": 9899,
+				"buffer_size": 9923,
 				"line_ending": "Unix"
 			}
 		},
@@ -449,7 +457,7 @@
 			"file": "CSS/sc.css",
 			"settings":
 			{
-				"buffer_size": 16836,
+				"buffer_size": 16858,
 				"line_ending": "Unix"
 			}
 		},
@@ -457,7 +465,7 @@
 			"file": "buy/send.php",
 			"settings":
 			{
-				"buffer_size": 2207,
+				"buffer_size": 2377,
 				"line_ending": "Unix",
 				"name": "<?"
 			}
@@ -490,7 +498,7 @@
 			"file": "buy/index.html",
 			"settings":
 			{
-				"buffer_size": 15142,
+				"buffer_size": 15173,
 				"line_ending": "Unix"
 			}
 		}
@@ -550,7 +558,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -562,6 +570,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"form",
+			"place",
 			".jpg",
 			".png",
 			"{TAOTODO:}",
@@ -696,7 +706,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -704,15 +714,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 11287,
+						"buffer_size": 11315,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7382,
-								7382
+								10865,
+								10865
 							]
 						],
 						"settings":
@@ -722,7 +732,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2216.0,
+						"translation.y": 2304.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -732,15 +742,15 @@
 					"file": "dental-nerve-inspector/index.html",
 					"settings":
 					{
-						"buffer_size": 10118,
+						"buffer_size": 10046,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2356,
-								2356
+								6894,
+								6894
 							]
 						],
 						"settings":
@@ -749,7 +759,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2496.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -786,15 +796,15 @@
 					"file": "3dface/index.html",
 					"settings":
 					{
-						"buffer_size": 9899,
+						"buffer_size": 9923,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6056,
-								6056
+								1918,
+								1918
 							]
 						],
 						"settings":
@@ -803,7 +813,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 415.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -831,7 +841,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 200.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -841,15 +851,15 @@
 					"file": "CSS/sc.css",
 					"settings":
 					{
-						"buffer_size": 16836,
+						"buffer_size": 16858,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								589,
-								589
+								127,
+								127
 							]
 						],
 						"settings":
@@ -868,15 +878,15 @@
 					"file": "buy/send.php",
 					"settings":
 					{
-						"buffer_size": 2207,
+						"buffer_size": 2377,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1255,
-								1255
+								390,
+								390
 							]
 						],
 						"settings":
@@ -886,7 +896,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 335.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -977,15 +987,15 @@
 					"file": "buy/index.html",
 					"settings":
 					{
-						"buffer_size": 15142,
+						"buffer_size": 15173,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10298,
-								10298
+								12933,
+								12933
 							]
 						],
 						"settings":
@@ -994,7 +1004,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4132.0,
+						"translation.y": 4426.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
