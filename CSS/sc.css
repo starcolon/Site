@@ -725,6 +725,12 @@ div.screenshot-mega img
 	height:559px;
 }
 
+button.dark
+{
+	color:black;
+	border:1px solid black;
+}
+
 
 button.wireframe
 {
