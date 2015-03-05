@@ -302,6 +302,18 @@ h2
 	text-shadow:0 0 3px orangered;
 }
 
+
+.left-black-gradient
+{
+	background: -moz-linear-gradient(-45deg, rgba(0,0,0,1) 0%, rgba(48,44,44,0.52) 78%, rgba(61,57,57,0.08) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(78%,rgba(48,44,44,0.52)), color-stop(100%,rgba(61,57,57,0.08))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, rgba(0,0,0,1) 0%,rgba(48,44,44,0.52) 78%,rgba(61,57,57,0.08) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, rgba(0,0,0,1) 0%,rgba(48,44,44,0.52) 78%,rgba(61,57,57,0.08) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, rgba(0,0,0,1) 0%,rgba(48,44,44,0.52) 78%,rgba(61,57,57,0.08) 100%); /* IE10+ */
+	background: linear-gradient(135deg, rgba(0,0,0,1) 0%,rgba(48,44,44,0.52) 78%,rgba(61,57,57,0.08) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#143d3939',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 .orange-gradient
 {
 	background: #f48230; /* Old browsers */
