@@ -696,6 +696,19 @@ img.placeholder, img[data-image="placeholder"]
 	color:gray;
 }
 
+img.inline
+{
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+div.overlay
+{
+	font-size:20pt;
+	display: inline
+}
+
 
 .float-ads-image /* USUALLY TRANSPARENT-BACKGROUND IMAGE */
 {
