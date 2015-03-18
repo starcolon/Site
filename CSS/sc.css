@@ -302,6 +302,16 @@ h2
 	text-shadow:0 0 3px orangered;
 }
 
+p.big
+{
+	font-size:31pt;
+}
+
+p.closed
+{
+	margin:0;
+	padding:0;
+}
 
 .left-black-gradient
 {
@@ -748,6 +758,13 @@ img.placeholder, img[data-image="placeholder"]
 	color:gray;
 }
 
+img.blurred-border
+{
+	border-radius: 10px 10px;
+	border:1px solid black;
+	box-shadow:inset 0 0 10px rgba(0,0,0,0.88);
+}
+
 img.inline
 {
 	display: inline-block;
@@ -994,6 +1011,7 @@ div.catalog-elem > div:nth-of-type(2)
 
 .scroll-down-note
 {
+	z-index: 100;
 	bottom:37px;
 	width:100%;
 	text-align:center;
