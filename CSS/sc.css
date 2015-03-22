@@ -758,6 +758,12 @@ img.placeholder, img[data-image="placeholder"]
 	color:gray;
 }
 
+img.article-figure
+{
+	margin-top:10px;
+	margin-bottom: 10px
+}
+
 img.blurred-border
 {
 	border-radius: 10px 10px;
