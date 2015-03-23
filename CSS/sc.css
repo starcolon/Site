@@ -134,6 +134,11 @@ h2
 	border-left:8px dotted;
 }
 
+sup
+{
+	font-size:65%;
+}
+
 .center
 {
 	left:0;
