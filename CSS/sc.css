@@ -123,6 +123,17 @@ h1
 	margin-bottom:10px;
 }
 
+h1.big
+{
+	font-size: 150%;
+	margin-top: 3px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	border-top: 3px double orange;
+	border-bottom: 3px double orange;
+	margin-bottom: 20px;
+}
+
 h2
 {
 	font-size:118%;
