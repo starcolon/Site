@@ -608,6 +608,11 @@ section.black
 	color:#001030;
 }
 
+section.dark
+{
+	background-color: #200500;
+}
+
 section.black-mesh
 {
 	background-color:silver;
@@ -665,8 +670,8 @@ ul.entry-menu > li
 	background-size: cover;
 	margin-top:8px;
 	-webkit-transition:all 0.2s linear;
-   -moz-transition:all 0.2s linear;
-   -o-transition:all 0.2s linear;
+	-moz-transition:all 0.2s linear;	
+	-o-transition:all 0.2s linear;
 	transition-property:all;
 	transition-duration:0.2s;
 }
