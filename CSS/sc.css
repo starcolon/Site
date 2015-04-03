@@ -450,6 +450,25 @@ p.closed
 	color: turquoise;
 }
 
+.blur
+{
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}
+
+.dim
+{
+	-webkit-filter: brightness(0.3);
+	-moz-filter: brightness(0.3);
+	-o-filter: brightness(0.3);
+	-ms-filter: brightness(0.3);
+	filter: brightness(0.3);
+}
+
+
 
 /*----------------------- LAYOUT CLASSES -----------------------------------------------------------------*/
 .free-float
