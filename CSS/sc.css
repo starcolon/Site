@@ -89,8 +89,8 @@ header#window-header > div[data-elem='backhome']
 	cursor:pointer;
 	line-height: 2em;
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
@@ -100,8 +100,8 @@ header#window-header > div[data-elem='backhome']:hover
 	width:85px;
 	text-align: center;
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
@@ -116,8 +116,6 @@ h1
 	margin-top:3px;
 	padding-top:3px;
 	padding-bottom:3px;
-	/*padding-left:20px;
-	padding-right:20px;*/
 	border-top:1px double;
 	border-bottom:1px double;
 	margin-bottom:10px;
@@ -161,8 +159,8 @@ sup
 {
 	cursor: pointer;
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
@@ -182,8 +180,8 @@ sup
 {
 	cursor:pointer;
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
@@ -195,8 +193,8 @@ sup
 	-o-transform:rotate(8deg) scale(1.1);
 	-moz-transform:rotate(8deg) scale(1.1);
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
@@ -711,8 +709,8 @@ ul.entry-menu > li:hover
 	box-shadow:0 0 6px white;
 	padding-top:30px;
 	-webkit-transition:all 0.06s linear;
-   -moz-transition:all 0.06s linear;
-   -o-transition:all 0.06s linear;
+	-moz-transition:all 0.06s linear;
+	-o-transition:all 0.06s linear;
 	transition-property:all;
 	transition-duration:0.06s;
 }
@@ -722,8 +720,8 @@ ul.entry-menu > li:hover > span
 	color:yellow;
 	background-color: : rgba(20,20,0,0,8);
 	-webkit-transition:all 0.06s linear;
-   -moz-transition:all 0.06s linear;
-   -o-transition:all 0.06s linear;
+	-moz-transition:all 0.06s linear;
+	-o-transition:all 0.06s linear;
 	transition-property:all;
 	transition-duration:0.06s;
 }
@@ -881,8 +879,8 @@ button.wireframe
 	color:white;
 	cursor:pointer;
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
@@ -892,8 +890,8 @@ button.wireframe:hover
 	background:#F3F3F3;
 	color:black;
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
@@ -908,8 +906,8 @@ button:not(.wireframe)
 	color:#f7c931;
 	cursor:pointer;
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
@@ -920,8 +918,8 @@ button:hover:not(.wireframe)
 	color:black;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c931', endColorstr='#ea7235',GradientType=0 ); /* IE6-9 */
 	-webkit-transition:all 0.31s ease-out;
-   -moz-transition:all 0.31s ease-out;
-   -o-transition:all 0.31s ease-out;
+	-moz-transition:all 0.31s ease-out;
+	-o-transition:all 0.31s ease-out;
 	transition-property:all;
 	transition-duration:0.31s;
 }
