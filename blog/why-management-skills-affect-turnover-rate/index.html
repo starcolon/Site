@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Blog | Why Management skills directly influence turnover rate?</title>
+		<link rel="shortcut icon" type="image/ico" href="../IMG/starcolon-logo.png"></link>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></meta>
+		<meta name="keywords" content="self balacing tree,binary tree,oop,javascript,js,jscript,ecma,ecmascript,ecmascript5,ecmascript 5,ecmascript 6,tree,tree structure,code,snippet,binary tree in javascript,avl tree,red black tree,splay tree,data structure,datastructure,implement,implementation"/>
+		<meta name="description" content="Making self-balancing trees in JavaScript is as easy as writing hello world! This article demonstrates how to create AVL tree and Splay tree using JavaScript."/>
+		<meta property="og:image" content="http://www.it24hrs.com/wp-content/uploads/2012/12/pain-office-syndrome.jpg"/>
+		<link rel="stylesheet" type="text/css" href="../../CSS/sc.css"/>
+		<link rel="stylesheet" type="text/css" href="../../CSS/MyFontsWebfontsKit.css"/>
+		<script type="text/javascript" src="../../JS/jquery.min.js"></script>
+		<script type="text/javascript" src="../../JS/skrollr.min.js"></script>
+		<script type="text/javascript" src="../../JS/main.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-35581556-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+		<script type="text/javascript">
+		window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+		</script>
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	</head>
+	<body style="font-size:12pt;background-color:black">
+		<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=362320777191713&version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+		<header id="window-header">
+			<div data-elem='backhome' onclick="document.location='../index.html'"
+			data-300="background-color:rgb(240,160,0);color:rgb(46,46,0)"
+			data-400="background-color:rgb(180,90,0);color:rgb(0,0,0)">
+				❰ Blog
+			</div>
+			<div class="content-container" 
+			data-300="background-color:rgba(80,46,0,0.77);color:rgb(240,210,0);box-shadow:0 1px 1px rgba(0,0,0,0.33);font-size:16pt">
+				<span class="">BLOG<span> | Make Self-Balancing Trees in JavaScript
+			</div>
+			<div class="social-panel" data-0="color:rgb(80,80,80)" data-380="color:rgb(255,255,255)">
+				<div class="fb-like social-box" 
+					data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" 	data-action="like" data-show-faces="false" data-share="false">
+				</div>
+				<div class="g-plusone social-box" data-size="medium" data-expandTo="right" data-count="true">
+				</div>
+				<div class="social-box">
+					<a class="twitter-share-button"
+					  href="https://twitter.com/share"
+					  data-via="twitterdev">
+						Tweet
+					</a>
+				</div>
+			</div>
+		</header>
+		<section class="black white centered" style="height:520px;background-image:url('../../IMG/ARTWORK/fp-01.png');background-size:cover;background-repeat:repeat-none">
+			<div style="padding-top:195px;width:450px"
+			data-0="padding-top:195px" data-500="padding-top:400px">
+				<div style="background-color:rgba(0,0,0,0.56);width:100%;padding:10px 10px;font-size:22pt;color:yellow;text-align:center">
+					Why Management skills directly influence turnover rate?
+				</div>
+			</div>
+		</section>
+		<section class="black centered" style="padding:20px 0">
+			<div style="margin:10px auto;width:800px;color:white">
+				<h1>ทีมที่ turnover rate สูง ๆ มีอะไรคล้ายกัน?</h1>
+				<p>
+					ผมเคยทำงานกับทีมที่หลากหลายในหลายองค์กร สิ่งที่ผมสังเกตเห็นได้จากทีมที่มักจะมีอัตราการลาออกสูง ๆ มักจะมีปัจจัยหลายอย่างที่คล้ายกัน แม้ว่าจะเป็นคนละองค์กรที่วัฒนธรรมต่างกันสิ้นเชิงก็ตาม
+				</p>
+				<p class="cyan">
+					นั่นก็คือ ... หัวหน้าทีม หรือผู้บริหาร ที่ขาดความเข้าใจในการบริหารคน
+				</p>
+				<p>
+					ลองมาดูตัวอย่างลักษณะการบริหารที่แย่กัน ...
+				</p>
+			</div>
+			<div style="margin:120px auto;width:800px;color:white">
+				<h1>หัวหน้าทีมหรือผู้บริหารที่มองลูกทีมเป็นลูกน้อง</h1>
+				<p>
+					<span class="cyan">ปัจจัยนี้ critical hit มาก</span> ในวัฒนธรรมของบางองค์กรไม่ได้จ้างงานคนเข้ามาทำงานให้เพียงอย่างเดียว แต่ให้มาเติมเต็มความรู้สึกอยู่บนยอดปิรามิดของหัวหน้าทีมหรือผู้บริหารด้วย คาดว่าหัวหน้าทีมบางคนไม่เคยเป็นผู้นำมาก่อน จึงขาดทักษะการบริหารทรัพยากรมนุษย์ที่มี วางตัวไม่เป็น แต่อยากให้ลูกทีมเชื่อฟัง จึงใช้วิธีกดขี่ (แม้จะโดยอ้อม) แทน เช่น
+					<ul>
+						<li>พยายามใช้คำว่าลูกน้อง มากกว่าทีม</li>
+						<li>พยายามออกคำสั่ง มากกว่าเสนอแนะ</li>
+						<li>มักจะไม่ยอมรับความคิดเห็นที่ดีกว่าจากทีม</li>
+						<li>เมื่อมีโอกาสมักจะอวดความเก่งของตนเสมอ เพราะเชื่อผิดๆ ว่าทำให้ทีมชื่นชมและเชื่อฟัง</li>
+					</ul>
+					<span class="yellow">วิธีนี้สร้าง turnover rate ได้สูงมาก โดยเฉพาะคนเก่ง ๆ เจอแบบนี้มักจะจากไปทันทีที่มีโอกาสที่ดีกว่า</span>
+				</p>
+			</div>
+			<div style="margin:120px auto;width:800px;color:white">
+				<h1>หัวหน้าทีมหรือผู้บริหารที่ไม่เก่งจริง</h1>
+				<p>
+					<span class="cyan">บ่อยครั้งที่หัวหน้าทีมหรือผู้บริหารไม่ได้มีทักษะความสามารถที่เก่งจริง เพียงแต่อยู่มานานกว่า หรือทำงานมานานกว่าเท่านั้น</span> เมื่อคนเหล่านี้ขึ้นมาบริหารทีมจะไม่สามารถแก้ปัญหาได้อย่างชาญฉลาด (เพราะบางอย่างมันฝึกฝนกันไม่ได้ โดยเฉพาะไหวพริบ) และส่วนมากหัวหน้าทีมหรือผู้บริหารที่ไม่ expert จริงก็มักจะสร้างปัญหาให้เกิดขึ้นเสียมากกว่า และผลกระทบก็เช่น
+					<ul>
+						<li>สร้างปัญหาจุบจิบที่เกิดจากความไม่ expert ในความรู้ที่ต้องใช้ในงาน ทำให้ทีมที่เก่งรู้สึกหงิดหงิดรำคาญใจ</li>
+						<li>หากหัวหน้าทีมประเภทนี้ยึดความคิดตนเป็นหลัก จะสร้างผลเสียอย่างมากต่องานและความรู้สึกของทีม เพราะมักจะเลือกทางที่เลวร้าย แต่ไม่รู้ตัว เพราะไม่เก่งจริง</li>
+					</ul>
+					<span class="yellow">ผลเสียมักเกิดขึ้นเรื้อรัง สะสม หมักหมม ซึ่งผลกระทบโดยตรงต่อบรรยากาศการทำงานในทีม</span>
+				</p>
+			</div>
+			<div style="margin:120px auto;width:800px;color:white">
+				<h1>หัวหน้าทีมหรือผู้บริหารที่อวดเก่ง ตนเองเก่งไปหมด</h1>
+				<p>
+					<span class="cyan">มนุษย์ทั่วไปรำคาญคนที่โอ้อวดอยู่แล้ว</span> เมื่อเจอกับหัวหน้าทีมหรือผู้บริหารที่มักจะอวดอ้างสรรพคุณของตน มักจะรู้สึกรำคาญใจ โดยเฉพาะถ้าอวดอ้างตนแถมยังไม่เก่งจริง (รวมกับข้อก่อนหน้า) นั่นยิ่งหายนะ เพราะทำให้ขาดความน่าเชื่อถือไปในทันที การอวดอ้างตนมักจะเกิดขึ้นในกรณีดังต่อไปนี้
+					<ul>
+						<li>อวดอ้างประสบการณ์ทำงานที่ตนเชื่อว่ามันดูดีเหลือเกิน</li>
+						<li>อวดอ้างสถาบันการศึกษา โดยไม่สนว่าผู้ฟังอยากทราบหรือไม่</li>
+						<li>นึกข้อสามไม่ออก เพราะเคยเจอมาแค่สองข้อข้างต้นครับ</li>
+					</ul>
+					<span class="yellow">หัวหน้าทีมลักษณะนิสัยเช่นนี้อาจไม่ส่งผลกระทบเชิงลบมากเท่าสองแบบแรก แต่ก็ทำให้ทีมเกิดความรู้สึกต่อต้านหรืออย่างร้ายแรงคือไม่นับถืออีกต่อไป</span>
+				</p>
+			</div>
+			<div style="margin:120px auto;width:800px;color:white">
+				<h1>หัวหน้าทีมหรือผู้บริหารที่ไม่เข้าใจ generation gap</h1>
+				<p>
+					<span class="cyan">ปัญหาความแตกต่าง (โดยสิ้นเชิง) ของคนในยุคที่แตกต่างกัน คือปัญหาที่ HRM ตระหนักดี</span> แต่อย่างไรก็ตาม หัวหน้าทีมหรือผู้บริหารไม่ได้เข้าใจกันทุกคน ทำให้เกิดปัญหาอยู่เสมอ เช่น
+					<ul>
+						<li>ผู้บริหาร Baby boomer ไม่เข้าใจวิธีสอนให้พนักงาน Gen Y/Z คล้อยตามหรือเชื่อฟังได้</li>
+						<li>หัวหน้าทีม Gen X เกิดความรู้สึกว่าพนักงาน Gen Y/Z ชอบตั้งคำถามมากเกินไป</li>
+						<li>ผู้บริหารไม่เข้าใจวิธีการสร้างบรรยากาศการทำงานให้พนักงานรู้สึกมีความสุขในการทำงาน และทำงานได้เต็มประสิทธิภาพ กล้าทุ่มเท</li>
+						<li>ผู้บริหารไม่เข้าใจว่าพนักงานรุ่นหลัง ๆ มักจะไม่เสียเวลาทนต่อสภาพการทำงานที่ไม่ดี และพร้อมจะตีจากเสมอหากไม่พึงพอใจ และเมื่อพนักงานจากไป ก็ไม่มีความพยายามที่จะแก้ไขไม่ให้เกิดขึนอีก</li>
+					</ul>
+				</p>
+			</div>
+			<div style="margin:120px auto;width:800px;color:white">
+				<h1>สรุปสั้น ๆ ดีกว่า</h1>
+				<p>
+					<span class="yellow">ทัศนคติและความสามารถของการบริหารส่งผลโดยตรงต่อบรรยากาศการทำงาน <span class="cyan">&#8594;</span> บรรยากาศการทำงานส่งผลโดยตรงต่อความสุขในการทำงานของพนักงาน <span class="cyan">&#8594;</span> เมื่อพนักงานไม่มีความสุข พนักงานก็มีแนวโน้มสูงที่จะลาออกไป</span>
+				</p>
+			</div>
+			<div style="margin:120px auto;width:800px;color:white">
+				<h1>ทำไมพนักงานจึงไม่ทน เมื่อเจอการบริหารที่ไม่ดี?</h1>
+				<p>ลองถามมุมกลับ คุณมองเห็นความคุ้มค่าที่จะต้องใช้เวลาวันละ 8 ชั่วโมง จำนวน 5 หรือ 6 วันต่อสัปดาห์ เพื่อทนกับสภาพบรรยากาศการทำงานที่ไม่ดี ไม่ช่วยพัฒนาอะไรคุณเลย หรือไม่?
+				</p>
+				<p class="yellow">
+					หากคุณกำลังบริหารทีมอยู่ และสงสัยว่าทำไมคนเก่ง ๆ ในทีมมักจะลาออกกันไป ... ลองพิจารณาค่าจ้างที่คุณให้แก่พวกเขาครับ ถ้าคิดว่าไม่น่าเป็นปัญหา ลองพิจารณาวิธีที่คุณบริหารทีม แล้วปรับปรุงโดยเริ่มตั้งแต่วันนี้ทันทีครับ ก่อนที่คนเก่ง ๆ ในทีมของคุณคนต่อไปจะเขียนใบลาออกเสร็จ
+				</p>
+			</div>
+		</section>
+	</body>
+</html>
