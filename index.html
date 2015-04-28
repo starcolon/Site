@@ -144,8 +144,8 @@
 				<button class="wireframe" onclick="document.location='./icommerce/icommerce.zip'">Download now</button>
 			</div>
 		</section>
-		<section class="" style="height:1475px;background-image:url('./PATTERN/blue-cut.jpg')">
-			<div class="stretch" style="background-color:rgba(45,145,245,0.75)">
+		<section class="white" style="height:1475px;background-image:url('./PATTERN/darkgreen-bar.jpg')">
+			<div class="stretch" style="background-color:rgba(0,75,0,0.15)">
 			</div>
 			<div class="free-float black" style="font-size:27pt;left:80px" 
 			data-0="top:-200px"
@@ -197,14 +197,31 @@
 	</body>
 </html>
 <script type="text/javascript">
+function setCircleLinkState(label,state){
+	$(label).attr('data-state',state);
+}
+function getCircleLinkState(label){
+	return $(label).attr('data-state');
+}
 function hoverCircleLink(el){
 	var circleLabel = $(el).children()[0];
-	$(circleLabel).animate({'height':'100%'});
+	if (getCircleLinkState(circleLabel)=='inprogress')
+		return;
+	setCircleLinkState(circleLabel,'inprogress');
+	$(circleLabel).animate({'height':'100%'},null,function(){
+		console.log('done!');
+		setCircleLinkState(circleLabel,'done');
+	});
 }
 
 function hideCircleLabel(el){
 	var circleLabel = $(el).children()[0];
-	$(circleLabel).animate({'height':'0%'});
+	if (getCircleLinkState(circleLabel)=='inprogress')
+		return;
+	$(circleLabel).animate({'height':'0%'},null,function(){
+		console.log('done!');
+		setCircleLinkState(circleLabel,'done');
+	});
 }
 
 function hideCircleLabels(){
