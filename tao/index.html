@@ -39,7 +39,7 @@
 			<div class="content-container yellow" style="font-size:14pt"
 			data-0="background-color:rgb(0,0,0)"
 			data-400="background-color:rgb(0,0,0)">
-				*:Tao
+				<!-- HEADER -->
 			</div>
 			<div class="social-panel" style="font-size:10pt">
 				<div class="fb-like social-box" 
@@ -56,12 +56,24 @@
 				</div>
 			</div>
 		</header>
-		<div class="fullscreen" style="background-color:black">
+		<div id="screen" class="fullscreen" style="background-color:black">
+			<div id="profile-card" class="center-screen gray" style="width:720px;height:500px;border:1px dotted gray;background-color:rgba(0,0,0,0.77)">
+				<div class="fullwidth" style="height:32px;border-bottom:1px dotted gray;line-height:1.78em">
+					Tao P R
+				</div>
+				<div>
+					DD
+				</div>
+			</div>
 		</div>
 	</body>
-	<script type="javascript">
+	<script type="text/javascript" >
 		// Setup
+		var scr = $('#screen');
+		var scr_level = 0;
+		console.log('Setup animation!');
 
+		var browser_prefix = ['','-o-','-moz-','-webkit-'];
 
 	</script>
 </html>
