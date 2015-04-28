@@ -57,7 +57,7 @@
 				</div>
 			</div>
 		</header>
-		<section style="height:620px;background-image:url('./PATTERN/stellar.jpg');background-color:black;background-size:cover;color:white">
+		<section id="cover" style="height:620px;background-image:url('./PATTERN/stellar.jpg');background-size:120%;background-repeat:repeat-y;background-color:black;color:white">
 			<div class="stretch">
 				<!-- OVERLAY -->
 			</div>
@@ -230,5 +230,25 @@ function hideCircleLabels(){
 	});
 }
 
+function animateCover(){
+	console.log('animation setup');
+	var bk = $('#cover');
+	var bkPos=3000;
+	function animateCoverBk(){
+		console.log('cover bk: ' + bkPos);
+		if (bkPos>0){
+			--bkPos;
+			$(bk).css('background-position', '0 '+bkPos+'%');
+		}
+		else{
+			bkPos = 3000;
+		}
+		setTimeout(animateCoverBk,60);
+	}
+
+	setTimeout(animateCoverBk,500);
+}
+
 hideCircleLabels();
+$(document).ready(animateCover);
 </script>
