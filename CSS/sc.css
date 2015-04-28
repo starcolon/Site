@@ -1067,7 +1067,7 @@ div.catalog-elem > div:nth-of-type(2)
 	line-height: 8;
 	text-align: center;
 	font-size: 23pt;
-	color: lime;
+	color: #008850;
 	background-color: rgba(0,80,20,0.3);
 	text-shadow: none;
 }
