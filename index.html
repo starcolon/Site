@@ -231,8 +231,23 @@ function hideCircleLabels(){
 }
 
 function animateCover(){
-	console.log('animation setup');
 	var bk = $('#cover');
+
+	// Blur animation (fade in)
+	var blurState = 18;
+	(function blurFadeIn(){
+		var browsers = ['-o-','-webkit-','-moz-'];
+		if (blurState<100){
+			++blurState;
+			browsers.forEach(function(prefix){
+				$(bk).css(prefix+'filter','brightness('+blurState+'%)');	
+			});
+			setTimeout(blurFadeIn,16);
+		}
+	})();
+
+
+	console.log('animation setup');
 	var bkPos=3000;
 	function animateCoverBk(){
 		console.log('cover bk: ' + bkPos);
