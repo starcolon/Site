@@ -229,6 +229,26 @@ function hideCircleLabels(){
 		$(el).animate({'height': '0%'});
 	});
 }
+
+function flashCover(){
+	var bk = $('#cover');
+	var flashCount = 0;
+	(function flash(){
+		$(bk).css('background-color','#666666');
+		setTimeout(function(){
+			$(bk).css('background-color','black');
+			flashCount++;
+
+			if (flashCount < 3){
+				setTimeout(flash,18);
+			}
+			else{
+				flashCount = 0;
+				setTimeout(flashCover,3200);	
+			}
+		},18);
+	})();
+}
 /*
 function animateCover(){
 	var bk = $('#cover');
@@ -265,5 +285,6 @@ function animateCover(){
 }
 */
 hideCircleLabels();
+setTimeout(flashCover,2500);
 // $(document).ready(animateCover);
 </script>
