@@ -68,8 +68,8 @@
 		</section>
 		<section class="black white centered">
 			<div style="margin-top:20px;width:800px">
-				<h2>Haskell, the most well-known purely functional language</h2>
-				If we split the world into two equal sides, functional and OOP. Haskell is clearly placed in the farthest side of the functional half. The language itself was designed to be a super purely functional which exposes the strong thinking in functional. People can't keep their OOP or imperative mindset to write the code in Haskell. The language does not allow anyone to write impure code.
+				<h2>Haskell, likely the most well-known purely functional language</h2>
+				If we split the world into two equal sides, functional and OOP, Haskell is clearly placed on the farthest side of the functional half. The language itself was designed to be a super purely functional which exposes the strong thinking in functional way. People can't keep their OOP or imperative mindset to write the code in Haskell. The language does not allow anyone to write impure code.
 			</div>
 			<div style="margin-top:20px;width:800px">
 				<h2>Function as first-class citizen</h2>
@@ -110,9 +110,9 @@
 
 				<h3>.NET's LINQ: Chain of functions</h3>
 				<img src="../../IMG/ARTWORK/haskell-05.png" width="88%"/><br/>
-				<span class="cyan">LINQ is a neat design of Monad in .NET. Every single LINQ operation takes an arbitary data, process it and returns a wrapped data for a subsequent operation. This is so glorious.</span>
+				<span class="cyan">LINQ is a neat design of Monad in .NET. Every single LINQ operation takes an arbitrary data, process it and returns a wrapped data for a subsequent operation. This is so glorious.</span>
 
-				<h3>ECMAScript6's promise: Through the pipeline</h3>
+				<h3>ECMAScript6's promise: Injection through the pipeline</h3>
 				<img src="../../IMG/ARTWORK/haskell-06.png" width="75%"/><br/>
 				<span class="cyan">Promise is coming to town. Instead of using a callback, promise takes the data through the processing sequence in a similar sense to function composition.</span>
 				
@@ -124,8 +124,54 @@
 			</div>
 		</section>
 		<section class="black white centered">
-			<div style="margin-top:20px;width:800px">
+			<div style="margin-top:60px;width:800px">
 				<h2>Currying</h2>
+				In purely functional language like Haskell, currying is eligible by default. When a function is defined with 4 arguments but when calling with only 3 supplied, Haskell (GHC) does not throw an exception asking for one missing argument, it just wisely returns a currying function which accepts the last missing argument. This is pretty neat, unlike other impure functional languages.
+			</div>
+			<div style="margin-top:20px;width:800px">
+				<h3>In Haskell, you can define a function where:</h3>
+				<img src="../../IMG/ARTWORK/haskell-08.png" width="52%"/><br/>
+				Function F does require two arguments by definition. Nonetheless, you can call it with one argument yet it is still legal:
+			</div>
+			<div style="margin-top:20px;width:800px">
+				<img src="../../IMG/ARTWORK/haskell-09.png" width="32%"/><br/>
+				<span class="cyan">What it returns from above is simply not an exception, but another function which accepts the last argument. A function that returns another function (currying) is far simpler to implement in Haskell compared to other languages.</span>
+			</div>
+			<div style="margin-top:20px;width:800px">
+				<h3>To create a currying function in Python, you need to:</h3>
+				<img src="../../IMG/ARTWORK/haskell-10.png" width="45%"/><br/>
+				You are forced to decide preemtively whether a function you're gonna write is a curryable function. You need to force a function to return a function manually.
+				<h3>In JavaScript, things are similar</h3>
+				<img src="../../IMG/ARTWORK/haskell-11.png" width="36%"/><br/>
+				Many other multi-paradigm programming languages are also the same. Calling a function with missing one or more arguments won't lead to a partial function creation. Instead, the compiler throws an exception due to argument shortage.
+			</div>
+			<div class="cyan" style="margin-top:20px;width:800px">
+				In a sense of functional, multi-paradigm languages like JavaScript or Python are not as flexible as purely functional language like Haskell.
+			</div>
+		</section>
+		<section class="black white centered">
+			<div style="margin-top:60px;width:800px">
+				<h2>Anonymous function</h2>
+				Lambda function is what you call it. Many modern programming languages support this. Say, we are in a position where we want to implement the two-level lambda function below:
+			</div>
+			<div style="margin-top:20px;width:800px;text-align:center">
+				<span class="cyan">f := λx.λg.(1+g(x))</span>
+			</div>
+			<div style="margin-top:20px;width:800px">
+				<h3>In Python, we may write down:</h3>
+				<img src="../../IMG/ARTWORK/haskell-12.png" width="52%"/><br/>
+				<span class="cyan">This doesn't quite seem visually fancy. How many people like how it looks?</span>
+				<h3>In ECMAScript6, we may write:</h3>
+				<img src="../../IMG/ARTWORK/haskell-13.png" width="42%"/><br/>
+				<h3>While it's easy in Haskell:</h3>
+				<img src="../../IMG/ARTWORK/haskell-14.png" width="40%"/><br/>
+				<span class="cyan">What an arousing appearance that is. ECMAScript6 is inspired somewhat by Haskell because the lambda statement looks really amazing in Haskell. You write less, keep the code concise, while maintaining the readability.
+				</span>
+			</div>
+		</section>
+		<section class="white centered" style="margin-top:40px;background-color:rgba(0,40,80,0.77)">
+			<div class="yellow" style="padding-top:60px;padding-bottom:60px;width:800px">
+				Visually, expressions in Haskell are very close to Mathematical expressions. The language itself was designed from ground-up to be a pure language in functional way so it has an extremely nerd look! But it's sexy after all. :)
 			</div>
 		</section>
 	</body>
