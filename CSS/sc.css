@@ -331,6 +331,15 @@ sup
 	text-shadow:none;
 }
 
+.text-stroke-black
+{
+	text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
+}
+
 .blackshadow
 {
 	text-shadow:0 0 3px black;
