@@ -739,7 +739,7 @@ ul.entry-menu
 
 ul.entry-menu > li
 {
-	height:100px;
+	height:186px;
 	border:1px solid white;
 	padding:5px 3px;
 	cursor:pointer;
@@ -750,18 +750,9 @@ ul.entry-menu > li
 	-o-transition:all 0.2s linear;
 	transition-property:all;
 	transition-duration:0.2s;
+	cursor:pointer;
 }
 
-ul.entry-menu > li:hover
-{
-	box-shadow:0 0 6px white;
-	padding-top:30px;
-	-webkit-transition:all 0.06s linear;
-	-moz-transition:all 0.06s linear;
-	-o-transition:all 0.06s linear;
-	transition-property:all;
-	transition-duration:0.06s;
-}
 
 ul.entry-menu > li:hover > span
 {
