@@ -291,6 +291,11 @@ sup
 	color:deepskyblue;
 }
 
+.yellow
+{
+	color:yellow;
+}
+
 .lime, .lime *
 {
 	color:lime;
@@ -488,6 +493,18 @@ p.closed
 .halfwidth
 {
 	width:50%;
+}
+
+.abs
+{
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.rel
+{
+	position: relative;
 }
 
 .floatleft
