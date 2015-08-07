@@ -59,9 +59,9 @@
 				</div>
 			</div>
 		</header>
-		<section id="cover" style="height:690px;background-image:url('');
+		<section id="cover" style="height:690px;background-color:black;
 		background-size:120%;background-repeat:repeat-y;color:white">
-			<div class="stretch" style="background-image:url('PATTERN/lightning.jpg');background-size:cover;filter:blur(3px) saturate(60%)">
+			<div class="stretch">
 				<!-- OVERLAY -->
 			</div>
 			<div class="fullwidth free-float" 
@@ -239,12 +239,12 @@ function flashCover(){
 	var bk = $('#cover');
 	var flashCount = 0;
 	(function flash(){
-		$(bk).css('background-color','#666666');
+		$(bk).css('filter','blur(20px)').css('-webkit-filter','blur(20px)');
 		setTimeout(function(){
-			$(bk).css('background-color','black');
+			$(bk).css('filter','blur(0)').css('-webkit-filter','blur(0)');
 			flashCount++;
 
-			if (flashCount < 3){
+			if (flashCount < 4){
 				setTimeout(flash,18);
 			}
 			else{
@@ -290,6 +290,5 @@ function animateCover(){
 }
 */
 hideCircleLabels();
-setTimeout(flashCover,2500);
-// $(document).ready(animateCover);
+
 </script>
