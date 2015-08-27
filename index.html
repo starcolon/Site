@@ -254,41 +254,6 @@ function flashCover(){
 		},18);
 	})();
 }
-/*
-function animateCover(){
-	var bk = $('#cover');
-
-	// Blur animation (fade in)
-	var blurState = 18;
-	(function blurFadeIn(){
-		var browsers = ['-o-','-webkit-','-moz-'];
-		if (blurState<100){
-			++blurState;
-			browsers.forEach(function(prefix){
-				$(bk).css(prefix+'filter','brightness('+blurState+'%)');	
-			});
-			setTimeout(blurFadeIn,16);
-		}
-	})();
-
-
-	console.log('animation setup');
-	var bkPos=3000;
-	function animateCoverBk(){
-		console.log('cover bk: ' + bkPos);
-		if (bkPos>0){
-			--bkPos;
-			$(bk).css('background-position', '0 '+bkPos+'%');
-		}
-		else{
-			bkPos = 3000;
-		}
-		setTimeout(animateCoverBk,60);
-	}
-
-	setTimeout(animateCoverBk,500);
-}
-*/
 hideCircleLabels();
 
 </script>
