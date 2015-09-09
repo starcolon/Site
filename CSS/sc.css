@@ -717,6 +717,11 @@ section.centered > div
 	margin:0 auto;
 }
 
+div.centered > div
+{
+	margin:0 auto;
+}
+
 
 /*------------------------ SPECIFIC ELEMENTS --------------------------------------------------------*/
 
