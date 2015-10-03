@@ -180,6 +180,11 @@ sup
 	position: fixed;
 }
 
+.center-text
+{
+	text-align: center;
+}
+
 .ads-link
 {
 	cursor: pointer;
@@ -314,6 +319,11 @@ sup
 .lightaqua, .lightaqua *
 {
 	color: turquoise;
+}
+
+.bigtext, .bigtext *
+{
+	font-size:120%;
 }
 
 .smalltext, .smalltext *
