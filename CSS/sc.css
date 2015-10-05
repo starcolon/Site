@@ -732,6 +732,14 @@ section.centered > div
 	margin:0 auto;
 }
 
+section.gravity > div
+{
+	margin-bottom:0;
+	margin-left:auto;
+	margin-right:auto;
+	bottom:0;
+}
+
 div.centered > div
 {
 	margin:0 auto;
