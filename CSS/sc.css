@@ -517,6 +517,11 @@ p.closed
 	position: relative;
 }
 
+.nospace
+{
+	margin:0;
+}
+
 .floatleft
 {
 	float:left;
@@ -593,6 +598,12 @@ p.closed
 .float-inside
 {
 	float:left;
+	position: relative;
+}
+
+img.inline
+{
+	display: inline;
 	position: relative;
 }
 
