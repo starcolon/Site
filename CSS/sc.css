@@ -601,12 +601,6 @@ p.closed
 	position: relative;
 }
 
-img.inline
-{
-	display: inline;
-	position: relative;
-}
-
 div.inline
 {
 	display:inline-block;
