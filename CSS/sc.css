@@ -450,6 +450,11 @@ p.closed
 	background-color: rgba(0,0,0,0.77);
 }
 
+.black-semitransparent
+{
+	background-color: rgba(0,0,0,0.37);
+}
+
 .inset-black-text
 {
 	color:#505050;
