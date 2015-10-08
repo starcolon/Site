@@ -239,6 +239,12 @@ sup
 	color:white;
 }
 
+.green-border
+{
+	border:1px solid springgreen;
+	color: springgreen;
+}
+
 .black-border
 {
 	border:1px solid black;
