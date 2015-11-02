@@ -28,7 +28,7 @@
 		</script>
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 	</head>
-	<body style="min-height:7300px">
+	<body style="min-height:6400px">
 		<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 			  var js, fjs = d.getElementsByTagName(s)[0];
@@ -37,7 +37,7 @@
 			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=362320777191713&version=v2.0";
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
-		<header id="window-header">
+		<header id="window-header" style="z-index:10">
 			<div data-elem='backhome' onclick="document.location='../index.html'"
 			data-300="background-color:rgb(0,200,110);color:rgb(0,46,16)"
 			data-400="background-color:rgb(0,180,90);color:rgb(0,0,0)"
@@ -45,8 +45,9 @@
 				❰ Home
 			</div>
 			<div class="content-container" 
-			data-300="background-color:rgb(0,46,20);color:rgb(0,240,120);box-shadow:0 1px 1px rgba(0,0,0,0.33);font-size:15pt" 
-			data-400="background-color:rgb(0,0,0);color:rgb(0,180,70);box-shadow:0 3px 5px rgba(0,0,0,0);font-size:12pt;pading-top:24px">
+			style="background-color:rgb(0,0,0);"
+			data-300="color:rgb(0,240,120);box-shadow:0 1px 1px rgba(0,0,0,0.33);font-size:15pt" 
+			data-400="color:rgb(0,180,70);box-shadow:0 3px 5px rgba(0,0,0,0);font-size:12pt;pading-top:24px">
 				Planet of Cells | Virus simulation game
 			</div>
 			<div class="social-panel" data-0="color:rgb(80,80,80)" data-380="color:rgb(255,255,255)">
@@ -65,13 +66,19 @@
 			</div>
 		</header>
 		<section class="transparent-black-gradient" 
-		style="height:566px;background-image:url('../IMG/ARTWORK/planet-cover-home.jpg');background-size:cover">
+		style="height:825px;background-image:url('../IMG/ARTWORK/-----');background-size:cover;background-color:black">
 			<div class="stretch" style="background-color:rgba(0,0,0,.45)"></div>
 			<div class="free-float blackshadow" style="width:100%;text-align:center;color:white"
 			data-start="top:180px;font-size:32pt" data-218="top:155px;font-size:32pt" 
 			data-450="top:-90px;font-size:8pt">
-				Raise your virus on Google Map<br/>
-				<span class="smalltext">Start from one, end up millions</span>
+				Let's seize the entire planet<br/>
+				<span class="smalltext">with millions of virus</span>
+			</div>
+			<!-- FLOATING ICON -->
+			<div class="center-screen" style="top:30px;width:85px;height:85px">
+				<div class="stretch" style="position:relative" data-1100="top:0px" data-1600="top:-100px" data-3300="top:-100px;opacity:1" data-3700="top:-300px;opacity:0">
+					<img class="stretch" src="http://starcolon.com/planet/content/img/cell/0016R.png"/>
+				</div>
 			</div>
 			<div class="free-float fullwidth center"
 			style="z-index:10"
@@ -90,151 +97,102 @@
 			</div>
 			<!-- SCROLLDOWN NOTE ---------------------------------------------------------->
 			<div class="scroll-down-note free-float smalltext gray"
-			data-1p-bottom="opacity:1" data-end="opacity:0">
+			data-100-bottom="opacity:1" data-end="opacity:0">
 				&#9660; scroll down &#9660;
 			</div>
 		</section>
-		<section class="black white" style="height:1666px">
-			<!-- SCREENSHOTS SHOWCASE ------------------------------------------------------------>
-			<div class="free-float" style="top:50px;height:600px;width:5800px" data-500="left:-5000px"
-			data-1900="left:1000px" data-2200="left:5000px">
-				<div class="screenshot-mega inline">
-					<img src="../IMG/ARTWORK/planet-ss-01.jpg" alt="planet of cells game screenshot"/>
+		<section class="white" style="height:970px;background-color:#424242;background-image:url('../IMG/ARTWORK/planet-ads.jpg');background-size:cover;border-bottom:1px solid black">
+		</section>
+		<section class="white black" style="height:2000px">
+			<!--- FLOATING LABELS ---->
+			<div class="center-screen center-text bigtext" 
+			style="top:30px;width:485px;height:85px" data-1100="opacity:0" data-1500="opacity:1" data-1800="opacity:1" data-2200="opacity:0">
+				You can spawn your virus anywhere.
+			</div>
+			<div class="center-screen center-text bigtext" 
+			style="top:30px;width:485px;height:85px" data-2200="opacity:0" data-2600="opacity:1" data-2900="opacity:1" data-3300="opacity:0">
+				Cells are automatically reproducing<br/>through time.
+			</div>
+			<!--- GRAPHICS ---->
+
+			<!---->
+		</section>
+		<section class="white black" style="height:1000px">
+			<div class="free-float fullwidth" style="background-color:black;height:100%;background-image:url('../IMG/ARTWORK/planet-ads-big.jpg');background-size:100%" 
+			data-3400="top:100%" 
+			data-3850="top:0" 
+			data-4200="top:0;height:100%;filter:sepia(0)" 
+			data-4600="top:-50%;height:0%;filter:sepia(100)">
+			</div>
+		</section>
+		<section class="white centered thick-darken-border" style="height:400px;background-color:#823200">
+			<div style="width:820px;margin-top:40px">
+				<h1>How players grow their cells?</h1>
+				<div class="blackshadow" style="width:91%;height:155px">
+					<img src="../IMG/ARTWORK/planet-sample-ui.jpg" class="stretch" />
 				</div>
-				<div class="screenshot-mega inline">
-					<img src="../IMG/ARTWORK/planet-ss-02.jpg" alt="planet of cells game screenshot"/>
+				<p>
+					After spawning cells onto the map, those cells are reproducing, sometimes mutating, and expanding territories continuously.
+				</p>
+			</div>
+		</section>
+		<section class="white black centered" style="height:1250px" data-5000="opacity:0" data-5200="opacity:1" data-6000="height:1250px" data-6300="height:800px">
+			<div style="width:820px;position:relative;top:200px">
+				<h1>Strengthen your viral empire</h1>
+				<span class="cyan">Your cells grow and swallow sibling opponent's cells! Surround opponents with your cells and let them automatically do their jobs.</span>
+			</div>
+			<div style="width:820px;position:relative;top:280px">
+				<img width="350px" height="270px" class="inline nospace" src="../IMG/ARTWORK/planet-merge-01.jpg"/>
+				<img width="28px" height="30px" src="../IMG/ARTWORK/right-arrow.png" class="inline nospace rel" style="top:-100px"/>
+				<img width="350px" height="270px" class="inline nospace" src="../IMG/ARTWORK/planet-merge-02.jpg"/>
+			</div>
+			<div style="width:820px;position:relative;top:400px">
+				<h1>Threathen other viral empires</h1>
+				<span class="cyan">Apart from merging cells, you can also destroy opponent cells with deadly items.</span>
+			</div>
+			<div style="width:820px;position:relative;top:450px">
+				<div class="inline white-border" style="width:60px;height:82px">
+					<img width="54px" src="http://starcolon.com/planet/content/img/item/item-030.png"/>
 				</div>
-				<div class="screenshot-mega inline">
-					<img src="../IMG/ARTWORK/planet-ss-03.jpg" alt="planet of cells game screenshot"/>
+				<div class="inline white-border" style="width:60px;height:82px">
+					<img width="54px" src="http://starcolon.com/planet/content/img/item/item-032.png"/>
 				</div>
-				<div class="screenshot-mega inline">
-					<img src="../IMG/ARTWORK/planet-ss-04.jpg" alt="planet of cells game screenshot"/>
+				<div class="inline white-border" style="width:60px;height:82px">
+					<img width="54px" src="http://starcolon.com/planet/content/img/item/item-033.png"/>
 				</div>
-				<div class="screenshot-mega inline">
-					<img src="../IMG/ARTWORK/planet-ss-05.jpg" alt="planet of cells game screenshot"/>
+				<div class="inline white-border" style="width:60px;height:82px">
+					<img width="54px" src="http://starcolon.com/planet/content/img/item/item-034.png"/>
+				</div>
+				<div class="inline white-border" style="width:60px;height:82px">
+					<img width="54px" src="http://starcolon.com/planet/content/img/item/item-035.png"/>
+				</div>
+				<div class="inline white-border" style="width:60px;height:82px">
+					<img width="54px" src="http://starcolon.com/planet/content/img/item/item-038.png"/>
+				</div>
+				<div class="inline white-border" style="width:60px;height:82px">
+					<img width="54px" src="http://starcolon.com/planet/content/img/item/item-039.png"/>
 				</div>
 			</div>
 		</section>
-		<section class="black white" style="height:4200px">
-			<div class="left-float-fixed" data-2020="opacity:1" data-2220="opacity:0.2">
-				<h2>What if you can conquer the entire world ... with a seed virus</h2>
+		<section class="black white centered" style="height:1250px">
+			<div class="free-float stretch" style="background-image:url('../IMG/ARTWORK/planet-ex-09.jpg');background-size:auto 100%;background-position:10%;top:0;left:0;
+			filter:brightness(0.23) hue-rotate(130deg) saturate(1.1) opacity(0.8)"
+			data-6000="opacity:0" data-6500="opacity:1">
+				<!-- COVER BACKGROUND -->	
 			</div>
-			<!-- PRESENTATION LYRICS ---------------------------------------------------->
-			<div class="fullwidth free-float" style="bottom:0;height:75px;background-image:url('../PATTERN/gray-horz.png')"
-			data-1770="opacity:0" data-2000="opacity:1" data-5750="opacity:1" data-6120="opacity:0">
-				<div class='stretch transparent-black-gradient-invert'>
-					<!-- BOTTOM GRADIENT BAND ------>
-				</div>
-			</div>
-			<div class="fullwidth free-float" style="height:55px"
-			data-2000="top:100%" data-2150="top:18%" data-2350="top:14%;opacity:1" 
-			data-2800="opacity:0;top:14%" data-6000="top:-100%;">
-				<div class="center" style="width:450px;height:281px">
-					<img class="stretch" src="../IMG/ARTWORK/planet-slide-01.png"/>
-				</div>
-			</div>
-			<div class="fullwidth free-float" style="top:63%"
-			data-2300="top:63%;opacity:0" data-2500="opacity:1" 
-			data-2880="top:63%;opacity:1" data-2980="opacity:0;top:63%"
-			data-7000="top:-90%">
-				As a few cells grow up
-			</div>
-			<div class="fullwidth free-float" style="height:55px;top:14%"
-			data-3000="top:100%" data-3150="top:18%" data-3350="top:14%;opacity:1" 
-			data-3800="opacity:0;top:14%" data-6000="opacity:0;top:-100%">
-				<div class="center" style="width:450px;height:281px">
-					<img class="stretch" src="../IMG/ARTWORK/planet-slide-02.png"/>
-				</div>
-			</div>
-			<div class="fullwidth free-float" style="top:63%"
-			data-3300="top:63%;opacity:0" data-3500="opacity:1" 
-			data-3880="top:63%;opacity:1" data-3980="opacity:0;top:63%"
-			data-7000="top:-90%">
-				They reproduce and occupy larger territory<br/>
-				through time...
-			</div>
-			<div class="fullwidth free-float" style="height:55px;top:14%"
-			data-4000="top:100%" data-4150="top:18%" data-4350="top:14%;opacity:1" 
-			data-4800="opacity:0;top:14%" data-6000="opacity:0;top:-100%">
-				<div class="center" style="width:450px;height:281px">
-					<img class="stretch" src="../IMG/ARTWORK/planet-slide-03.png"/>
-				</div>
-			</div>
-			<div class="fullwidth free-float" style="top:63%"
-			data-4300="top:63%;opacity:0" data-4500="opacity:1" 
-			data-4880="top:63%;opacity:1" data-4980="opacity:0;top:63%"
-			data-7000="top:-90%">
-				As the territory expands and overlap others
-			</div>
-			<div class="fullwidth free-float" style="height:55px;top:14%"
-			data-5000="top:100%" data-5150="top:18%" data-5350="top:14%;opacity:1" 
-			data-5800="opacity:0;top:14%" data-6000="top:-100%">
-				<div class="center" style="width:450px;height:281px">
-					<img class="stretch" src="../IMG/ARTWORK/planet-slide-04.png"/>
-				</div>
-			</div>
-			<div class="fullwidth free-float" style="top:63%"
-			data-5300="top:63%;opacity:0" data-5500="opacity:1" 
-			data-5880="top:63%;opacity:1" data-5980="opacity:0;top:63%"
-			data-7000="top:-90%">
-				They eat neighboring territories and expand even further, become more unstoppable
-			</div>
-		</section>
-		<section class="black" style="height:266px">
-			<div class="fullwidth">
-
-
-
-
-			</div>
-		</section>
-		<section style="background-image:url('../IMG/ARTWORK/planet-ss-04.jpg');height:1000px;border-top:1px solid black;box-shadow:0 0 2px black;background-size:cover">
-			<div class="fullwidth black-translucent" style="height:26px">
-				<!-- padding -->
-			</div>
-			<div class="fullwidth black-translucent gray">
-				3RD BETA PROTOTYPE IS OUT AND READY!
-			</div>
-			<div class="fullwidth black-translucent" style="height:26px">
-				<!-- padding -->
-			</div>
-			<div class="fullwidth black" style="height:800px;background-color:rgba(0,0,0,0.35)">
-				<div class="free-float" style="top:116px;left:0;right:0">
-					<div class="link-box blackshadow black-translucent lime link circle"
-					style="width:190px;height:190px;background-color:rgba(0,0,0,0.45);border:5px solid black;left:0;right:0;margin:auto"
-					data-6558="opacity:0" data-6720="opacity:1">
-						<div class="fullwidth" style="height:32px"><!--padding--></div>
-						<div class="fullwidth link-limelight" 
-							onclick="document.location='http://starcolon.com/planet/'"
-							style="font-size:64pt;text-shadow:0 0 6px black">
-								&#x27a4;
+			<div class="free-float center-screen black-semitransparent" style="width:750px;height:420px" data-6100="top:100%" data-6570="top:18%">
+				<div data-role="content" class="stretch">
+					<div data-role="inner-content" class="green bigtext" style="margin:15px 20px;width:auto">
+						<h2 class="underline">Available in Chrome Webstore</h2>
+						Play Planet of Cells with your favorite browsers.</br>
+						Also, you can install it from Chrome Webstore.
+						<div class="green-border link" style="width:340px;height:96px;margin-left:20px;margin-top:35px" onclick="window.open('https://chrome.google.com/webstore/detail/planet-of-cells/oifhobeedkjhkeiegppjiajcjlloenfb','_blank')">
+							<img src="https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png">
 						</div>
-						<div class="fullwidth link-limelight" 
-							onclick="document.location='http://starcolon.com/planet/'"
-							style="margin-top:-8px;font-size:20pt">
-								Play now
+						<div style="position:relative;top:-80px;left:390px">
+							<button onclick="window.open('http://starcolon.com/planet/','_blank')">PLAY NOW !</button>
 						</div>
-					</div>
-				</div>
-				<div class="free-float blackshadow cyan" 
-				style="top:325px;width;240px;font-size:20pt;left:0;right:0;margin:0 auto"
-				data-6700="opacity:0" data-6850="opacity:1">
-					Expand your great empire of virus
-				</div>
-				<div class="free-float blackshadow cyan" 
-				style="top:370px;left:0;right:0"
-				data-6700="opacity:0" data-6850="opacity:1">
-					 Spawn your virus and let them expand!
-				</div>
-				<div class="free-float blackshadow orange" 
-				style="top:445px;font-size:14pt;padding:8px 8px;left:0;right:0">
-					<div style="width:220px;border:1px solid black;left:0;right:0;margin:0 auto"
-					data-6800="opacity:0;background-color:rgba(0,0,0,0)" 
-					data-6890="opacity:1;background-color:rgba(0,0,0,0.35)">
-						<button class="wireframe" data-118="font-size:15pt"
-					data-230="font-size:11pt" onclick="document.location='expand-empire-of-virus/index.html'">
-						TIPS: Expand the empire of virus
-					</button>
+						<span class="smalltext">Planet of Cells is FREE to play!</span>
 					</div>
 				</div>
 			</div>

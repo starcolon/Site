@@ -180,6 +180,11 @@ sup
 	position: fixed;
 }
 
+.center-text
+{
+	text-align: center;
+}
+
 .ads-link
 {
 	cursor: pointer;
@@ -232,6 +237,12 @@ sup
 	border-bottom:1px solid white;
 	padding: 15px 10px;
 	color:white;
+}
+
+.green-border
+{
+	border:1px solid springgreen;
+	color: springgreen;
 }
 
 .black-border
@@ -316,6 +327,11 @@ sup
 	color: turquoise;
 }
 
+.bigtext, .bigtext *
+{
+	font-size:120%;
+}
+
 .smalltext, .smalltext *
 {
 	font-size:89%;
@@ -329,6 +345,12 @@ sup
 .minitext, .minitext *
 {
 	font-size:76%;
+}
+
+.underline
+{
+	padding-bottom: 2px;
+	border-bottom:1px solid;
 }
 
 .noshadow
@@ -440,6 +462,11 @@ p.closed
 	background-color: rgba(0,0,0,0.77);
 }
 
+.black-semitransparent
+{
+	background-color: rgba(0,0,0,0.37);
+}
+
 .inset-black-text
 {
 	color:#505050;
@@ -505,6 +532,11 @@ p.closed
 .rel
 {
 	position: relative;
+}
+
+.nospace
+{
+	margin:0;
 }
 
 .floatleft
@@ -703,7 +735,7 @@ section.black
 
 section.dark
 {
-	background-color: #200500;
+	background-color: #181828;
 }
 
 section.black-mesh
@@ -715,6 +747,14 @@ section.black-mesh
 section.centered > div
 {
 	margin:0 auto;
+}
+
+section.gravity > div
+{
+	margin-bottom:0;
+	margin-left:auto;
+	margin-right:auto;
+	bottom:0;
 }
 
 div.centered > div
