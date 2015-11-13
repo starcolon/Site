@@ -80,9 +80,7 @@
 			data-300="top:245px;opacity:1" data-420="top:-200px;opacity:0">
 				<div class="circle center" style="background-color:white;width:88px;height:88px;color:black;
 				border:4px solid black;box-shadow:-1px 1px 4px black">
-					<div style="width:100%;height:100%;padding:8px 3px;font-size:42pt">
-						&#x2731;:
-					</div>
+					<div style="width:100%;height:100%;padding:8px 3px;font-size:42pt" id="logo-eye">&#x2731;:</div>
 				</div>
 			</div>
 			<div class="fullwidth free-float" style="font-size:11pt"
@@ -256,6 +254,18 @@ function flashCover(){
 		},18);
 	})();
 }
+
+function blink(){
+	if ($('#logo-eye')[0].innerHTML.trim().length==2){
+		$('#logo-eye')[0].innerHTML = '&#x2731;&nbsp;';
+		setTimeout(blink, 100);
+	}
+	else{
+		$('#logo-eye')[0].innerHTML ='&#x2731;:';
+		setTimeout(blink, 3000);
+	}	
+}
 hideCircleLabels();
+blink();
 
 </script>
