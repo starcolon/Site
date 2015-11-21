@@ -384,7 +384,8 @@ sup
 
 p.big
 {
-	font-size:31pt;
+	font-size: 42pt;
+   	letter-spacing: -1pt;
 }
 
 p.closed
