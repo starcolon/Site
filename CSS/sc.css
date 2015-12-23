@@ -807,6 +807,7 @@ ul.entry-menu > li
 	padding:5px 3px;
 	cursor:pointer;
 	background-size: cover;
+	background-position: 0 0;
 	margin-top:8px;
 	-webkit-transition:all 0.2s linear;
 	-moz-transition:all 0.2s linear;	
@@ -814,12 +815,27 @@ ul.entry-menu > li
 	transition-property:all;
 	transition-duration:0.2s;
 	cursor:pointer;
+	-webkit-transition:all 0.06s linear;
+	-moz-transition:all 0.06s linear;
+	-o-transition:all 0.06s linear;
+	transition-property:all;
+	transition-duration:0.06s;
 }
 
+ul.entry-menu > li:hover
+{
+	background-position: 0 30%;
+	-webkit-transition:all 0.06s linear;
+	-moz-transition:all 0.06s linear;
+	-o-transition:all 0.06s linear;
+	transition-property:all;
+	transition-duration:0.06s;
+}
 
 ul.entry-menu > li:hover > span
 {
 	color:yellow;
+	font-size:20pt;
 	background-color: : rgba(20,20,0,0,8);
 	-webkit-transition:all 0.06s linear;
 	-moz-transition:all 0.06s linear;
