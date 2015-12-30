@@ -1,7 +1,7 @@
 *
 {
 	font-family: 'CoreSansA35Light';
-	font-size:14pt;
+	font-size:15pt;
 }
 
 body
@@ -161,6 +161,13 @@ h2
 sup
 {
 	font-size:65%;
+}
+
+pre
+{
+	border-top:1px solid rgba(200,200,200,0.5);
+	border-bottom:1px solid rgba(200,200,200,0.5);
+	margin:15px 0;
 }
 
 .center
@@ -325,6 +332,11 @@ sup
 .lightaqua, .lightaqua *
 {
 	color: turquoise;
+}
+
+.gigantic
+{
+	font-size:250pt;
 }
 
 .bigtext, .bigtext *
