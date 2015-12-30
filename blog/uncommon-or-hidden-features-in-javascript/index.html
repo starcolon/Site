@@ -81,26 +81,7 @@
 		<section class="white black centered">
 			<div style="padding-top:90px;width:800px">
 				<h2>Named-argument-like just like Python</h2>
-				People usually encounter functions which accepts many arguments and it's probably lead to difficulty maintaining them at some degree. See the following sample.
-			</div>
-			<div class="white-border black" style="margin-top:40px;width:85%">
-				<pre>
-					<code class="language-js">
-						function doJob(taskId,isHaltWhenFail,isSynchronous,params){
-							/* Whoa */
-						}
-
-						// Call it
-						doJob(10001,false,false,['a','b']);
-						doJob(10010,true,false,['i','j','k']);
-					</code>
-				</pre>
-			</div>
-			<div style="padding-top:40px;width:800px">
-				This would debatably cause some confusion when somebody happen to modify the function call. Not everyone will remember what the meaning of each argument is. Peeking the documentation or the function definition might be a bit annoying.
-				<p class="cyan">
-				Instead, we can do the following.
-				</p>
+				Using variable assignment statements as named-argument-like code may help inspecting the argument a bit easier.
 			</div>
 			<div class="white-border black" style="margin-top:40px;width:85%">
 				<pre>
@@ -116,7 +97,7 @@
 				</pre>
 			</div>
 			<div style="padding-top:40px;width:800px">
-				Now life is easier.
+				No matter how long the argument list is - this simple trick could implicitly add some semantic to those arguments for the sake of simplicity.
 			</div>
 			<div style="padding-top:40px;width:800px">
 				<span class="cyan">CAVEAT</span> This trick potentially assigns the values to the named variable upon a function call. In case the variable names are duplicate with the previously defined ones, their values will be replaced.
@@ -142,7 +123,65 @@
 		</section>
 		<section class="white black centered">
 			<div style="padding-top:90px;width:800px">
-				<h2>Sssss</h2>
+				<h2>Replace If statement with logical and</h2>
+				You can shrink the following simple If statement.
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						if (this || that){
+							this.a = that;
+							done();
+						}
+					</code>
+				</pre>
+			</div>
+			<div style="padding-top:40px;width:800px">
+				Into this
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						// One liner
+						(this || that) && (this.a = that) || done(); 
+					</code>
+				</pre>
+			</div>
+			<div style="padding-top:40px;width:800px">
+				The technique is simple. It short-circuits the logical and statement whenever the term is not evaluated to true.
+				Applying this technique to a bit more complicated nested statement like following.
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						for (var a of list){
+							if (a.isDone){
+								a.val++;
+							}
+							if (a.isReady && a.val>42){
+								do(a)
+							}
+						}
+					</code>
+				</pre>
+			</div>
+			<div style="padding-top:40px;width:800px">
+				So it becomes neater and less pyramid-of-doom look.
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						for (var a of list){
+							a.isDone && a.val++;
+							a.isReady && a.val>42 && do(a);
+						}
+					</code>
+				</pre>
+			</div>
+		</section>
+		<section class="white black centered">
+			<div style="padding-top:90px;width:800px">
+				<h2>Foobaz</h2>
 			</div>
 		</section>
 	</body>
