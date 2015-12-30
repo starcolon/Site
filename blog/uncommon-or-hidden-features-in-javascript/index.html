@@ -92,11 +92,57 @@
 
 						// Call it
 						doJob(10001,false,false,['a','b']);
-						//..
-						//..
 						doJob(10010,true,false,['i','j','k']);
 					</code>
 				</pre>
+			</div>
+			<div style="padding-top:40px;width:800px">
+				This would debatably cause some confusion when somebody happen to modify the function call. Not everyone will remember what the meaning of each argument is. Peeking the documentation or the function definition might be a bit annoying.
+				<p class="cyan">
+				Instead, we can do the following.
+				</p>
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						// Call it with named arguments
+						doJob(
+							taskId=10001,
+							isHaltWhenFail=false,
+							isSynchronous=false,
+							params=['a','b']
+						);
+					</code>
+				</pre>
+			</div>
+			<div style="padding-top:40px;width:800px">
+				Now life is easier.
+			</div>
+			<div style="padding-top:40px;width:800px">
+				<span class="cyan">CAVEAT</span> This trick potentially assigns the values to the named variable upon a function call. In case the variable names are duplicate with the previously defined ones, their values will be replaced.
+		</section>
+		<section class="white black centered">
+			<div style="padding-top:90px;width:800px">
+				<h2>Unsigned bitwise shift</h2>
+				Everyone knows bitwise shift operators <span class="yellow">&lt;&lt;</span> and <span class="yellow">&gt;&gt;</span> which are <span class="orange">signed operators</span>. Nonetheless, there available another unsigned bitwise operator in JavaScript.
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						// Signed bitwise shifts
+						16 >> 1; // 8
+						-16 >> 1; // -8
+
+						// Unsigned bitwise shifts
+						16 >>> 1; // 8
+						-16 >>> 1; // 2147483640 (Signed bit also shifted)
+					</code>
+				</pre>
+			</div>
+		</section>
+		<section class="white black centered">
+			<div style="padding-top:90px;width:800px">
+				<h2>Sssss</h2>
 			</div>
 		</section>
 	</body>

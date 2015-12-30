@@ -149,7 +149,7 @@ h1.big
 
 h2
 {
-	font-size:118%;
+	font-size:124%;
 	margin-top:3px;
 	padding-top:3px;
 	padding-bottom: 3px;
@@ -167,7 +167,6 @@ pre
 {
 	border-top:1px solid rgba(200,200,200,0.5);
 	border-bottom:1px solid rgba(200,200,200,0.5);
-	margin:15px 0;
 }
 
 .center
