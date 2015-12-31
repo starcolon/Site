@@ -1,7 +1,7 @@
 *
 {
 	font-family: 'CoreSansA35Light';
-	font-size:14pt;
+	font-size:15pt;
 }
 
 body
@@ -149,7 +149,7 @@ h1.big
 
 h2
 {
-	font-size:118%;
+	font-size:124%;
 	margin-top:3px;
 	padding-top:3px;
 	padding-bottom: 3px;
@@ -161,6 +161,12 @@ h2
 sup
 {
 	font-size:65%;
+}
+
+pre
+{
+	border-top:1px solid rgba(200,200,200,0.5);
+	border-bottom:1px solid rgba(200,200,200,0.5);
 }
 
 .center
@@ -327,6 +333,11 @@ sup
 	color: turquoise;
 }
 
+.gigantic
+{
+	font-size:250pt;
+}
+
 .bigtext, .bigtext *
 {
 	font-size:120%;
@@ -415,6 +426,26 @@ p.closed
 	background: -ms-linear-gradient(top, #f48230 0%,#e26e53 100%); /* IE10+ */
 	background: linear-gradient(to bottom, #f48230 0%,#e26e53 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f48230', endColorstr='#e26e53',GradientType=0 ); /* IE6-9 */
+}
+
+.top-down-green-gradient
+{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005700+13,000000+100 */
+	background: #005700; /* Old browsers */
+	background: -moz-linear-gradient(top, #005700 13%, #000000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #005700 13%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #005700 13%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005700', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.top-down-silver-gradient
+{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f7f7+0,d6d6d6+100 */
+	background: rgb(247,247,247); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(247,247,247,1) 0%, rgba(214,214,214,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(247,247,247,1) 0%,rgba(214,214,214,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(247,247,247,1) 0%,rgba(214,214,214,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
 }
 
 .transparent-black-gradient
@@ -634,6 +665,11 @@ div.snapmiddle
 	vertical-align: middle;
 }
 
+div.snaptop
+{
+	vertical-align: top;
+}
+
 .ads-big
 {
 	width:100%;
@@ -807,6 +843,7 @@ ul.entry-menu > li
 	padding:5px 3px;
 	cursor:pointer;
 	background-size: cover;
+	background-position: 0 0;
 	margin-top:8px;
 	-webkit-transition:all 0.2s linear;
 	-moz-transition:all 0.2s linear;	
@@ -814,12 +851,27 @@ ul.entry-menu > li
 	transition-property:all;
 	transition-duration:0.2s;
 	cursor:pointer;
+	-webkit-transition:all 0.06s linear;
+	-moz-transition:all 0.06s linear;
+	-o-transition:all 0.06s linear;
+	transition-property:all;
+	transition-duration:0.06s;
 }
 
+ul.entry-menu > li:hover
+{
+	background-position: 0 30%;
+	-webkit-transition:all 0.06s linear;
+	-moz-transition:all 0.06s linear;
+	-o-transition:all 0.06s linear;
+	transition-property:all;
+	transition-duration:0.06s;
+}
 
 ul.entry-menu > li:hover > span
 {
 	color:yellow;
+	font-size:20pt;
 	background-color: : rgba(20,20,0,0,8);
 	-webkit-transition:all 0.06s linear;
 	-moz-transition:all 0.06s linear;
@@ -1046,7 +1098,17 @@ table td
 
 .circle
 {
-	border-radius: 50%;
+	border-radius: 50% 50%;
+}
+
+.bulb-button
+{
+	border-radius: 50% 50%;
+	border:1px solid rgba(10,10,10,0.6);
+	margin-top:5px;
+	width:16px;
+	height:16px;
+	box-shadow: inset -1px -1px 3px rgba(0,0,0,0.2);
 }
 
 .ring
