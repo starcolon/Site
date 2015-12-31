@@ -245,34 +245,14 @@ function hideCircleLabels(){
 	});
 }
 
-function flashCover(){
-	var bk = $('#cover');
-	var flashCount = 0;
-	(function flash(){
-		$(bk).css('filter','blur(20px)').css('-webkit-filter','blur(20px)');
-		setTimeout(function(){
-			$(bk).css('filter','blur(0)').css('-webkit-filter','blur(0)');
-			flashCount++;
-
-			if (flashCount < 4){
-				setTimeout(flash,18);
-			}
-			else{
-				flashCount = 0;
-				setTimeout(flashCover,3200);	
-			}
-		},18);
-	})();
-}
-
-function blink(){
+function wink(){
 	if ($('#logo-eye')[0].innerHTML.trim().length==2){
 		$('#logo-eye')[0].innerHTML = '&#x2731;&nbsp;';
-		setTimeout(blink, 100);
+		setTimeout(wink, 100);
 	}
 	else{
 		$('#logo-eye')[0].innerHTML ='&#x2731;:';
-		setTimeout(blink, 3000);
+		setTimeout(wink, 3000);
 	}	
 }
 
@@ -285,7 +265,8 @@ function cursorBlink(){
 	setTimeout(cursorBlink, 600);
 }
 
+
 hideCircleLabels();
-blink();
+wink();
 cursorBlink();
 </script>
