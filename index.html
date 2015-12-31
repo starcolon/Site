@@ -65,7 +65,7 @@
 				<!-- OVERLAY -->
 			</div>
 			<div class="free-float" style="width:80%;top:30px;border:1px solid black;height:80%;left:10%;background-color:rgba(0,0,0,0.4);box-shadow:0 1px 5px rgba(0,0,0,0.4)"
-			data-500="opacity:1" data-600="opacity:0">
+			data-200="opacity:1" data-400="opacity:0">
 				<!-- WINDOW FRAME -->
 				<div class="fullwidth top-down-silver-gradient" style="border-bottom:1px solid black;height:30px">
 					<!-- TITLE BAR-->
@@ -86,7 +86,9 @@
 						StarColon Projects
 					</div>
 					<div class="floatleft fullwidth" style="font-size:25pt;text-align:left">
-						$&gt;<span id="cursor">—</span>
+						$&gt;
+						<span id="input" class="cyan"></span>
+						<span id="cursor">_</span>
 					</div>
 				</div>
 			</div>
@@ -265,8 +267,30 @@ function cursorBlink(){
 	setTimeout(cursorBlink, 600);
 }
 
+function captureKey(evt){
+	var c = String.fromCharCode(evt.which);
+	// Append the input
+	if (input.length>30) input = [];
+	input.push(c);
+	$('#input').text(input.join(' '));
+}
 
-hideCircleLabels();
+function renderMsg(s){
+	if (s.length){
+		var c = s.splice(0,1);
+		var key = $.Event('keydown');
+		key.which = c[0].charCodeAt(0);
+		$(document).trigger(key);
+		setTimeout(function(){renderMsg(s)},100);
+	}
+}
+
+var input = [];
+var welcomeMsg = "We_engineer_fun_stuffs!".split('');
+$(document).keydown(captureKey);
+
+renderMsg(welcomeMsg);
 wink();
 cursorBlink();
+hideCircleLabels();
 </script>
