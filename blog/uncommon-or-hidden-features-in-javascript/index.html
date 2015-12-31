@@ -215,6 +215,37 @@
 				</pre>
 			</div>
 		</section>
+		<section class="white black centered">
+			<div style="padding-top:90px;width:800px">
+				<h2 style="color:yellow">Measure the time interval to process something</h2>
+				Some developers may just simply create a <span class="yellow">Date</span> to memorize the starting time, then potentially create one another Date once the processing is done. Subtract them and gain the time interval. This is not bad but there is still some better approach.
+			</div>
+			<div style="padding-top:40px;width:800px">
+				Thing is easier with <span class="cyan">console.time</span> and <span class="cyan">console.timeEnd</span>
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						// Beginning of the interval
+						console.time('process list');
+						getList()
+							.do(removeDuplicates)
+							.do(process)
+							.do(print)
+							.do(function done(){
+								// Done! stop the timer
+								console.timeEnd('process list');
+							})
+					</code>
+				</pre>
+			</div>
+			<div style="padding-top:40px;width:800px">
+				You don't need to declare multiple Date variables, subtract, and format the output. The console just simply does it all for you and have the measured time interval printed on the console. 
+				<p>
+					This is comfortable.
+				</p>
+			</div>
+		</section>
 		<section class="white centered" style="margin-top:40px;background-color:rgba(0,40,80,0.77)">
 			<div class="cyan" style="padding-top:60px;padding-bottom:60px;width:800px">
 				JavaScript is flexible (but lots of people say it's too jack-of-all-trade). Same work can be achieved with multitude of coding techniques. This is a real joy of coding with JavaScript.
