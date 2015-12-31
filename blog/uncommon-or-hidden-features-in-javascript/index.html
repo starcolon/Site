@@ -181,12 +181,43 @@
 		</section>
 		<section class="white black centered">
 			<div style="padding-top:90px;width:800px">
-				<h2 style="color:yellow">Foobaz</h2>
+				<h2 style="color:yellow">Check if it's a number</h2>
+				In JavaScript, you can use the built-in function <span class='cyan'>isNaN</span> to check whether something is not a number. Conversely, you can adopt a function which checks whether something is a number by deriving from it.
+				<p>
+				For an example, you want to filter an array so it contains only numbers.
+				</p>
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						// You want to filter this list
+						var list = [1,2,3,null,null,undefined,'5',6,Infinity];
+
+						// Into something like [1,2,3,6]
+					</code>
+				</pre>
+			</div>
+			<div style="padding-top:40px;width:800px">
+				You can just borrow functionality of <span class='cyan'>isNaN</span> and do the following.
+			</div>
+			<div class="white-border black" style="margin-top:40px;width:85%">
+				<pre>
+					<code class="language-js">
+						// You want to filter this list
+						var list = [1,2,3,null,null,undefined,'5',6,Infinity];
+
+						var isNumber = function(n){
+							return !isNaN(n)
+						}
+
+						numberOnly = list.filter(isNumber); // [1,2,3,6]
+					</code>
+				</pre>
 			</div>
 		</section>
 		<section class="white centered" style="margin-top:40px;background-color:rgba(0,40,80,0.77)">
 			<div class="cyan" style="padding-top:60px;padding-bottom:60px;width:800px">
-				JavaScript is flexible. Same work can be achieved with multitude of coding techniques. This is a real joy of coding with JavaScript.
+				JavaScript is flexible (but lots of people say it's too jack-of-all-trade). Same work can be achieved with multitude of coding techniques. This is a real joy of coding with JavaScript.
 			</div>
 		</section>
 	</body>
