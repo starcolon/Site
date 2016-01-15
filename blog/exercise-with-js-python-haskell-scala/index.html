@@ -74,18 +74,49 @@
 			<h1 class="white" style="padding-left:100px">EX1: Generate a list of tuples (1,2),(3,4),(5,6),...</h1>
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">JS</h2>
-				dddddd
+				<div class="white">
+					JavaScript is very handy at this job. Go for ES6 generator for lazy evaluation.
+					<pre>
+					<code class="language-js">
+						function* gen(n){
+							yield [n,n+1];
+							yield* gen(n+2);
+						}
+
+						var tuples = gen(1); // Initiate
+						// Go...
+						tuples.next().value; // [1,2]
+						tuples.next().value; // [3,4]
+						tuples.next().value; // [5,6]
+					</code>
+				</pre>
+				</div>
 			</div>
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">Python</h2>
-				dddddd
+				Do it in Python like a boss.
+				<pre>
+				<code class="language-python">
+					def gen(n):
+						yield (n,n+1)
+						n = n + 1
+
+					# Initiate
+					tuples = gen(1)
+
+					# Go go!
+					next(tuples) # (1,2)
+					next(tuples) # (3,4)
+					next(tuples) # (5,6)
+				</code>
+				</pre>
 			</div>
 
 		</section>
 
 
 		<section class="black centered" style="margin-top:80px">
-			<h1 class="white" style="padding-left:100px">EX2: Fibonacci as tuples (1,1),(2,3),(5,8),...</h1>
+			<h1 class="white" style="padding-left:100px">EX2: Fibonacci tuples (1,1),(2,3),(5,8),...</h1>
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">JS</h2>
 				dddddd
