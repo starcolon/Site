@@ -101,8 +101,9 @@
 				<pre>
 				<code class="language-python">
 					def gen(n):
-						yield (n,n+1)
-						n = n + 1
+						while True:
+							yield (n,n+1)
+							n = n + 1
 
 					# Initiate
 					tuples = gen(1)
@@ -122,7 +123,9 @@
 				<pre>
 				<code class="language-haskell">
 					-- Infinite run
-					[(i,i+1) | i <- [1,3..]] -- [(1,2),(3,4),(5,6)..]
+					[(i,i+1) | i <- [1,3..]] 
+
+					-- [(1,2),(3,4),(5,6).......... until you beg it to stop.
 				</code>
 				</pre>
 		</section>
@@ -133,11 +136,55 @@
 				<span style="color:cyan">EX2:</span> Fibonacci tuples (1,1),(2,3),(5,8),...</h1>
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">JS</h2>
-				dddddd
+				<div class="white">
+					Generator comes into play yet again.
+					<pre>
+					<code class="language-js">
+						function* gen(a,b){
+							yield [a, b];
+							yield* gen(a+b, a+2*b);
+						}
+
+						var tuples = gen(1,1); // Initiate first 2 elements
+						// Go...
+						tuples.next().value; // [1,1]
+						tuples.next().value; // [2,3]
+						tuples.next().value; // [5,8]
+					</code>
+					</pre>
+				</div>
 			</div>
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">Python</h2>
-				dddddd
+				<div class="white">
+					Similar formula with the preceding JS snippet.
+				</div>
+				<pre>
+				<code class="language-python">
+					def gen(a,b):
+						while True:
+							yield (a,b)
+							a, b = a+b, a+2*b
+
+					# Initiate
+					tuples = gen(1,1)
+
+					# Go go!
+					next(tuples) # (1,1)
+					next(tuples) # (2,3)
+					next(tuples) # (5,8)
+				</code>
+				</pre>
+			</div>
+			<div style="padding-top:50px;width:800px">
+				<h2 class="orange">Haskell</h2>
+				<div class="white">
+					Lend the power of list interpolation.
+				</div>
+				<pre>
+				<code class="language-haskell">
+				</code>
+				</pre>
 			</div>
 
 		</section>
