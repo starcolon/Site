@@ -189,5 +189,37 @@
 
 		</section>
 
+
+		<section class="black centered" style="margin-top:80px">
+			<h1 class="white" style="padding-left:100px">
+				<span style="color:cyan">EX3:</span> Given a list of triplets (a,b,c), find ones which form right triangles<br/> and return areas of each of them.</h1>
+			<div style="padding-top:50px;width:800px">
+				<h2 class="orange">JS</h2>
+				<div class="white">
+					Filter and Map can help.
+					<pre>
+					<code class="language-js">
+						var candidates = [[1,1,5],[3,4,5],[5,12,13],[10,20,30]];
+						function rightTriangle(a,b,c){
+							return c*c == a*a + b*b
+						}
+						function area(a,b,c){
+							return 0.5*a*b
+						}
+
+						// Filter qualifiers
+						candidates.filter(rightTriangle).map(area);
+
+						// Filtered ..
+						// [[3,4,5],[5,12,13]
+
+						// Mapped ..
+						// [6,30]
+					</code>
+					</pre>
+				</div>
+			</div>
+		</section>
+
 	</body>
 </html>
