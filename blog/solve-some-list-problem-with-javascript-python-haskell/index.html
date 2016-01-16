@@ -179,10 +179,15 @@
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">Haskell</h2>
 				<div class="white">
-					Lend the power of list interpolation.
+					Recursion does the trick.
 				</div>
 				<pre>
 				<code class="language-haskell">
+					let fibo_tuple a b = [(a,b)] ++ fibo_tuple (a+b) (a+b*2)
+
+					# Try 
+					fibo_tuple 1 1 
+					# [(1,1),(2,3),(5,8),(13,21),(34,55) ..... Runs forever
 				</code>
 				</pre>
 			</div>
@@ -373,9 +378,42 @@
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">Python</h2>
 				<div class="white">
-					ddd
+					When it comes into Pythonic syntax, list comprehension is very beneficial to the situation!
 					<pre>
-					<code class="language-js">
+					<code class="language-python">
+						def proper_divisor(n):
+							# Get all proper divisors
+							divisors = [i for i in range(n) if i>0 and n%i==0]
+
+							# Function which checks whether
+							# nothing in list can divide i
+							def indivisible(i,list):
+								d = [j for j in list if j&lt;i and j>1 and i%j==0]
+								return len(d) == 0
+
+
+							# Take only prime out of them
+							prime_divisors = [i for i in divisors if indivisible(i,divisors))]
+
+							return prime_divisors
+
+
+						# Try it on
+						properDivisor(18) # [1,2,3]
+						properDivisor(188) # [1,2,47]
+						properDivisor(1888) # [1,2,59]
+						properDivisor(2000) # [1,2,5]
+					</code>
+					</pre>
+				</div>
+			</div>
+			<div style="padding-top:50px;width:800px">
+				<h2 class="orange">Haskell</h2>
+				<div class="white">
+					Haskell hurts people brutally mentally, often. This is one of the practical proof.
+					<pre>
+					<code class="language-haskell">
+
 					</code>
 					</pre>
 				</div>
