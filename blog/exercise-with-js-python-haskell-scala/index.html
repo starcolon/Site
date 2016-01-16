@@ -312,6 +312,25 @@
 					</pre>
 				</div>
 			</div>
+			<div style="padding-top:50px;width:800px">
+				<h2 class="orange">Haskell</h2>
+				<div class="white">
+					This can be done recursively within a one-liner guarding.
+					<pre>
+					<code class="language-haskell">
+						-- Recursion comes into play
+						let shiftR xs n | n==0 = xs | otherwise = shiftR ([last xs] ++ init xs) n-1
+
+						-- Try it on
+						shiftR [1,2,3,4] 3 
+						-- [2,3,4,1]
+
+						shiftR [1,2,3,4,5,6,7] 8
+						-- [7,1,2,3,4,5,6,7]
+					</code>
+					</pre>
+				</div>
+			</div>
 		</section>
 
 	</body>
