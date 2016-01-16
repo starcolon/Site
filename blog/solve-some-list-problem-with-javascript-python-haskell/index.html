@@ -356,7 +356,7 @@
 							}
 						}
 
-						function properDivisor(n){
+						function primeDivisor(n){
 							var divisors = [];
 							for (var a=2; a&lt;n; a++){
 								if (isDivisible(n)(a) && !divisors.some(isDivisible(a))){
@@ -367,10 +367,10 @@
 						}
 
 						// Now try
-						properDivisor(18); // [1,2,3]
-						properDivisor(188); // [1,2,47]
-						properDivisor(1888); // [1,2,59]
-						properDivisor(2000); // [1,2,5]
+						primeDivisor(18); // [1,2,3]
+						primeDivisor(188); // [1,2,47]
+						primeDivisor(1888); // [1,2,59]
+						primeDivisor(2000); // [1,2,5]
 					</code>
 					</pre>
 				</div>
@@ -399,10 +399,10 @@
 
 
 						# Try it on
-						properDivisor(18) # [1,2,3]
-						properDivisor(188) # [1,2,47]
-						properDivisor(1888) # [1,2,59]
-						properDivisor(2000) # [1,2,5]
+						primeDivisor(18) # [1,2,3]
+						primeDivisor(188) # [1,2,47]
+						primeDivisor(1888) # [1,2,59]
+						primeDivisor(2000) # [1,2,5]
 					</code>
 					</pre>
 				</div>
@@ -410,10 +410,20 @@
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">Haskell</h2>
 				<div class="white">
-					Haskell hurts people brutally mentally, often. This is one of the practical proof.
+					Haskell is relatively simpler for writing algorithm in Mathematical expressions. You know I'm kidding.
 					<pre>
 					<code class="language-haskell">
+						let divisors n = [1] ++ [i | i &lt;- [2..n], mod n i == 0]
 
+						let indivisible_by_any a b = length [i | i&lt;-b, a>i && mod a i == 0 && i>1] == 0
+
+						let prime_divisors n = [i | i &lt;- divisors n, indivisible_by_any i (divisors n)]
+
+						-- Go trying it
+						prime_divisors 18  -- [1,2,3]
+						prime_divisors 188 -- [1,2,47]
+						prime_divisors 1888 -- [1,2,59]
+						prime_divisors 2000 -- [1,2,5]
 					</code>
 					</pre>
 				</div>
