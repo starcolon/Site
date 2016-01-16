@@ -192,7 +192,12 @@
 
 		<section class="black centered" style="margin-top:80px">
 			<h1 class="white" style="padding-left:100px">
-				<span style="color:cyan">EX3:</span> Given a list of triplets (a,b,c), find ones which form right triangles<br/> and return areas of each of them.</h1>
+				<span style="color:cyan">EX3:</span> Given a list of triplets (a,b,c), find ones which form right triangles<br/> and return areas of triangles they form.</h1>
+			<div style="padding-top:50px;width:800px">
+				<span class="orange">NOTE:</span>
+				<span class="white">This is literally so called</span>
+				<a class="cyan" href="https://en.wikipedia.org/wiki/Pythagorean_triple">Pythgorean Triple</a>
+			</div>
 			<div style="padding-top:50px;width:800px">
 				<h2 class="orange">JS</h2>
 				<div class="white">
@@ -207,14 +212,102 @@
 							return 0.5*a*b
 						}
 
-						// Filter qualifiers
 						candidates.filter(rightTriangle).map(area);
 
 						// Filtered ..
 						// [[3,4,5],[5,12,13]
 
 						// Mapped ..
-						// [6,30]
+						// [6.0,30.0]
+					</code>
+					</pre>
+				</div>
+			</div>
+			<div style="padding-top:50px;width:800px">
+				<h2 class="orange">Python</h2>
+				<div class="white">
+					Filter and Map can help.
+					<pre>
+					<code class="language-python">
+						candidates = [[1,1,5],[3,4,5],[5,12,13],[10,20,30]]
+						def rightTriangle(a,b,c):
+							return c**2 == a**2 + b**2
+
+						def area(a,b,c):
+							return 0.5*a*b
+
+						[area(a,b,c) for a,b,c in candidates if rightTriangle(a,b,c)]
+
+						# [6.0,30.0]
+					</code>
+					</pre>
+				</div>
+			</div>
+			<div style="padding-top:50px;width:800px">
+				<h2 class="orange">Haskell</h2>
+				<div class="white">
+					Likewise, writing a chain of operations in Haskell is a real joy.
+					<pre>
+					<code class="language-haskell">
+						let candidates = [(1,1,5),(3,4,5),(5,12,13),(10,20,30)]
+
+						-- Pythagorean triple checker
+						let right_triangle (a,b,c) = c*c == a*a + b*b
+
+						-- Area
+						let area (a,b,c) = 0.5 * a * b
+
+						-- Do the pipeline
+						map area $ filter right_triangle candidates
+
+						-- [6.0, 30.0]
+					</code>
+					</pre>
+				</div>
+			</div>
+		</section>
+
+		<section class="black centered" style="margin-top:80px">
+			<h1 class="white" style="padding-left:100px">
+				<span style="color:cyan">EX4:</span> 
+				Cyclic shift. Right shifting [1,2,3,4] by 3 is supposed to result in [2,3,4,1]
+			</h1>
+			<div style="padding-top:50px;width:800px">
+				<h2 class="orange">JS</h2>
+				<div class="white">
+					Let's try it with recursion.
+					<pre>
+					<code class="language-js">
+						function shiftR(arr,n){
+							var list = arr.slice();
+							var a = list.pop();
+							list.splice(0,0,a);
+							(--n > 0) && (list = shiftR(list,n));
+							return list;
+						}
+
+						// Try it
+						shiftR([1,2,3,4],3); // [2,3,4,1]
+						shiftR([1,2,3,4,5,6,7],8); // [7,1,2,3,4,5,6]
+					</code>
+					</pre>
+				</div>
+			</div>
+			<div style="padding-top:50px;width:800px">
+				<h2 class="orange">Python</h2>
+				<div class="white">
+					Explicitly translate the previous algorithm to Python.
+					<pre>
+					<code class="language-python">
+						def shiftR(arr,n):
+							list = arr[:]
+							a = list.pop()
+							list = [a] + list
+							return shiftR(list,n-1) if n>0 else list
+
+						# Try
+						shiftR([1,2,3,4],3) # [2,3,4,1]
+						shiftR([1,2,3,4,5,6,7],8) # [7,1,2,3,4,5,6,7]
 					</code>
 					</pre>
 				</div>
