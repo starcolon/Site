@@ -64,16 +64,6 @@
 			<div class="stretch">
 				<!-- OVERLAY -->
 			</div>
-			<div class="free-float" style="width:80%;top:30px;border:1px solid black;height:80%;left:10%;background-color:rgba(0,0,0,0.4);box-shadow:0 1px 5px rgba(0,0,0,0.4)"
-			data-200="opacity:1" data-400="opacity:0">
-				<!-- WINDOW FRAME -->
-				<div class="fullwidth top-down-silver-gradient" style="border-bottom:1px solid black;height:30px">
-					<!-- TITLE BAR-->
-					<div class="inline snapmiddle floatleft bulb-button" style="margin-left:10px;background-color:#E03000"></div>
-					<div class="inline snapmiddle floatleft bulb-button" style="margin-left:3px;background-color:#E0A000"></div>
-					<div class="inline snapmiddle floatleft bulb-button" style="margin-left:3px;background-color:#00CC00"></div>
-				</div>
-			</div>
 			<div class="fullwidth free-float" 
 			data-300="top:245px;opacity:1" data-420="top:-200px;opacity:0">
 				<!-- WINKING EYE -->
@@ -85,17 +75,15 @@
 					<div class="floatleft fullwidth" style="font-size:35pt;text-align:left">
 						StarColon Projects
 					</div>
-					<div class="floatleft fullwidth" style="font-size:25pt;text-align:left">
-						$&gt;
-						<span id="input" class="cyan"></span>
-						<span id="cursor">_</span>
+					<div class="floatleft fullwidth" style="font-size:21pt;text-align:left">
+						Intelligent software at a glance
 					</div>
 				</div>
 			</div>
 			<div class="fullwidth free-float" style="font-size:11pt"
 			data-170="top:460px;opacity:1" data-440="top:-200px;opacity:0">
 				<span class="white-border" style="background-color:rgba(0,30,0,0.2);border:1px solid rgba(255,255,255,0.3);font-size:12pt">
-					WE ARE READY FOR 2016!
+					Explore our projects below
 				</span>
 			</div>
 			<!-- SCROLLDOWN NOTE ---------------------------------------------------------->
@@ -258,39 +246,6 @@ function wink(){
 	}	
 }
 
-function cursorBlink(){
-	if ($('#cursor').is(':visible'))
-		$('#cursor').hide();
-	else
-		$('#cursor').show();
-
-	setTimeout(cursorBlink, 600);
-}
-
-function captureKey(evt){
-	var c = String.fromCharCode(evt.which);
-	// Append the input
-	if (input.length>30) input = [];
-	input.push(c);
-	$('#input').text(input.join(' '));
-}
-
-function renderMsg(s){
-	if (s.length){
-		var c = s.splice(0,1);
-		var key = $.Event('keydown');
-		key.which = c[0].charCodeAt(0);
-		$(document).trigger(key);
-		setTimeout(function(){renderMsg(s)},100);
-	}
-}
-
-var input = [];
-var welcomeMsg = "We_engineer_fun_stuffs!".split('');
-$(document).keydown(captureKey);
-
-renderMsg(welcomeMsg);
 wink();
-cursorBlink();
 hideCircleLabels();
 </script>
