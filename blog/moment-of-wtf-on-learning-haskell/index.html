@@ -100,7 +100,43 @@
 				Passing negative number
 			</h1>
 			<div style="padding-top:50px;width:800px">
-				blah blah
+				<span class="white">
+				You may do this when you want to pass a negative number to a function in Python.
+				</span>
+				<pre>
+				<code class="language-python">
+					def f(a,b):
+						return a*b
+
+					f(5,3) # Just works
+					f(-5,3) # Just works
+				</code>
+				</pre>
+				<span class="white">
+				But it hurts you when you try to do the same thing in Haskell.
+				</span>
+				<pre>
+				<code class="language-haskell">
+					let f a b = a*b
+
+					f 5 3 -- works
+					f -5 3 -- WTF! Non type-variable argument in the constraint: Num (a -> a -> a)
+				</code>
+				</pre>
+				<span class="cyan">
+					Haskell sees -5 as an operation "minus something by five", not a number. This would blow your mind. Function first class doesn't always magically make life easier, it somehow hurts at the first glance.
+				</span>
+				<p class="white">
+					To cope with this, just wrap around it with parentheses.
+				</p>
+				<pre>
+				<code class="language-haskell">
+					let f a b = a*b
+
+					f 5 3 -- works
+					f (-5) 3 -- Awesome
+				</code>
+				</pre>
 			</div>
 		</section>
 	</body>
