@@ -139,5 +139,43 @@
 				</pre>
 			</div>
 		</section>
+		<section class="black centered" style="margin-top:80px">
+			<h1 class="white" style="padding-left:100px">
+				Left arrows, right arrows ... 
+			</h1>
+			<div style="padding-top:50px;width:800px">
+				<span class="white">
+					In Haskell universe, <span class="cyan">&lt;-</span> and <span class="cyan">-&gt;</span> are utilized in various areas to serve different purposes. For newbies, this is visually a nightmare.
+				</span>
+				<pre>
+				<code class="language-haskell">
+					[a | a &lt;- [1..n]]
+					..
+					..
+					[(a,b) | a &lt;- [1..n], b &lt;- [1,n..2*n]]
+					..
+					..
+					case u of
+					  Vector i,j -> (i,j)
+					  Scalar c -> (0,0)
+					..
+					..
+					map (\n -> n^2) [1..]
+					..
+					..
+				</code>
+				</pre>
+				<span class="white">
+					When they co-exist in a statement, somehow it hurts the beginners.
+				</span>
+				<pre>
+				<code class="language-haskell">
+					case u of
+					  Nothing -> 0
+					  Just v -> map (\i -> if i then [1..5] else []) [n>k| n&lt;-v, k&lt;-[1..3]]
+				</code>
+				</pre>
+			</div>
+		</section>
 	</body>
 </html>
