@@ -103,6 +103,40 @@
 				<span class="white">
 				Pythonistas might not feel uncomfortable with the complexity of how identations make such difference in terms of meanings in the code. Improper identations cause syntactic errors which most of the time the error messages are slightly misleading. In Python, the statements are indented to make the code structure well-organized in hierachy. In Haskell, identation causes statements to nest.
 				</span>
+				<p class="white">
+				The following code snippet demonstrates a general indentation case.
+				</p>
+				<pre>
+				<code class="language-haskell">
+					countEql a b = 
+					  let ab = [a'==b' | (a',b') &lt;- zip a b]
+					  in length $ filter (\n -> n) ab
+				</code>
+				</pre>
+				<span class="white">
+				But when it comes into binding <span class="cyan">do</span>, the same indentation will break:
+				</span>
+				<pre>
+				<code class="language-haskell">
+					something $ do
+					  let ab = [a'==b' | (a',b') &lt;- zip a b]
+					  in bindValue $ length $ filter (\n -> n) ab -- BREAKS
+				</code>
+				</pre>
+				<span class="cyan">Surprisingly, indent the `in` by several spaces will fix it.</span>
+				<pre>
+				<code class="language-haskell">
+					something $ do
+					  let ab = [a'==b' | (a',b') &lt;- zip a b]
+					    in bindValue $ length $ filter (\n -> n) ab -- works!
+				</code>
+				</pre>
+				<span class="white">
+					My celebrum hurts ...
+				</span>
+				<p class="cyan">
+					Still more like this awaiting to find. The language is beautiful but, still, I don't think it seems pretty friendly for new learners. It is somewhat like a smart quiet guy who is difficult to understand at first, but once you get along with him well as time goes, he will become a great fellowship.
+				</p>
 			</div>
 		</section>
 		<section class="black centered" style="margin-top:80px">
