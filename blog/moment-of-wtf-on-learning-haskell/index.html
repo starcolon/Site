@@ -91,9 +91,56 @@
 			<h1 class="white" style="padding-left:100px">
 				Doom of parentheses
 			</h1>
-			<div style="padding-top:50px;width:800px">
-				blah blah
+			<div class="white" style="padding-top:50px;width:800px">
+				You may want to have a look at <a href="http://rigaux.org/language-study/syntax-across-languages-per-language/Haskell.html" target="_blank">a complete list of Haskell block syntaxes</a> if you haven't realized what they are. In general, Haskell encourages the programmers to write redundant parentheses less. Most of Haskell syntaxes don't even need parentheses to group such expressions. This ultimately makes the code clean and minimized.
 			</div>
+			<div style="padding-top:20px;width:800px">
+				<span class="white">
+					Let's take a look at the following code.
+				</span>
+				<pre>
+				<code class="language-haskell">
+					u = realToFrac( head( zip ((*) a b ) ) )
+				</code>
+				</pre>
+				<p class="white">
+					This is simply not looking good in Haskell. You can remove unnecessary parentheses while the resultant code is still sound and legal as follows.
+				</p>
+				<pre>
+				<code class="language-haskell">
+					u = realToFrac $ head $ zip (*) a b
+				</code>
+				</pre>
+				<p class="cyan">
+					Gorgeous, neat and very nice looking. Let's then try another example which is a bit more complicated.
+				</p>
+				<pre>
+				<code class="language-haskell">
+					-- Say we have this at first
+					take(3 reverse( zipWith( (\a b -> (a-b)/(a+b)) [599,598..1] [290,280..0] ) ))
+
+					-- Remove unnessary parentheses
+					-- Group tokens with $ sign
+					take $ 3 reverse $ zipWith $ (\a b -> (a-b)/(a+b) [599,598..1] [290,280..]
+				</code>
+				</pre>
+				<p class="white">
+					However, in reality for beginners, the boundary of grouping could be unbelievably confusing ...
+				</p>
+				<pre>
+				<code class="language-haskell">
+					-- This breaks! 
+					take 3 $ reverse $ zipWith $ (\a b -> (a-b)/(a+b) [599,598..1] [290,280..]
+
+					-- This also does!
+					take $ 3 reverse $ zipWith (\a b -> (a-b)/(a+b) [599,598..1] [290,280..]
+				</code>
+				</pre>
+				<p class="cyan">
+					Can you spot the mistakes and give reasons why they are disfunctional?
+				</p>
+			</div>
+
 		</section>
 		<section class="black centered" style="margin-top:80px">
 			<h1 class="white" style="padding-left:100px">
@@ -222,6 +269,11 @@
 				<span class="white">
 					Beginners may probably find it painful to start googling for the explanation. It's difficult to say what the are, how to tokenize them into expressions and how they are called. Thus, they don't even know how to google (like I was). But, when you thrive learning the syntax, you'll eventually understand how it works very quickly.
 				</span>
+			</div>
+		</section>
+		<section class="white centered" style="margin-top:40px;background-color:rgba(0,20,50,0.77)">
+			<div class="cyan" style="padding-top:60px;padding-bottom:60px;width:800px">
+				Learning Haskell is great. The only caveat is it'll be hard to tackle the tough learning curve unless you remove all senses trained specifically for OOP or imperative languages. 
 			</div>
 		</section>
 	</body>
