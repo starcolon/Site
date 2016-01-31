@@ -127,13 +127,13 @@ header#window-header > div[data-elem='backhome']:hover
 
 h1
 {
-	font-size:130%;
-	margin-top:3px;
-	padding-top:3px;
-	padding-bottom:3px;
-	border-top:1px double;
-	border-bottom:1px double;
-	margin-bottom:10px;
+	font-size: 160%;
+    margin-top: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;
+    margin-bottom: 10px;
 }
 
 h1.big
