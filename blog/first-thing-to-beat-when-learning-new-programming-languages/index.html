@@ -89,7 +89,10 @@
 					knowledge, the next brick wall they would hit hard are:
 				</div>
 				<div class="white" style="padding-top:50px">
-					<h2 class="yellow">const and pointer</h2>
+					<h2 class="yellow">
+						const and pointer 
+						<span class="white">★★★☆☆</span>
+					</h2>
 					<p>
 						You don't need to be a C++ uber to 
 						know the meaning behind the following function 
@@ -124,11 +127,11 @@
 					</pre>
 				</div>
 				<div class="white" style="padding-top:50px">
-					<h2 class="yellow">const with passing by ref</h2>
+					<h2 class="yellow">const with passing by ref
+					<span class="white">★★★★★</span></h2>
 					<p>
 						Passing arguments by reference when 
-						associates with const is a grave enemy 
-						to beginners ... 
+						associates with const is a complete onslaught against beginners, literally...
 					</p>
 					<pre>
 						<code class="language-cpp">
@@ -144,6 +147,91 @@
 						some time for beginners to understand 
 						and accustom themselves to use it.
 					</p>
+				</div>
+			</div>
+		</section>
+		<section class="black centered" style="margin-top:80px">
+			<h1 class="white" style="padding-left:100px">
+				Python
+			</h1>
+			<div style="padding-top:50px;width:800px">
+				<div class="white">
+					The grammar and syntaxes of Python is easy 
+					for everybody to learn and gain familiarity 
+					quickly. But the awaiting brick wall are:
+				</div>
+				<div class="white" style="padding-top:50px">
+					<h2 class="yellow">Decorator 
+					<span class="white">★★★☆☆</span></h2>
+					<p>
+						You need to understand <span class="cyan">nested functions</span> and <span class="cyan">closures</span> to master it.
+					</p>
+					<p>
+						First off, when seeing the decorated function as follows.
+					</p>
+					<pre>
+						<code class="language-python">
+							@plus_one
+							def f(a):
+							  return a*10
+
+							# Where the function plus_one looks like:
+							def plus_one(g):
+							  def _(n):
+							    return n+1
+							  return _
+						</code>
+					</pre>
+					<p>
+						People who just learn Python would probably wonder what the hell @ sign <span class="cyan">decorator</span> does with function <span class="cyan">f(a)</span>. To interpret decorator into basic functions, they will look like following.
+					</p>
+					<pre>
+						<code class="language-python">
+							def f(a):
+								return a*10
+
+							# Here f() is decorated (modified)...
+							f = plus_one(f)
+						</code>
+					</pre>
+					<p>
+						It's actually easy. But for beginners, 
+						it may probably take some time to remove confusion and finally they will realise how simple (and beautiful) it is.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="black centered" style="margin-top:80px">
+			<h1 class="white" style="padding-left:100px">
+				Ruby
+			</h1>
+			<div style="padding-top:50px;width:800px">
+				<div class="white">
+					Ruby is clearly one of the frienliest programming languages by design. However, apart from its simplicity, there is still something a bit hard to learn at the beginning.
+					<h2 class="yellow">Block 
+					<span class="white">★★☆☆☆</span></h2>
+					<pre>
+						<code class="language-c#">
+							result = doSomething "foo" do |bar|
+								puts bar
+							end
+						</code>
+					</pre>
+					<p>
+						For those who just land on first lessons of Ruby would frown at it. Why <span class="cyan">doSomething()</span> returns <span class="underline">result</span> and passes <span class="underline">bar</span> to another block at the same time?
+					</p>
+					<p>
+						This works much like a <span class="cyan">callback</span> in general sense. Ruby just makes it more verbose and less risky of introducing pyramid of doom.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="black centered" style="margin-top:80px">
+			<h1 class="white" style="padding-left:100px">
+				JavaScript
+			</h1>
+			<div style="padding-top:50px;width:800px">
+				<div class="white">
 				</div>
 			</div>
 		</section>
