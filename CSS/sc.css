@@ -348,6 +348,16 @@ pre
 	font-size: 180pt;
 }
 
+.large
+{
+	font-size: 100pt;
+}
+
+.big
+{
+	font-size: 40pt;
+}
+
 .bigtext, .bigtext *
 {
 	font-size:120%;
@@ -905,11 +915,10 @@ ul.entry-menu > li:hover > span
 ul.entry-menu > li > span
 {
 	width: 100%;
-	height:60px;
-	padding:8px 8px;
-	font-size:18pt;
+	padding: 8px 8px;
+	font-size: 23pt;
 	background-color: rgba(0,0,0,0.75);
-	margin-top:75px;
+	line-height: 140px;
 }
 
 ul.nodot
