@@ -118,7 +118,7 @@
 						</code>
 					</pre>
 					<p>
-						The position of <span class="cyan">const</span> can cause some confusion (or even seizure ... )
+						Beginners sometimes just realise they suffer from seizure and migraine when they see <span class="cyan">const</span> in different positions.
 					</p>
 					<pre>
 						<code class="language-cpp">
@@ -345,6 +345,26 @@
 					<p>
 						None of articles, tutorials, books, or any Haskell experts say Monad is easy. If they do they're drunk.
 					</p>
+					<pre>
+						<code class="language-haskell">
+							[0..100] >>= (\n -> [x-1,x,x+1]) 
+						</code>
+					</pre>
+					<p>
+						Or more general use of <span class="cyan">bindings</span>
+					</p>
+					<pre>
+						<code class="language-haskell">
+							filterM pred xs = do
+  							bools <- mapM pred xs
+  							return [ x | (x,True) <- zip xs bools ]
+
+  						-- Excerpt from Facebook Haxl
+						</code>
+					</pre>
+					<p>
+						Monad is a set of simple concepts, but visually complicated when comes into designing. <span class="cyan">Monoid</span> is also a related area of Haskell's common feature which involves some difficulty to learn for the beginner.
+					</p> 
 				</div>
 			</div>
 		</section>
