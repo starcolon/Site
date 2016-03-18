@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<title>Tao's Blog | First thing to beat when learning a new language</title>
+		<title>Tao's Blog | Early challenges of learning new programming languages</title>
 		<link rel="shortcut icon" type="image/ico" href="../IMG/starcolon-logo.png"></link>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></meta>
 		<meta name="keywords" content="programming,language,c#,c++,haskell,javascript,beginner,tutorial,learning,newbie,starter,fundamental"/>
@@ -70,8 +70,12 @@
 				</div>
 				<div class="stretch" style="position:absolute;padding-top:150px;left:0;top:0;pointer-events:none">
 					<span class="big yellow blackshadow">
-						First Thing to Beat<br/>
-						When Learning a New Language
+						Early Challenges of<br/>
+						Learning New Languages
+					</span>
+					<br/>
+					<span>
+						c++ | python | ruby | js | haskell
 					</span>
 				</div>
 			</div>
@@ -224,6 +228,24 @@
 						This works much like a <span class="cyan">callback</span> in general sense. Ruby just makes it more verbose and less risky of introducing pyramid of doom.
 					</p>
 				</div>
+				<div class="white" style="padding-top:50px">
+					<h2 class="yellow">Functions with ? or !
+					<span class="white">★★★☆☆</span></h2>
+					<p>
+						Mindblown moment for people from different languages. At the first glance, functions with <span class="cyan">?</span> or <span class="cyan">!</span> likely lead some traffics to StackOverflow.com.
+					</p>
+					<pre>
+						<code class="language-python">
+							model.save!
+							if model.save? 
+								...
+								...
+							end
+
+							# Nah....
+						</code>
+					</pre>
+				</div>
 			</div>
 		</section>
 		<section class="black centered" style="margin-top:80px">
@@ -232,6 +254,97 @@
 			</h1>
 			<div style="padding-top:50px;width:800px">
 				<div class="white">
+					JavaScript is relatively more flexible than other scripting languages yet it supports wide range of programming paradigms. Learning JavaScript from the fundamental level is comfortable until the following. 
+				</div>
+				<div class="white" style="padding-top:50px">
+					<h2 class="yellow">For loops 
+					<span class="white">★★★☆☆</span></h2>
+					<p>
+						JavaScript comes with a few versions of <span class="cyan">for loops</span>.
+					</p>
+					<pre>
+						<code class="language-js">
+							var v = ['a','b','c'];
+
+							for (var i in v)
+								console.log(this,v[i]);
+
+							for (var n of v)
+								console.log(this,n);
+
+							v.forEach((n,i) => console.log(this,n));
+						</code>
+					</pre>
+					<p>
+						Three loops above work differently and scope the variable <span class="cyan">this</span> even more differently (In reality, this often causes mistakes). Beginners may find it complicated at first glance.
+					</p>
+				</div>
+				<div class="white" style="padding-top:50px">
+					<h2 class="yellow">Coercion to boolean
+					<span class="white">★★★★★</span></h2>
+					<p>
+						Let's see how following expressions evaluate to boolean.
+					</p>
+					<pre>
+						<code class="language-js">
+							![] // falsy
+
+							![1] // falsy
+
+							!([] + []) // truthy ... heck??
+
+							!!{foo: 'bar'} // truthy
+
+							!!{} // still truthy ..Hmmm
+
+							!!-1 // truthy
+
+							!'' // truthy
+
+							!' ' // one space becomes falsy 
+
+							s = new Set();
+							!!s // Empty set is still truthy
+						</code>
+					</pre>
+					<p>
+						A complete intuition of boolean coercion in JavaScript still remains controversial, not just only beginners. On StackOverflow you may find a number of questions playing around with different combinations of these.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="black centered" style="margin-top:80px">
+			<h1 class="white" style="padding-left:100px">
+				Haskell
+			</h1>
+			<div style="padding-top:50px;width:800px">
+				<div class="white">
+					When compare to other mainstream languages in the industry, Haskell looks much like an alien's language invented by a counterpart of God who had a strong desire to destroy all mandkind. 
+				</div>
+				<div class="white" style="padding-top:50px">
+					<h2 class="yellow">List pattern capture
+					<span class="white">★★★★☆</span></h2>
+					<p>
+						For beginners, writing a function definition which matches all possible patterns is much more difficult than capturing a legendary pokémon. See example below:
+					</p>
+					<pre>
+						<code class="language-haskell">
+							flip_every_two :: [a] -> [a]
+							flip_every_two [] = []
+							flip_every_two n:[] = [n]
+							flip_every_two n:ns:[] = [head ns,n]++flip_every_two $ tail ns
+						</code>
+					</pre>
+					<p>
+						For beginners, it's hard to come up with list patterns like <span class="cyan">n:[]</span> or <span class="cyan">n:ns</span>, etc.
+					</p>
+				</div>
+				<div class="white" style="padding-top:50px">
+					<h2 class="yellow">Monad
+					<span class="white">★★★★★</span></h2>
+					<p>
+						None of articles, tutorials, books, or any Haskell experts say Monad is easy. If they do they're drunk.
+					</p>
 				</div>
 			</div>
 		</section>
