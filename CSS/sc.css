@@ -1,6 +1,16 @@
+@font-face{
+	font-family: "ruda-regular";
+	src: url('font/Ruda-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: "ruda-black";
+	src: url('font/Ruda-Black.ttf') format('truetype');
+}
+
 *
 {
-	font-family: 'Ruda','CoreSansA35Light';
+	font-family: 'ruda-regular','CoreSansA35Light';
 	font-size:15pt;
 }
 
