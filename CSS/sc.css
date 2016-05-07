@@ -3,16 +3,6 @@
 	src: url('font/DPSDbeyond.otf') format("opentype");
 }
 
-@font-face{
-	font-family: "ruda-regular";
-	src: url('font/Ruda-Regular.ttf') format('truetype');
-}
-
-@font-face{
-	font-family: "ruda-black";
-	src: url('font/Ruda-Black.ttf') format('truetype');
-}
-
 *
 {
 	font-family: 'dpsd','CoreSansA35Light';
