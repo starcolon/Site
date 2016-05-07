@@ -1,4 +1,9 @@
 @font-face{
+	font-family: "dpsd";
+	src: url('font/DPSDbeyond.otf') format("opentype");
+}
+
+@font-face{
 	font-family: "ruda-regular";
 	src: url('font/Ruda-Regular.ttf') format('truetype');
 }
@@ -10,7 +15,7 @@
 
 *
 {
-	font-family: 'ruda-regular','CoreSansA35Light';
+	font-family: 'dpsd','CoreSansA35Light';
 	font-size:15pt;
 }
 
