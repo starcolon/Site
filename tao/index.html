@@ -16,15 +16,15 @@
 		<script type="text/javascript" src="./tao-profile.js"></script>
 		<script type="text/javascript">
 			function scrollItem(n){
-			try{
-				$('#anchor-' + n).ScrollTo();
+				try{
+					$('#anchor-' + n).ScrollTo();
+				}
+				catch (e){
+					$('#profile-card').animate({
+						scrollTop: $('#anchor-' + n).offset().top-16
+					})	
+				}
 			}
-			catch (e){
-				$('#profile-card').animate({
-					scrollTop: $('#anchor-' + n).offset().top-16
-				})	
-			}
-		}
 		</script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -50,24 +50,33 @@
 			<div id="profile-card" class="center-screen-x scrollable gray dropshadow" style="margin-top:18px;margin-bottom:18;width:950px;border:1px solid black;background-color:rgba(0,0,0,0.77);max-height:90%">
 				<h1 style="padding:18px 15px" id="anchor-0">
 					Tao P.R.
-						<button style="float:right" onclick="window.open('https://www.linkedin.com/in/tao-ruangyam-881b7119','_blank')">LinkedIn</button>
-						<button style="float:right" onclick="window.open('https://github.com/starcolon','_blank')">Github</button>
-						<button style="float:right" onclick="window.open('http://stackoverflow.com/users/4154262/tao-p-r','_blank')">Stack</button>
+						<button class="solid-yellow no-padding" style="float:right;vertical-align:middle;padding:4px" onclick="window.open('https://www.linkedin.com/in/tao-ruangyam-881b7119','_blank')">
+							<img class="icon24" src="../IMG/icon-linkedin.png"/>
+						</button>
+						<button class="solid-yellow no-padding" style="float:right;vertical-align:middle;padding:4px" onclick="window.open('https://github.com/starcolon','_blank')">
+							<img class="icon24" src="../IMG/icon-github.png"/>
+						</button>
+						<button class="solid-yellow no-padding" style="float:right;vertical-align:middle;padding:4px" onclick="window.open('http://stackoverflow.com/users/4154262/tao-p-r','_blank')">
+							<img class="icon24" src="../IMG/icon-stackoverflow.png"/>
+						</button>
+						<button class="solid-yellow no-padding" style="float:right;vertical-align:middle;padding:4px" onclick="window.open('https://www.researchgate.net/profile/Pathompong_Ruangyam')">
+							<img class="icon24" src="../IMG/icon-researchgate.png"/>
+						</button>
 				</h1>
 				<div style="margin-left:15px;font-size:14pt;line-height:1.2em;height:200px">
 					<img style="float:left;margin:10px 10px;" src="../IMG/tao.jpg" width="168px" />
 					<h2 class="big" style="color:white">Software Engineer / Researcher</h2>
 					<ul class="feature">
 						<li>
-							<img class="bullet-academic"/>
+							<img class="bullet-academic" style="background-color:deepskyblue;"/>
 							M.Eng. (Computer Engineering)
 						</li>
 						<li>
-							<img class="bullet-skills"/>
+							<img class="bullet-skills" style="background-color:deepskyblue;"/>
 							Machine Learning / Computer Vision / NLP / Backend
 						</li>
 						<li>
-							<img class="bullet-contact"/>
+							<img class="bullet-contact" style="background-color:deepskyblue;"/>
 							pataoengineer <span class="faded">®gmail.com</span>
 						</li>
 					</ul>
@@ -89,7 +98,7 @@
 						<canvas class="chart-radar-feature" id="chart-mq"></canvas>
 					</div>
 				</div>
-				<div id="anchor-1" style="height:240px">
+				<div id="anchor-1" style="height:370px">
 					<h1 style="font-size:125%;padding:10px 15px">ACHIEVEMENTS</h1>
 					<ul class="feature spacing">
 						<li>
@@ -101,23 +110,169 @@
 							<label class="frame margin-right">2010</label>
 							<span>IEEE ICIP 2010, paper</span>
 							<span class="faded">3D Face pose &amp; shape estimation</span>
+							<button class="mini-blue link" onclick="window.open('https://www.researchgate.net/publication/224201011_3-dimensional_face_pose_and_shape_estimation_based_on_relaxed_model_fitting_optimization')">
+								🌎
+							</button>
 						</li>
 						<li>
 							<label class="frame margin-right">2009</label>
 							<span>IVCNZ 2009, paper</span>
 							<span class="faded">Skin color model for face localisation</span>
+							<button class="mini-blue link" onclick="window.open('https://www.researchgate.net/publication/224098460_An_Efficient_Region-based_Skin_Color_Model_for_Reliable_Face_Localization')">
+								🌎
+							</button>
 						</li>
 						<li>
 							<label class="frame margin-right">2005</label>
 							<span>Imagine Cup Finalists</span>
 							<span class="faded">Nationwide round</span>
 						</li>
+						<li>
+							<label class="frame margin-right">2005</label>
+							<span>Thaiware Award 2005 winners</span>
+							<span class="faded">iCommerce won a trophy.</span>
+						</li>
 					</ul>
 				</div>
-				<div id="anchor-2" style="height:150px">
+				<div id="anchor-2" style="height:1200px">
 					<h1 style="font-size:125%;padding:10px 15px">PROJECTS / PERSONAL WORKS</h1>
+					<ul class="feature spacing">
+						<li>
+							<label class="frame yellow">Thesis / Senior Project</label>
+							<p class="padding-left">
+								<label class="frame">Automated 3D human face recontruction process</label>
+								<label class="frame">2010</label>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Develop series of algorithms for facial pose tracking
+									</span><br/>
+									<span class="faded padding-left">
+										and 3D reconstruction in semi-real-time.
+									</span>
+								</p>
+							</p>
+							<p class="padding-left">
+								<label class="frame">Pedestrian tracker algorithms in video surveillance</label>
+								<label class="frame">2007</label>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Implement image-processing-technique-based pedestrian
+									</span><br/>
+									<span class="faded padding-left">
+										tracking algorithms for CCTV videos.
+									</span>
+								</p>
+							</p>
+						</li>	
+						<li>
+							<label class="frame yellow">Proprietary Products</label>
+							<p class="padding-left">
+								<label class="frame">Planet of Cells</label>
+								<label class="frame">since 2015</label>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Web-based virtual virus game based on GoogleMap, multi-player.
+									</span>
+								</p>
+							</p>
+							<p class="padding-left">
+								<label class="frame">Project 0Cell</label>
+								<label class="frame">2013-2015</label>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Web-based virtual virus game based on GoogleMap, multi-player.
+									</span>
+								</p>
+							</p>
+							<p class="padding-left">
+								<label class="frame">iCommerce</label>
+								<label class="frame">since 2005</label>
+								<button class="mini-blue link" onclick="window.open('http://software.thaiware.com/5503-iCommerce_%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1_%E0%B8%88%E0%B8%B3%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%AB%E0%B8%B8%E0%B9%89%E0%B8%99_%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B9%82%E0%B8%A5%E0%B8%81.html')">
+									🌎
+								</button>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Virtual stock markets app for Windows, 88K+ downloads.
+									</span>
+								</p>
+							</p>
+							<p class="padding-left">
+								<label class="frame">AutoSchedule</label>
+								<label class="frame">since 2005</label>
+								<button class="mini-blue link" onclick="window.open('http://software.thaiware.com/4229-Auto_Schedule_%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1_%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%AD%E0%B8%A1.html')">
+									🌎
+								</button>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Common system task scheduler app for Windows, 36K+ downloads.
+									</span>
+								</p>
+							</p>
+						</li>
+						<li>
+							<label class="frame yellow">Github Projects</label>
+							<p class="padding-left">
+								<ul class="feature spacing">
+									<li>
+										<label class="frame">Q-EXP</label>
+										<button class="mini-blue link" onclick="window.open('')">
+											🌎
+										</button>
+										<span class="faded" style="font-size:82%">
+											Reinforcement learning (Q-learning) implementation in JS
+										</span>
+									</li>
+									<li>
+										<label class="frame">SpatialJS</label>
+										<button class="mini-blue link" onclick="window.open('')">
+											🌎
+										</button>
+										<span class="faded">
+											2D grid data structure with algorithms
+										</span>
+									</li>
+									<li>
+										<label class="frame">ρίζα (Riza)</label>
+										<button class="mini-blue link" onclick="window.open('')">
+											🌎
+										</button>
+										<span class="faded">
+											Human-machine conversation model
+										</span>
+									</li>
+									<li>
+										<label class="frame">Pantip-Libr</label>
+										<button class="mini-blue link" onclick="window.open('')">
+											🌎
+										</button>
+										<span class="faded">
+											Sentiment analysis of Pantip.com posts.
+										</span>
+									</li>
+									<li>
+										<label class="frame">SkullLiner</label>
+										<button class="mini-blue link" onclick="window.open('')">
+											🌎
+										</button>
+										<span class="faded">
+											Automated curve of spee estimation.
+										</span>
+									</li>
+									<li>
+										<label class="frame">Git-Regional-Language</label>
+										<button class="mini-blue link" onclick="window.open('')">
+											🌎
+										</button>
+										<span class="faded">
+											Spatial visualisation of programming languages distribution around the world.
+										</span>
+									</li>
+								</ul>
+							</p>
+						</li>
+					</ul>
 				</div>
-				<div id="anchor-3" style="height:720px">
+				<div id="anchor-3" style="height:780px">
 					<h1 style="font-size:125%;padding:10px 15px">PROFESSIONAL EXPERIENCES</h1>
 					<ul class="feature spacing">
 						<li>

@@ -686,6 +686,12 @@ p.closed
 	float:right;
 }
 
+.no-padding
+{
+	padding: 0;
+}
+
+
 .padding-left
 {
 	padding-left: 30px;
@@ -1105,6 +1111,24 @@ ul.dashed li
 	border-top: 1px dashed;
 }
 
+img.icon64
+{
+	width:64px;
+	height:64px;
+}
+
+img.icon24
+{
+	width: 24px;
+	height: 24px;
+}
+
+img.icon16
+{
+	width: 16px;
+	height: 16px;
+}
+
 img.placeholder, img[data-image="placeholder"]
 {
 	border:1px dashed white;
@@ -1186,6 +1210,14 @@ button.dark
 	border:1px solid black;
 }
 
+button.mini-blue
+{
+	color:deepskyblue !important;
+	border:1px solid deepskyblue !important;
+	padding:4px !important;
+	font-size:10pt !important;
+}
+
 button.wireframe
 {
 	border-radius: 5px 5px;
@@ -1250,6 +1282,12 @@ button.solid
 button.solid:hover
 {
 	background-color:yellow;
+	color:black;
+}
+
+button.solid-yellow
+{
+	background-color: yellow;
 	color:black;
 }
 
