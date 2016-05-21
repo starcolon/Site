@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<title>Tao P.R. | StarColon Projects' Sole Developer</title>
+		<title>Tao P.R. | StarColon Projects</title>
 		<link rel="shortcut icon" type="image/ico" href="IMG/starcolon-logo.png"></link>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></meta>
 		<meta name="keywords" content="tao,tao p.r.,pathompong,ruangyam,pataoengineer,ปฐมพงษ์,เรืองแย้ม,เต๋า"/>
 		<meta name="description" content="The official home of StarColon Projects, a highly enthusiasm software developer who were up and alive for making constructive software."/>
-		<meta property="og:image" content="http://starcolon.com/IMG/tao.png"/>
+		<meta property="og:image" content="http://starcolon.com/IMG/ARTWORK/tao-cv.jpg"/>
 		<link rel="stylesheet" type="text/css" href="../CSS/sc.css"/>
 		<link rel="stylesheet" type="text/css" href="../CSS/MyFontsWebfontsKit.css"/>
 		<script type="text/javascript" src="../JS/jquery.min.js"></script>
-		<script type="text/javascript" src="../JS/skrollr.min.js"></script>
+		<script type="text/javascript" src="../JS/jquery-scrollto.js"></script>
 		<script type="text/javascript" src="../JS/main.js"></script>
+		<script type="text/javascript" src="../JS/Chart.bundle.js"></script>
+		<script type="text/javascript" src="./tao-profile.js"></script>
+		<script type="text/javascript">
+			function scrollItem(n){
+				try{
+					$('#anchor-' + n).ScrollTo();
+				}
+				catch (e){
+					$('#profile-card').animate({
+						scrollTop: $('#anchor-' + n).offset().top-16
+					})	
+				}
+			}
+		</script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,70 +36,350 @@
 		  ga('send', 'pageview');
 
 		</script>
-		<script type="text/javascript">
-		window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-		</script>
-		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 	</head>
 	<body>
-		<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=362320777191713&version=v2.0";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
-		<header id="window-header" class="transparent" style="box-shadow:0 1px 3px rgba(0,0,0,0.33)">
-			<div data-elem='backhome' onclick="document.location='../index.html'"
-			style="background-color:#1070F0">
-				❰ Home
-			</div>
-			<div class="content-container yellow" style="font-size:15pt;line-height:2.0em;background-color:rgba(0,0,0,0.37)">				Creator of StarColon Projects
-			</div>
-			<div class="social-panel" style="font-size:10pt">
-				<div class="fb-like social-box" 
-					data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" 	data-action="like" data-show-faces="false" data-share="false">
-				</div>
-				<div class="g-plusone social-box" data-size="medium" data-expandTo="right" data-count="true">
-				</div>
-				<div class="social-box">
-					<a class="twitter-share-button"
-					  href="https://twitter.com/share"
-					  data-via="twitterdev">
-						Tweet
-					</a>
-				</div>
-			</div>
-		</header>
 		<div id="screen" class="fullscreen calmblue" style="background-image:url('../PATTERN/blue-cut.jpg');background-color:black">
-			<div id="profile-card" class="center-screen gray" style="width:720px;height:318px;border:1px solid black;background-color:rgba(0,0,0,0.77)">
-				<h1 style="padding-left:15px">Tao P. Ruangyam</h1>
-				<div style="margin-left:15px;font-size:13pt">
-					<img style="float:left;margin:10px 10px;" src="../IMG/tao.jpg" width="168px" />
-					Tao is a developer who has an educational background in machine learning with computer vision. He is passionate about data processing and web technology.
-					<p style="font-size:13pt">
-						He found his true love with JavaScript. Also, he has professional experiences in C++, Java, Python and Ruby. Recently he started learning Haskell but it almost killed him.
-					</p>
+			<div id="float-menu">
+				<ul class="black-border black-semitransparent dropshadow">
+					<li onclick="scrollItem(0)">🏠</li>
+					<li onclick="scrollItem(1)">🏆</li>
+					<li onclick="scrollItem(2)">🍴</li>
+					<li onclick="scrollItem(3)">🏇</li>
+				</ul>
+			</div>
+			<div id="profile-card" class="center-screen-x scrollable gray dropshadow" style="margin-top:18px;margin-bottom:18;width:950px;border:1px solid black;background-color:rgba(0,0,0,0.77);max-height:90%">
+				<h1 style="padding:18px 15px" id="anchor-0">
+					Tao P.R.
+						<button class="solid-yellow no-padding" style="float:right;vertical-align:middle;padding:4px" onclick="window.open('https://www.linkedin.com/in/tao-ruangyam-881b7119','_blank')">
+							<img class="icon24" src="../IMG/icon-linkedin.png"/>
+						</button>
+						<button class="solid-yellow no-padding" style="float:right;vertical-align:middle;padding:4px" onclick="window.open('https://github.com/starcolon','_blank')">
+							<img class="icon24" src="../IMG/icon-github.png"/>
+						</button>
+						<button class="solid-yellow no-padding" style="float:right;vertical-align:middle;padding:4px" onclick="window.open('http://stackoverflow.com/users/4154262/tao-p-r','_blank')">
+							<img class="icon24" src="../IMG/icon-stackoverflow.png"/>
+						</button>
+						<button class="solid-yellow no-padding" style="float:right;vertical-align:middle;padding:4px" onclick="window.open('https://www.researchgate.net/profile/Pathompong_Ruangyam')">
+							<img class="icon24" src="../IMG/icon-researchgate.png"/>
+						</button>
+				</h1>
+				<div style="margin-left:15px;font-size:14pt;line-height:1.2em;height:200px">
+					<img style="float:left;margin:10px 10px;" src="https://avatars1.githubusercontent.com/u/2756089?v=3&s=460" width="168px" />
+					<h2 class="big" style="color:white">Software Engineer / Researcher</h2>
+					<ul class="feature">
+						<li>
+							<img class="bullet-academic" style="background-color:deepskyblue;"/>
+							M.Eng. (Computer Engineering)
+						</li>
+						<li>
+							<img class="bullet-skills" style="background-color:deepskyblue;"/>
+							Machine Learning / Computer Vision / NLP / Backend
+						</li>
+						<li>
+							<img class="bullet-contact" style="background-color:deepskyblue;"/>
+							pataoengineer <span class="faded">®gmail.com</span>
+						</li>
+					</ul>
 				</div>
-				<div style="margin-left:15px;margin-right:15px">
-					<div style="margin:0 auto">
-						<button onclick="window.open('https://www.linkedin.com/in/tao-ruangyam-881b7119','_blank')">LinkedIn</button>
-						<button onclick="window.open('https://www.researchgate.net/profile/Pathompong_Ruangyam','_blank')">ResearchGate</button>
-						<button onclick="window.open('https://plus.google.com/u/0/+TaoPR/','_blank')">G+</button>
-						<button onclick="window.open('http://stackoverflow.com/users/4154262/tao-p-r','_blank')">StackOverflow</button>
+				<div style="height:3	30px">
+					<h1 style="font-size:125%;padding:10px 15px">SKILLS / AREA of EXPERTISE</h1>
+					<div class="halfwidth inline margin-top margin-bottom">
+						<canvas class="chart-radar-feature" id="chart-languages"></canvas>
 					</div>
+					<div class="halfwidth inline margin-top margin-bottom">
+						<canvas class="chart-radar-feature" id="chart-dynamic"></canvas>
+					</div>
+					<div class="fullwidth" style="height:60px">
+					</div>
+					<div class="halfwidth inline margin-top margin-bottom">
+						<canvas class="chart-radar-feature" id="chart-database"></canvas>
+					</div>
+					<div class="halfwidth inline margin-top margin-bottom">
+						<canvas class="chart-radar-feature" id="chart-mq"></canvas>
+					</div>
+				</div>
+				<div id="anchor-1" style="height:370px">
+					<h1 style="font-size:125%;padding:10px 15px">ACHIEVEMENTS</h1>
+					<ul class="feature spacing">
+						<li>
+							<label class="frame margin-right">2015</label>
+							<span>Earn 2,600+ reputation on StackOverflow</span>
+							<span class="faded">(Top 15% worldwide)</span>
+						</li>
+						<li>
+							<label class="frame margin-right">2010</label>
+							<span>IEEE ICIP 2010, paper</span>
+							<span class="faded">3D Face pose &amp; shape estimation</span>
+							<button class="mini-blue link" onclick="window.open('https://www.researchgate.net/publication/224201011_3-dimensional_face_pose_and_shape_estimation_based_on_relaxed_model_fitting_optimization')">
+								🌎
+							</button>
+						</li>
+						<li>
+							<label class="frame margin-right">2009</label>
+							<span>IVCNZ 2009, paper</span>
+							<span class="faded">Skin color model for face localisation</span>
+							<button class="mini-blue link" onclick="window.open('https://www.researchgate.net/publication/224098460_An_Efficient_Region-based_Skin_Color_Model_for_Reliable_Face_Localization')">
+								🌎
+							</button>
+						</li>
+						<li>
+							<label class="frame margin-right">2005</label>
+							<span>Imagine Cup Finalists</span>
+							<span class="faded">Nationwide round</span>
+						</li>
+						<li>
+							<label class="frame margin-right">2005</label>
+							<span>Thaiware Award 2005 winners</span>
+							<span class="faded">iCommerce won a trophy.</span>
+						</li>
+					</ul>
+				</div>
+				<div id="anchor-2" style="height:1200px">
+					<h1 style="font-size:125%;padding:10px 15px">PROJECTS / PERSONAL WORKS</h1>
+					<ul class="feature spacing">
+						<li>
+							<label class="frame yellow">Thesis / Senior Project</label>
+							<p class="padding-left">
+								<label class="frame">Automated 3D human face recontruction process</label>
+								<label class="frame">2010</label>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Develop series of algorithms for facial pose tracking
+									</span><br/>
+									<span class="faded padding-left">
+										and 3D reconstruction in semi-real-time.
+									</span>
+								</p>
+							</p>
+							<p class="padding-left">
+								<label class="frame">Pedestrian tracker algorithms in video surveillance</label>
+								<label class="frame">2007</label>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Implement image-processing-technique-based pedestrian
+									</span><br/>
+									<span class="faded padding-left">
+										tracking algorithms for CCTV videos.
+									</span>
+								</p>
+							</p>
+						</li>	
+						<li>
+							<label class="frame yellow">Proprietary Products</label>
+							<p class="padding-left">
+								<label class="frame">Planet of Cells</label>
+								<label class="frame">since 2015</label>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Web-based virtual virus game based on GoogleMap, multi-player.
+									</span>
+								</p>
+							</p>
+							<p class="padding-left">
+								<label class="frame">Project 0Cell</label>
+								<label class="frame">2013-2015</label>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Web-based virtual virus game based on GoogleMap, multi-player.
+									</span>
+								</p>
+							</p>
+							<p class="padding-left">
+								<label class="frame">iCommerce</label>
+								<label class="frame">since 2005</label>
+								<button class="mini-blue link" onclick="window.open('http://software.thaiware.com/5503-iCommerce_%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1_%E0%B8%88%E0%B8%B3%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%AB%E0%B8%B8%E0%B9%89%E0%B8%99_%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B9%82%E0%B8%A5%E0%B8%81.html')">
+									🌎
+								</button>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Virtual stock markets app for Windows, 88K+ downloads.
+									</span>
+								</p>
+							</p>
+							<p class="padding-left">
+								<label class="frame">AutoSchedule</label>
+								<label class="frame">since 2005</label>
+								<button class="mini-blue link" onclick="window.open('http://software.thaiware.com/4229-Auto_Schedule_%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1_%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%AD%E0%B8%A1.html')">
+									🌎
+								</button>
+								<p class="padding-left">
+									<span class="faded padding-left">
+										Common system task scheduler app for Windows, 36K+ downloads.
+									</span>
+								</p>
+							</p>
+						</li>
+						<li>
+							<label class="frame yellow">Github Projects</label>
+							<p class="padding-left">
+								<ul class="feature spacing">
+									<li>
+										<label class="frame">Q-EXP</label>
+										<button class="mini-blue link" onclick="window.open('https://github.com/starcolon/q-exp')">
+											🌎
+										</button>
+										<span class="faded" style="font-size:82%">
+											Reinforcement learning (Q-learning) implementation in JS
+										</span>
+									</li>
+									<li>
+										<label class="frame">SpatialJS</label>
+										<button class="mini-blue link" onclick="window.open('https://github.com/starcolon/spatialjs')">
+											🌎
+										</button>
+										<span class="faded">
+											2D grid data structure with algorithms
+										</span>
+									</li>
+									<li>
+										<label class="frame">ρίζα (Riza)</label>
+										<button class="mini-blue link" onclick="window.open('https://github.com/starcolon/riza-bot')">
+											🌎
+										</button>
+										<span class="faded">
+											Human-machine conversation model
+										</span>
+									</li>
+									<li>
+										<label class="frame">Pantip-Libr</label>
+										<button class="mini-blue link" onclick="window.open('https://github.com/starcolon/pantip-libr')">
+											🌎
+										</button>
+										<span class="faded">
+											Sentiment analysis of Pantip.com posts.
+										</span>
+									</li>
+									<li>
+										<label class="frame">SkullLiner</label>
+										<button class="mini-blue link" onclick="window.open('https://github.com/starcolon/SkullLiner')">
+											🌎
+										</button>
+										<span class="faded">
+											Automated curve of spee estimation.
+										</span>
+									</li>
+									<li>
+										<label class="frame">Git-Regional-Language</label>
+										<button class="mini-blue link" onclick="window.open('https://github.com/starcolon/git-regional-languages')">
+											🌎
+										</button>
+										<span class="faded">
+											Spatial visualisation of programming languages distribution around the world.
+										</span>
+									</li>
+								</ul>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div id="anchor-3" style="height:780px">
+					<h1 style="font-size:125%;padding:10px 15px">PROFESSIONAL EXPERIENCES</h1>
+					<ul class="feature spacing">
+						<li>
+							<label class="frame yellow">AmiVoice Thai</label>
+							<label class="frame">NLP Developer</label>
+							(May 2015 ~ June 2016)
+							<p class="padding-left faded">
+								Research / develop NLP and machine-learning-driven
+								virtual agent.
+							</p>
+						</li>
+						<li>
+							<label class="frame yellow">Draycir</label>
+							<label class="frame">C++ Software Developer</label>
+							(July 2012 ~ April 2015)
+							<p class="padding-left faded">
+								Develop digital document distribution and management automator.
+							</p>
+						</li>
+						<li>
+							<label class="frame yellow">Cal-Comp Electronics</label>
+							<label class="frame">Software Architect</label>
+							(Sep 2011 ~ June 2012)
+							<p class="padding-left faded">
+								Design / develop end-to-end management and insight tool for standardised manufacturing process.
+							</p>
+						</li>
+						<li>
+							<label class="frame yellow">NECTEC</label>
+							<label class="frame">Computer Vision Engineer</label>
+							(June 2011 ~ September 2011)
+							<p class="padding-left faded">
+								Research / develop automated curve of spee estimation and tracking algorithm for dental imagery product.
+							</p>
+						</li>
+						<li>
+							<label class="frame yellow">ThaiQuest</label>
+							<label class="frame">Software Engineer</label>
+							(November 2010 ~ June 2011)
+							<p class="padding-left faded">
+								Design / develop real-time news feed manipulator backend system.
+							</p>
+						</li>
+						<li>
+							<label class="frame yellow">NECTEC</label>
+							<label class="frame">Research Intern</label>
+							Summer 2007
+							<p class="padding-left faded">
+								Research / Develop imagery semantic extraction under supervision of NECTEC IMG lab.
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div style="height:150px">
+					<h1 style="font-size:125%;padding:10px 15px">PERSONALITY</h1>
+					<p style="padding-left:20px">
+						<label class="frame">Love learning new things</label>
+						<label class="frame">Enjoy tech meetups</label>
+						<label class="frame">Love sharing ideas</label>
+					</p>
 				</div>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript" >
-		// Setup
-		var scr = $('#screen');
-		var scr_level = 0;
-		console.log('Setup animation!');
+		function applyChartVisualSettings(data){
+			data['backgroundColor'] = 'rgba(100,235,255,0.4)';
+			data['borderColor'] = 'rgba(100,200,255,0.6)';
+			data['pointBackgroundColor'] = 'rgba(100,255,240,0.4)';
+			data['pointBorderColor'] = '#00F0FF';
+			return data
+		}
 
-		var browser_prefix = ['','-o-','-moz-','-webkit-'];
+		Chart.defaults.global.defaultFontColor = 'deepskyblue';
+		Chart.defaults.global.defaultFontFamily = 'dpsd';
+		Chart.defaults.global.elements.line.borderColor = 'rgba(100,240,255,0.4)';
+
+		var options = {
+			borderWidth: 1,
+			borderColor: 'deepskyblue',
+			legend: {
+				display: false
+			},
+			scale:{
+				ticks:{
+					display: false,
+					beginAtZero: true
+				},
+				gridLines:{
+					display: false
+				}
+			}
+		}
+
+		// Set up charts
+		$(document).ready(function(){
+			Object.keys(profile).forEach(function(cate){
+				var data = profile[cate];
+				applyChartVisualSettings(data.datasets[0]);
+
+				var chart = new Chart($('#chart-' + cate)[0].getContext('2d'),{
+					type: 'radar',
+					data: data,
+					options: options
+				});
+			})
+		})
 
 	</script>
 </html>

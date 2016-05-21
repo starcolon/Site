@@ -16,16 +16,18 @@ var fullheight = window.screen.availHeight;
 
 		// Initialize toolkits
 		(function initToolkits(){
+			if (typeof skrollr === 'undefined')
+				return;
 			sk = skrollr.init({ forceHeight: false});
 			console.log('--> skrollr initialized ...');
 		})();
 
 		// Monitor vertical scroll position
-		(function bindScrollMonitor(){
-			$(window).scroll(function(){
-				console.log('Pos Y: ' + $(document).scrollTop());	
-			});
-		})();
+		// (function bindScrollMonitor(){
+		// 	$(window).scroll(function(){
+		// 		console.log('Pos Y: ' + $(document).scrollTop());	
+		// 	});
+		// })();
 
 		// Stretch misc bottom panel
 		(function stretchMiscBottom(){
