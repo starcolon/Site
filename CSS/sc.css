@@ -126,7 +126,12 @@ header#window-header > div[data-elem='backhome']:hover
 	transition-duration:0.31s;
 }
 
-
+canvas.chart-radar-feature
+{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
 
 /*--------------------- COMMON CLASSES -------------------------------------------------------------------------*/
 
@@ -226,7 +231,7 @@ pre
 
 .scrollable
 {
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 
 #float-menu
@@ -254,6 +259,12 @@ pre
 	min-width: 50px;
 	cursor:pointer;
 	border-bottom:1px dotted rgba(0,0,0,0.55);
+	text-align: center;
+}
+
+#float-menu ul li:hover
+{
+	background-color: rgba(0,0,0,0.15)
 }
 
 .ads-link
@@ -742,6 +753,11 @@ p.closed
 {
 	float:left;
 	position: relative;
+}
+
+div.halfwidth
+{
+	width: 46%;
 }
 
 div.inline
@@ -1322,13 +1338,20 @@ div.catalog-elem > div:nth-of-type(2)
 	vertical-align: middle;
 }
 
-label
+label:not(.frame)
 {
 	font-size: 80%;
 	padding:3px;
 	border:1px solid black;
 	background-color:#323232;
 	margin-right:5px;
+}
+
+label.frame
+{
+	padding:5px 10px;
+	margin:0 2px;
+	border:1px solid;
 }
 
 .circle-label

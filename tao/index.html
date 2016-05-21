@@ -12,6 +12,8 @@
 		<script type="text/javascript" src="../JS/jquery.min.js"></script>
 		<script type="text/javascript" src="../JS/skrollr.min.js"></script>
 		<script type="text/javascript" src="../JS/main.js"></script>
+		<script type="text/javascript" src="../JS/Chart.bundle.js"></script>
+		<script type="text/javascript" src="./tao-profile.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,17 +24,13 @@
 		  ga('send', 'pageview');
 
 		</script>
-		<script type="text/javascript">
-		window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-		</script>
-		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 	</head>
 	<body>
 		<div id="screen" class="fullscreen calmblue" style="background-image:url('../PATTERN/blue-cut.jpg');background-color:black">
 			<div id="float-menu">
 				<ul class="black-border black-semitransparent dropshadow">
-					<li>ea</li>
-					<li>aa</li>
+					<li onclick="scroll(0)">HOME</li>
+					<li onclick="scroll(1)">ACHI</li>
 					<li>ee</li>
 					<li></li>
 					<li></li>
@@ -40,15 +38,15 @@
 				</ul>
 			</div>
 			<div id="profile-card" class="center-screen-x scrollable gray dropshadow" style="margin-top:18px;margin-bottom:18;width:950px;border:1px solid black;background-color:rgba(0,0,0,0.77);max-height:90%">
-				<h1 style="padding:10px 15px">
+				<h1 style="padding:18px 15px" id="anchor-0">
 					Tao (Pathompong Ruangyam)
 						<button style="float:right" onclick="window.open('https://www.linkedin.com/in/tao-ruangyam-881b7119','_blank')">LinkedIn</button>
 						<button style="float:right" onclick="window.open('https://github.com/starcolon','_blank')">Github</button>
 						<button style="float:right" onclick="window.open('http://stackoverflow.com/users/4154262/tao-p-r','_blank')">Stack</button>
 				</h1>
 				<div style="margin-left:15px;font-size:14pt;line-height:1.2em;height:200px">
-					<img style="float:left;margin:10px 10px 25px;" src="../IMG/tao.jpg" width="168px" />
-					<h2 class="yellow big">Software Engineer / Researcher</h2>
+					<img style="float:left;margin:10px 10px;" src="../IMG/tao.jpg" width="168px" />
+					<h2 class="big" style="color:white">Software Engineer / Researcher</h2>
 					<ul class="feature">
 						<li>
 							<img class="bullet-academic"/>
@@ -64,25 +62,85 @@
 						</li>
 					</ul>
 				</div>
-				<div class="white-border" style="height:150px">
+				<div style="height:3	30px">
+					<h1 style="font-size:125%;padding:10px 15px">SKILLS</h1>
+					<div class="halfwidth inline">
+						<canvas class="chart-radar-feature" id="chart-languages"></canvas>
+					</div>
+					<div class="halfwidth inline">
+						<canvas class="chart-radar-feature" id="chart-dynamic"></canvas>
+					</div>
 				</div>
-				<div class="white-border" style="height:150px">
+				<div id="anchor-1" style="height:150px">
+					<h1 style="font-size:125%;padding:10px 15px">ACHIEVEMENTS</h1>
 				</div>
-				<div class="white-border" style="height:150px">
+				<div style="height:150px">
+					<h1 style="font-size:125%;padding:10px 15px">PROJECTS / PERSONAL WORKS</h1>
 				</div>
-				<div class="white-border" style="height:150px">
-					aaa
+				<div style="height:150px">
+					<h1 style="font-size:125%;padding:10px 15px">PROFESSIONAL EXPERIENCES</h1>
+				</div>
+				<div style="height:150px">
+					<h1 style="font-size:125%;padding:10px 15px">PERSONALITY</h1>
+					<p style="padding-left:20px">
+						<label class="frame">Love learning new things</label>
+						<label class="frame">Enjoy tech meetups</label>
+						<label class="frame">Code a lot!</label>
+					</p>
 				</div>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript" >
-		// Setup
-		var scr = $('#screen');
-		var scr_level = 0;
-		console.log('Setup animation!');
 
-		var browser_prefix = ['','-o-','-moz-','-webkit-'];
+		function scroll(n){
+			$('#profile-card').animate({
+				scrollTop: $('#anchor-' + n).offset().top-16
+			})
+		}
+
+		function applyChartVisualSettings(data){
+			data['backgroundColor'] = 'rgba(100,235,255,0.4)';
+			data['borderColor'] = 'rgba(100,200,255,0.6)';
+			data['pointBackgroundColor'] = 'rgba(100,255,240,0.4)';
+			data['pointBorderColor'] = '#00F0FF';
+			return data
+		}
+
+		Chart.defaults.global.defaultFontColor = 'deepskyblue';
+		Chart.defaults.global.defaultFontFamily = 'dpsd';
+		Chart.defaults.global.elements.line.borderColor = 'rgba(100,240,255,0.4)';
+
+		var options = {
+			borderWidth: 1,
+			borderColor: 'deepskyblue',
+			legend: {
+				display: false
+			},
+			scale:{
+				ticks:{
+					display: false,
+					beginAtZero: true
+				},
+				gridLines:{
+					display: false
+				}
+			}
+		}
+
+		// Set up charts
+		$(document).ready(() => {
+			Object.keys(profile).forEach((cate) => {
+				var data = profile[cate];
+				applyChartVisualSettings(data.datasets[0]);
+
+				var chart = new Chart($('#chart-' + cate)[0].getContext('2d'),{
+					type: 'radar',
+					data: data,
+					options: options
+				});
+			})
+		})
 
 	</script>
 </html>
