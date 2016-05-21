@@ -1,6 +1,6 @@
 var profile = {
   languages: {
-    labels: ["C++","JS/Node","C#","Python","Ruby","Scala","Haskell"],
+    labels: ["C++","Node (JS)","C#","Python","Ruby","Scala","Haskell"],
     datasets: [
       {
         label: "",

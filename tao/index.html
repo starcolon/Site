@@ -10,10 +10,22 @@
 		<link rel="stylesheet" type="text/css" href="../CSS/sc.css"/>
 		<link rel="stylesheet" type="text/css" href="../CSS/MyFontsWebfontsKit.css"/>
 		<script type="text/javascript" src="../JS/jquery.min.js"></script>
-		<script type="text/javascript" src="../JS/skrollr.min.js"></script>
+		<script type="text/javascript" src="../JS/jquery-scrollto.js"></script>
 		<script type="text/javascript" src="../JS/main.js"></script>
 		<script type="text/javascript" src="../JS/Chart.bundle.js"></script>
 		<script type="text/javascript" src="./tao-profile.js"></script>
+		<script type="text/javascript">
+			function scrollItem(n){
+			try{
+				$('#anchor-' + n).ScrollTo();
+			}
+			catch (e){
+				$('#profile-card').animate({
+					scrollTop: $('#anchor-' + n).offset().top-16
+				})	
+			}
+		}
+		</script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -29,12 +41,10 @@
 		<div id="screen" class="fullscreen calmblue" style="background-image:url('../PATTERN/blue-cut.jpg');background-color:black">
 			<div id="float-menu">
 				<ul class="black-border black-semitransparent dropshadow">
-					<li onclick="scroll(0)">HOME</li>
-					<li onclick="scroll(1)">ACHI</li>
-					<li>ee</li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li onclick="scrollItem(0)">🏠</li>
+					<li onclick="scrollItem(1)">🏆</li>
+					<li onclick="scrollItem(2)">🍴</li>
+					<li onclick="scrollItem(3)">🏇</li>
 				</ul>
 			</div>
 			<div id="profile-card" class="center-screen-x scrollable gray dropshadow" style="margin-top:18px;margin-bottom:18;width:950px;border:1px solid black;background-color:rgba(0,0,0,0.77);max-height:90%">
@@ -63,7 +73,7 @@
 					</ul>
 				</div>
 				<div style="height:3	30px">
-					<h1 style="font-size:125%;padding:10px 15px">SKILLS / EXPERTISES</h1>
+					<h1 style="font-size:125%;padding:10px 15px">SKILLS / AREA of EXPERTISE</h1>
 					<div class="halfwidth inline margin-top margin-bottom">
 						<canvas class="chart-radar-feature" id="chart-languages"></canvas>
 					</div>
@@ -104,10 +114,10 @@
 						</li>
 					</ul>
 				</div>
-				<div style="height:150px">
+				<div id="anchor-2" style="height:150px">
 					<h1 style="font-size:125%;padding:10px 15px">PROJECTS / PERSONAL WORKS</h1>
 				</div>
-				<div style="height:720px">
+				<div id="anchor-3" style="height:720px">
 					<h1 style="font-size:125%;padding:10px 15px">PROFESSIONAL EXPERIENCES</h1>
 					<ul class="feature spacing">
 						<li>
@@ -151,6 +161,14 @@
 								Design / develop real-time news feed manipulator backend system.
 							</p>
 						</li>
+						<li>
+							<label class="frame yellow">NECTEC</label>
+							<label class="frame">Research Intern</label>
+							Summer 2007
+							<p class="padding-left faded">
+								Research / Develop imagery semantic extraction under supervision of NECTEC IMG lab.
+							</p>
+						</li>
 					</ul>
 				</div>
 				<div style="height:150px">
@@ -165,13 +183,6 @@
 		</div>
 	</body>
 	<script type="text/javascript" >
-
-		function scroll(n){
-			$('#profile-card').animate({
-				scrollTop: $('#anchor-' + n).offset().top-16
-			})
-		}
-
 		function applyChartVisualSettings(data){
 			data['backgroundColor'] = 'rgba(100,235,255,0.4)';
 			data['borderColor'] = 'rgba(100,200,255,0.6)';
@@ -202,8 +213,8 @@
 		}
 
 		// Set up charts
-		$(document).ready(() => {
-			Object.keys(profile).forEach((cate) => {
+		$(document).ready(function(){
+			Object.keys(profile).forEach(function(cate){
 				var data = profile[cate];
 				applyChartVisualSettings(data.datasets[0]);
 
