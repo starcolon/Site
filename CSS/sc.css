@@ -686,6 +686,26 @@ p.closed
 	float:right;
 }
 
+.padding-left
+{
+	padding-left: 30px;
+}
+
+.margin-top
+{
+	margin-top: 10px;
+}
+
+.margin-bottom
+{
+	margin-bottom: 10px;
+}
+
+.margin-right
+{
+	margin-right: 10px;
+}
+
 .marked
 {
 	padding:5px 15px;
@@ -953,15 +973,25 @@ img.bullet-academic, img.bullet-skills, img.bullet-status, img.bullet-contact
 	height:16px;
 }
 
-span.faded
+span.faded, p.faded
 {
 	color:rgba(200,230,255,0.5);
-	margin:3pt;
 }
 
 ul.feature
 {
 	list-style-type: none;
+}
+
+ul.line-separated li:not(:last-child)
+{
+	border-bottom: 1px dashed;
+}
+
+ul.spacing li
+{
+	padding:10px 0;
+	width:90%;
 }
 
 ul.entry-menu

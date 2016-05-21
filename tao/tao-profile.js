@@ -1,6 +1,6 @@
 var profile = {
   languages: {
-    labels: ["C++","JS","C#","Python","Ruby","Scala","Haskell"],
+    labels: ["C++","JS/Node","C#","Python","Ruby","Scala","Haskell"],
     datasets: [
       {
         label: "",
@@ -14,6 +14,24 @@ var profile = {
       {
         label: "",
         data:[70,50,60,50,70,40]
+      }
+    ]
+  },
+  database: {
+    labels: ["MySQL","SQL Svr","Oracle","MongoDB","H2","CouchDB","Redis","Solr"],
+    datasets:[
+      {
+        label: "",
+        data:[80,80,50,90,40,70,75,80]
+      }
+    ]
+  },
+  mq: {
+    labels: ["IBMMQ (Websphere)","RabbitMQ","Kafka"],
+    datasets: [
+      {
+        label: "",
+        data: [75,85,0]
       }
     ]
   }
