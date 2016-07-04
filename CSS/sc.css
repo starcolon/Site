@@ -3,9 +3,25 @@
 	src: url('font/DPSDbeyond.otf') format("opentype");
 }
 
+@font-face {
+  font-family: 'cloudbold';
+  src: url('font/cloud-bold-webfont.woff2') format('woff2'),
+       url('font/cloud-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cloud_lightlight';
+  src: url('font/cloud-light-webfont.woff2') format('woff2'),
+       url('font/cloud-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *
 {
-	font-family: 'dpsd','CoreSansA35Light';
+	font-family: 'cloud_lightlight','CoreSansA35Light';
 	font-size:15pt;
 }
 
