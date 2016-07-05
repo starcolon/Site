@@ -19,9 +19,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'nikaiaregular';
+  src: url('font/nikaia-webfont.woff2') format('woff2'),
+       url('font/nikaia-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *
 {
-	font-family: 'cloud_lightlight','CoreSansA35Light';
+	font-family: 'nikaiaregular','CoreSansA35Light';
 	font-size:15pt;
 }
 
