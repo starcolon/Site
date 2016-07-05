@@ -1249,7 +1249,7 @@ button.wireframe
 	border:1px solid white;
 	background-color: rgba(0,0,0,0);
 	color:white;
-	cursor:pointer;
+	cursor:arrow;
 	-webkit-transition:all 0.31s ease-out;
 	-moz-transition:all 0.31s ease-out;
 	-o-transition:all 0.31s ease-out;
