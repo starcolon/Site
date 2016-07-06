@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'nikaiaregular';
+  src: url('font/nikaia-webfont.woff2') format('woff2'),
+       url('font/nikaia-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*
+{
+  font-family: 'nikaiaregular',sans serif;
+  font-size:16pt;
+}
+
+body
+{
+  background-color:#edeace;
+  padding:0;
+  margin:0;
+  width:100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x:hidden;
+}
+
+/* ------------ PATTERNS -------------*/
+
+.pattern-inflicted
+{
+  background-repeat: repeat;
+  background-image: url(../PATTERN/inflicted.png);
+}
+
+.pattern-black-ice-age
+{
+  background-color:#141417;
+  background-repeat: repeat;
+  background-image: url(../PATTERN/ice-age.png);
+}
+
+.black-bkk
+{
+  background-color:black;
+}
+
+/* ------------ LAYOUT -------------*/
+
+.free-float
+{
+  position: fixed;
+}
+
+.center
+{
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+
+.fullwidth
+{
+  width:100%;
+  text-align:center;
+}
+
+.fullheight
+{
+  height:100%;
+}
+
+.cinema-width
+{
+  width:87%;
+  max-width: 1300px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+
+.inline-container > *
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.float-left
+{
+  float: left;
+}
+
+.float-right
+{
+  float: right;
+}
+
+/* ------------ SHAPES -------------*/
+.circle
+{
+  border-radius: 50% 50%;
+}
+
+.border
+{
+  border:1px solid rgba(0,0,0,0.5);
+}
+
+.dash-gray-border
+{
+  border-top:2px dashed #353535;
+  border-bottom:2px dashed #353535;
+}
+
+.layout-frame /* DEBUG */
+{
+  /*border:1px solid rgba(0,0,0,0.3);*/
+}
+
+.layout-frame-light /* DEBUG */
+{
+  /*border: 1px solid rgba(255,255,255,0.3);*/
+}
+
+.black-filled-white-text
+{
+  background-color: black;
+  color:white;
+}
+
+.darken
+{
+  background-color: rgba(0,0,0,0.35);
+}
+
+.shadow-wide
+{
+  box-shadow: 0 0 5px black;
+}
+
+.tagged-wireframe
+{
+  border:1px dotted rgba(255,255,255,0.3);
+  margin-left:2px;
+  margin-right:2px;
+  padding:5px;
+}
+
+/* ------------ TYPOS -------------*/
+
+.megatext
+{
+  font-size:50pt;
+}
+
+.largetext, h1
+{
+  font-size:36pt;
+}
+
+.bigtext, h2
+{
+  font-size:24pt;
+}
+
+.smalltext
+{
+  font-size:13pt;
+}
+
+.white-font
+{
+  color: white;
+}
+
+.yellow-font
+{
+  color: yellow;
+}
+
+.gray-font
+{
+  color: gray;
+}
+
+.left-align
+{
+  text-align: left;
+}
+
+/* ---------------- BUTTONS ----------- */
+button.wireframe
+{
+  padding: 8px 12px;
+  border:1px solid white;
+  background-color: rgba(0,0,0,0);
+  color:white;
+  cursor:pointer;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
+
+button.wireframe:hover
+{
+  background:#F3F3F3;
+  color:black;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}

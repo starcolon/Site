@@ -19,9 +19,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'nikaiaregular';
+  src: url('font/nikaia-webfont.woff2') format('woff2'),
+       url('font/nikaia-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *
 {
-	font-family: 'cloud_lightlight','CoreSansA35Light';
+	font-family: 'nikaiaregular','CoreSansA35Light';
 	font-size:15pt;
 }
 
@@ -1241,7 +1249,7 @@ button.wireframe
 	border:1px solid white;
 	background-color: rgba(0,0,0,0);
 	color:white;
-	cursor:pointer;
+	cursor:arrow;
 	-webkit-transition:all 0.31s ease-out;
 	-moz-transition:all 0.31s ease-out;
 	-o-transition:all 0.31s ease-out;
