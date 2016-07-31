@@ -211,3 +211,28 @@ button.wireframe:hover
   transition-property:all;
   transition-duration:0.31s;
 }
+
+button.cyan
+{
+  padding: 8px 12px;
+  border:1px solid cyan;
+  background-color: rgba(0,0,0,0);
+  color:cyan;
+  cursor:pointer;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
+
+button.cyan:hover
+{
+  background:cyan;
+  color:black;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
