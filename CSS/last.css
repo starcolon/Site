@@ -31,6 +31,12 @@ body
   background-image: url(../PATTERN/inflicted.png);
 }
 
+.pattern-skull
+{
+  background-repeat: repeat;
+  background-image: url(../PATTERN/skulls.png);
+}
+
 .pattern-black-ice-age
 {
   background-color:#141417;
