@@ -100,12 +100,24 @@
             a great job on segmenting all programming languages 
             which co-exist in a particular repository with given 
             amount of code and these values are accessible 
-            out-of-the-box through its API. Nice. 
+            out-of-the-box through its API. The endpoint users (us) 
+            don't need to commit any additional effort to find out.
           </p>
         </div>
 
-        <h1>SS</h1>
+        <h1>Download Github Data</h1>
+        <div class="center" style="width:800px;margin-top:25px">
+          <p class="left-align">
+            We prepared a quick <a href="https://github.com/starcolon/git-regional-languages/blob/master/download.py" target="_blank">python script to download Github repo data</a> and store them in <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>. Due to the API usage constraints, we are unable to download 90K repos at once even our Internet connection is ready to go. We accumulatively collect the data by days until it reaches 90K reposotories (as a sample set).
+          </p>
+        </div>
 
+        <h1>Geospatial Plots!</h1>
+        <div class="center" style="width:800px;margin-top:25px">
+          <p class="left-align">
+            It's a show time! Once we have enough Github repo data downloaded (say 90K repos), we proceed to plot it with <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-heatmap" target="_blank">GoogleMap Heatmap API</a>. The API is not fully free for server mode and we can't afford the price (apology), so we run it offline and capture the visualisations in the following showcase.
+          </p>
+        </div>
       </div>
     </div>
 
