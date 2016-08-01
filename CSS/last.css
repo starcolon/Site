@@ -109,6 +109,11 @@ body
   float: right;
 }
 
+.clip-content
+{
+  overflow: hidden;
+}
+
 /* ------------ SHAPES -------------*/
 .circle
 {

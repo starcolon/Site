@@ -118,10 +118,9 @@
         </div>
         <div class="center" style="width:800px;margin-top:25px">
           <p class="left-align">
-            We don't know where a piece of code has been composed. We can however find out where Github users currently live in by determining their <span class="brown-font">location</span>. The <span class="brown-font">location strings</span> are converted to a set of the most likely <span class="brown-font">Geospatial locations</span> by utilising <a href="https://github.com/starcolon/git-regional-languages/blob/master/mapapi/gmap.js" target="_blank">Google Map: Geocoder API</a>.
-          </p>
-          <p class="left-align">
-            There are some users who don't provide valid (decodable by Google API) address so we unfortunately lose out some useful repositories. But there is nothing we can do to cope with this though. 
+            We determine the location of code written in a repository by look up the location of the owner. This is a bit of tricky though since some people may don't properly have valid address attributed.
+
+            To convert a plain text address to a geospatial location, we use <span class="brown-font">GoogleMap geocoding API.</span> <a href="https://github.com/starcolon/git-regional-languages/blob/master/mapapi/gmap.js" target="_blank">See the implementation here.</a>
           </p>
         </div>
 
@@ -138,37 +137,75 @@
 
       <!-- PLOTS -->
       <div class="fullwidth semi-black-bkk">
-        <div class="center fullwidth" style="height:700px">
+        <div class="center fullwidth" style="height:500px">
           <div class="black-bkk fullwidth" style="height:50px">
             <div class="center white-font" style="line-height:2.2em">
               Distribution Plot of :
-              <select>
-                <option>ApacheConf</option>
-                <option>Assembly</option>
-                <option>Common Lisp</option>
-                <option>Elixir</option>
-                <option>F#</option>
-                <option>Haskell</option>
-                <option>Lasso</option>
-                <option>Matlab</option>
-                <option>OCaml</option>
-                <option>Oz</option>
-                <option>Perl6</option>
-                <option>Python</option>
-                <option>R</option>
-                <option>Ruby</option>
-                <option>Scala</option>
-                <option>Smalltalk</option>
-                <option>Swift</option>
-                <option>XSLT</option>
+              <select id="langs">
               </select>
             </div>
           </div>
 
+          <div id="plotSpatialMap" class="fullwidth fullheight clip-content layout-frame-light">
+            <!-- SPATIAL MAP -->
+            <img style="margin-top:-80px" />
+          </div>
 
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+      var langs = [
+        "ASP",
+        "ApacheConf",
+        "Assembly",
+        "Brainfuck",
+        "Clojure",
+        "CommonLisp",
+        "Cucumber",
+        "Elixir",
+        "FSharp",
+        "Groovy",
+        "Haskell",
+        "JavaScript",
+        "Lasso",
+        "Matlab",
+        "OCaml",
+        "Oz",
+        "Pascal",
+        "Perl6",
+        "R",
+        "Ruby",
+        "Rust",
+        "Scala",
+        "XSLT",
+      ];
+      langs.forEach(function(l,i){
+        $('#langs').append($('<option value="' + l + '">' + l + '</option>'));
+        // Load image to cache
+        var img = $('<img src="../../IMG/SS/' + l +'.jpg" />');
+        // Adjust container's clipping 
+        // after the image has been loaded.
+        if (i==0){
+          $(img).load(function(){
+            var ssHeight = this.height;
+            $('#plotSpatialMap').height(ssHeight-200);
+          })
+        }
+      })
+
+      function updateMapDist(lang){
+        $('#plotSpatialMap img').attr('src','../../IMG/SS/' + lang + '.jpg');
+      }
+
+      $('#langs').change(function(){
+        updateMapDist($('#langs').val());
+      })
+
+      updateMapDist($('#langs').val());
+      
+    </script>
 
   </body>
 </html>
