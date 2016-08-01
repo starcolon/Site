@@ -25,6 +25,11 @@ body
 
 /* ------------ PATTERNS -------------*/
 
+.pattern-pegged
+{
+  background-attachment: scroll;
+}
+
 .pattern-inflicted
 {
   background-repeat: repeat;
@@ -47,6 +52,11 @@ body
 .black-bkk
 {
   background-color:black;
+}
+
+.semi-black-bkk
+{
+  background-color: rgba(0,0,0,0.3);
 }
 
 /* ------------ LAYOUT -------------*/
