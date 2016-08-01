@@ -118,7 +118,7 @@ body
 
 .layout-frame /* DEBUG */
 {
-  /*border:1px solid rgba(0,0,0,0.3);*/
+  border:1px solid rgba(0,0,0,0.3);
 }
 
 .layout-frame-light /* DEBUG */
@@ -160,11 +160,13 @@ body
 .largetext, h1
 {
   font-size:36pt;
+  font-weight: normal;
 }
 
 .bigtext, h2
 {
   font-size:24pt;
+  font-weight: normal;
 }
 
 .smalltext
@@ -187,12 +189,29 @@ body
   color: gray;
 }
 
+.brown-font
+{
+  color:brown;
+}
+
 .left-align
 {
   text-align: left;
 }
 
 /* ---------------- BUTTONS ----------- */
+a
+{
+  color: teal;
+  border-bottom: 1px dotted;
+  cursor: default;
+}
+
+a:hover
+{
+  border-bottom: 1px double;
+}
+
 button.wireframe
 {
   padding: 8px 12px;
