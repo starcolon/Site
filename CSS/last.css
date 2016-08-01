@@ -114,10 +114,29 @@ body
   overflow: hidden;
 }
 
+.top-left-pin
+{
+  position: fixed;
+  top:5px;
+  left:5px;
+}
+
 /* ------------ SHAPES -------------*/
 .circle
 {
   border-radius: 50% 50%;
+}
+
+.box
+{
+  padding:10px 10px;
+  border:2px solid rgba(0,0,0,0.8);
+  cursor: default;
+}
+
+.box:hover
+{
+  background-color:rgba(240,200,200,0.4);
 }
 
 .border
@@ -133,12 +152,12 @@ body
 
 .layout-frame /* DEBUG */
 {
-  border:1px solid rgba(0,0,0,0.3);
+  /*border:1px solid rgba(0,0,0,0.3);*/
 }
 
 .layout-frame-light /* DEBUG */
 {
-  border: 1px solid rgba(255,255,255,0.3);
+  /*border: 1px solid rgba(255,255,255,0.3);*/
 }
 
 .black-filled-white-text
@@ -212,6 +231,11 @@ body
 .left-align
 {
   text-align: left;
+}
+
+.rotate-cw
+{
+  transform: rotate(90deg);
 }
 
 /* ---------------- BUTTONS ----------- */
