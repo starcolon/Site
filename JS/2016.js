@@ -26,7 +26,7 @@ function fillMasterMenu(mnu){
   menus.forEach(function(m){
     ul.append(
       $('<li>').text(m[0]).click(function(){
-        window.open(m[1]);
+        document.location = m[1];
       })
     );
   })
