@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Geo Distributions of Programming Languages | StarColon Projects</title>
+    <link rel="shortcut icon" type="image/ico" href="../../IMG/starcolon-logo.png"></link>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></meta>
+    <meta name="keywords" content="github,programming,language,lang,distribution,geospatial,geodist,geo,local,worldwide,stats,stat,statistic,heatmap"/>
+    <meta name="description" content="Analysis of Geospatial Distribution of Programming Languages on Github"/>
+    <meta property="og:image" content="https://github.com/starcolon/git-regional-languages/blob/master/media/apacheconf.jpg"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/last.css"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/MyFontsWebfontsKit.css"/>
+    <script type="text/javascript" src="../../JS/jquery.min.js"></script>
+    <script type="text/javascript" src="../../JS/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../JS/main.js"></script>
+    <script type="text/javascript" src="../../JS/2016.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-35581556-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+    window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+    </script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body class="pattern-skull pattern-pegged">
+    <div id="masterMnu" class="top-left-pin topmost box mega-text rotate-cw" onclick="masterMenu()">
+      ¦¦¦
+    </div>
+    <div class="fullwidth">
+      <div class="fullwidth" style="height:140px">
+        <!-- -->
+      </div>
+      <div class="layout-frame inline-container fullwidth" style="top:180px;opacity:1;height:150px">
+        <div class="layout-frame largetext" style="width:820px">
+          Analysis of Geo-Distributions of Programming Languages
+        </div>
+      </div>
+      <div class="fullwidth" style="height:10px">
+        <div class="center" style="width:30%;border-bottom:1px solid black">
+          <!-- DASH LINE -->
+        </div>
+      </div>
+      <div class="fullwidth" style="height:35px;margin-top:20px">
+        <div class="center black-filled-white-text" 
+        style="width:300px;height:35px;line-height:1.5em">
+          2 Aug 2016 | Tao P.R.
+        </div>
+      </div>
+      <div class="fullwidth" style="height:250px">
+        <!-- -->
+      </div>
+    </div>
+
+    <!-- INTRO PANEL -->
+    <div class="black-bkk">
+      <div class="fullwidth inline-container" style="height:370px">
+        <div class="float-left fullheight" style="width:32%;background-color:white;background-image:url('../../IMG/SS/america.jpg');background-size:cover">
+          <!-- GRAPHIC -->
+        </div>
+        <div class="layout-frame-light float-left fullheight white-font" style="width:700px">
+          <p class="left-align" style="padding-left:25px">
+            <label class="bigtext">Regional or Global Dominance?</label>
+            <p class="left-align" style="padding-left:25px"> 
+              A quick hypothesis of this analysis project is 
+              just simple. We believe the popularity of programming 
+              languages are likely epidemic. It might be 
+              controversial if world-famous languages like C++, 
+              Python, Java, etc. are dominating everywhere 
+              in the world. We rush into finding out!
+            </p>
+            <p class="left-align" style="padding-left:32px">
+              <button class="wireframe" onclick="window.open('https://github.com/starcolon/git-regional-languages')">
+                View Code On Github
+              </button>
+            </p>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <!-- FIRST SCOOP -->
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Languages of Github Repos</h1>
+        <div class="layout-frame center" style="width:800px">
+          <!-- GRAPHIC -->
+          <img src="../../IMG/ARTWORK/langs.png" class="fullwidth"/>
+        </div>
+        <div class="center" style="width:800px;margin-top:25px">
+          <p class="left-align">
+            <span class="brown-font">Languages </span>are a common 
+            attribute of a Github repository. <a href="https://developer.github.com/v3/repos/#list-languages" target="_blank">Github API</a> does 
+            a great job on segmenting all programming languages 
+            which co-exist in a particular repository with given 
+            amount of code and these values are accessible 
+            out-of-the-box through its API. The endpoint users (us) 
+            don't need to commit any additional effort to find out.
+          </p>
+        </div>
+
+        <h1>Download Github Data</h1>
+        <div class="center" style="width:800px;margin-top:25px">
+          <p class="left-align">
+            We prepared a quick <a href="https://github.com/starcolon/git-regional-languages/blob/master/download.py" target="_blank">python script to download Github repo data</a> and store them in <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>. Due to the API usage constraints, we are unable to download 90K repos at once even our Internet connection is ready to go. We accumulatively collect the data by days until it reaches 90K reposotories (as a sample set).
+          </p>
+        </div>
+
+        <h1>Determine the Location?</h1>
+        <!-- <div class="layout-frame center" style="width:250px;height:125px"> -->
+          <!-- GRAPHIC -->
+        <!-- </div> -->
+        <div class="center" style="width:800px;margin-top:25px">
+          <p class="left-align">
+            We determine the location of code written in a repository by look up the location of the owner. This is a bit of tricky though since some people may don't properly have valid address attributed.
+
+            To convert a plain text address to a geospatial location, we use <span class="brown-font">GoogleMap geocoding API.</span> <a href="https://github.com/starcolon/git-regional-languages/blob/master/mapapi/gmap.js" target="_blank">See the implementation here.</a>
+          </p>
+        </div>
+
+        <h1>Geospatial Plots!</h1>
+        <div class="center" style="width:800px;margin-top:25px">
+          <p class="left-align">
+            It's a show time! Once we have enough Github repo data downloaded (say 90K repos), we proceed to plot it with <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-heatmap" target="_blank">GoogleMap Heatmap API</a>. The API is not fully free for server mode and we can't afford the price (apology), so we run it offline and capture the visualisations in the following showcase.
+          </p>
+        </div>
+      </div>
+      <div class="fullwidth" style="height:50px">
+        <!-- -->
+      </div>
+
+      <!-- PLOTS -->
+      <div class="fullwidth semi-black-bkk">
+        <div class="center fullwidth" style="height:500px">
+          <div class="black-bkk fullwidth" style="height:50px">
+            <div class="center white-font" style="line-height:2.2em">
+              Distribution Plot of :
+              <select id="langs">
+              </select>
+            </div>
+          </div>
+
+          <div id="plotSpatialMap" class="fullwidth fullheight clip-content layout-frame-light">
+            <!-- SPATIAL MAP -->
+            <img style="margin-top:-80px" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var langs = [
+        "ASP",
+        "ApacheConf",
+        "Assembly",
+        "Brainfuck",
+        "Clojure",
+        "CommonLisp",
+        "Cucumber",
+        "Elixir",
+        "FSharp",
+        "Groovy",
+        "Haskell",
+        "JavaScript",
+        "Lasso",
+        "Matlab",
+        "OCaml",
+        "Oz",
+        "Pascal",
+        "Perl6",
+        "R",
+        "Ruby",
+        "Rust",
+        "Scala",
+        "XSLT",
+      ];
+      langs.forEach(function(l,i){
+        $('#langs').append($('<option value="' + l + '">' + l + '</option>'));
+        // Load image to cache
+        var img = $('<img src="../../IMG/SS/' + l +'.jpg" />');
+        // Adjust container's clipping 
+        // after the image has been loaded.
+        if (i==0){
+          $(img).load(function(){
+            var ssHeight = this.height;
+            $('#plotSpatialMap').height(ssHeight-200);
+          })
+        }
+      })
+
+      function updateMapDist(lang){
+        $('#plotSpatialMap img').attr('src','../../IMG/SS/' + lang + '.jpg');
+      }
+
+      $('#langs').change(function(){
+        updateMapDist($('#langs').val());
+      })
+
+      updateMapDist($('#langs').val());
+      
+    </script>
+
+  </body>
+</html>
