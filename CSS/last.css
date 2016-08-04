@@ -173,6 +173,11 @@ body
   border-radius: 50% 50%;
 }
 
+.link
+{
+  cursor: pointer;
+}
+
 .black-box
 {
   background-color: #484848;
@@ -326,6 +331,33 @@ a
 a:hover
 {
   border-bottom: 1px double;
+}
+
+button.white
+{
+  padding: 8px 12px;
+  border: 1px solid black;
+  background-color:white;
+  color:black;
+  cursor:pointer;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
+
+button.white:hover
+{
+  background-color:#FFF8E0;
+  color:black;
+  cursor:pointer;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+  margin-left:5px;
 }
 
 button.wireframe
