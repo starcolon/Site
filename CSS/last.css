@@ -27,7 +27,8 @@
 
 body
 {
-  background-color: #faf3d7;/*#edeace;*/
+  background-color: #F3FFEF;
+  /*background-color: #faf3d7;*/
   padding:0;
   margin:0;
   width:100%;
@@ -258,7 +259,7 @@ body
 
 .layout-frame-light /* DEBUG */
 {
-  /*border: 1px solid rgba(255,255,255,0.3);*/
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
 .black-filled-white-text
@@ -294,19 +295,24 @@ body
 
 .largetext, h1
 {
-  font-size:36pt;
+  font-size:40pt;
   font-weight: normal;
 }
 
 .bigtext, h2
 {
-  font-size:24pt;
+  font-size:26pt;
   font-weight: normal;
 }
 
 .smalltext
 {
   font-size:13pt;
+}
+
+.highlighted
+{
+  border:1px solid rgba(10,10,10,0.4);
 }
 
 .white-font
@@ -340,14 +346,15 @@ body
 }
 
 /* ---------------- BUTTONS ----------- */
-a
+a, a:visited
 {
   color: teal;
   border-bottom: 1px dotted;
   cursor: default;
+  text-decoration: none;
 }
 
-a:hover
+a:hover, a:hover:visited
 {
   border-bottom: 1px double;
 }

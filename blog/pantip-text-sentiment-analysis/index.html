@@ -61,11 +61,74 @@
 
     <!-- INTRO PANEL -->
     <div class="black-bkk">
-      <div class="fullwidth inline-container" style="height:370px">
-        <div class="float-left fullheight" style="width:32%;background-color:white;background-image:url('../../IMG/SS/america.jpg');background-size:cover">
-          <!-- GRAPHIC -->
+      <div class="fullwidth inline-container" style="height:350px">
+        <div class="fullwidth white-font inline-container" style="margin-top:30px;margin-bottom:30px">
+          <div class="bigtext" style="width:420px;margin-left:20%;text-align:left">
+            Hundreds thousand of topics are posted on Pantip.com in a variety 
+            of categories including sports, health, arts, science, etc. 
+          </div>
+          <div class="layout-frame-light float-right" style="width:40%;margin-left:18px">
+            <!-- -->
+          </div>
         </div>
       </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <!-- INTRO CONTEXT -->
+    <div class="fullwidth" style="height:1000px">
+      <h1>Hypothesis: Nice topic speaks for itself</h1>
+      <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+        <span class="brown-font">So probably does the bad content.</span> 
+        Just like Facebook, Pantip.com allows the readers to mark the topic 
+        with their positive or negative reactions. By this information, 
+        we know how people think.
+        </p> 
+        <p class="brown-font bigtext">
+        "Number of votes can also measure quality of a post."
+        </p>
+      </div>
+
+      <h1>Classification Problem</h1>
+      <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+        Given a <span class="brown-font">natural language text topic (X)</span>, 
+        I want to know <span class="brown-font">the degree of readers' reaction (Y).</span> 
+        To do so, the machine needs to learn the relationship 
+        <span class="brown-font">(f)</span> between 
+        the text features and their corresponding readers' reaction. 
+        Now it's down to a simple <a href="https://en.wikipedia.org/wiki/Linear_classifier" target="_blank">
+        linear classification problem.</a>
+        </p> 
+        <p class="bigtext">
+          f: X -> Y
+        </p>
+        <p class="left-align">
+        Where
+        </p>
+        <p class="bigtext left-align" style="padding-left:40px">
+          Y : The reactions {Adorable, Disgusting, Neutral} <br/>
+          X : The topic vector
+        </p>
+      </div>
+
+      <h1>Topic Vectors</h1>
+      <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+        Text data can be easily transformed into numerical feature vectors 
+        by applying 
+        <a href="https://en.wikipedia.org/wiki/Text_mining" target="_blank">
+          text mining techniques
+        </a>. In my experiments, a combination of several techniques are tested 
+        for comparison.
+        </p>
+      </div>
+
     </div>
 
   </body>
