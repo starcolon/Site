@@ -106,13 +106,13 @@
         linear classification problem.</a>
         </p> 
         <p class="bigtext">
-          f: X -> Y
+          f: X -> y
         </p>
         <p class="left-align">
         Where
         </p>
         <p class="bigtext left-align" style="padding-left:40px">
-          Y : The reactions {Adorable, Disgusting, Neutral} <br/>
+          y : The reaction of {Adorable, Disgusting, Neutral} <br/>
           X : The topic vector
         </p>
       </div>
@@ -125,10 +125,47 @@
         <a href="https://en.wikipedia.org/wiki/Text_mining" target="_blank">
           text mining techniques
         </a>. In my experiments, a combination of several techniques are tested 
-        for comparison.
+        for comparison. The transformation pipeline from text to feature vectors 
+        are designed as follows.
+        </p>
+        <p>
+          <!-- TAOTODO: Pipeline image -->
+          <img class="layout-frame" width="700px" height="200px">
         </p>
       </div>
 
+
+      <h1>Text Vectorisation</h1>
+      <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+        All threads on Pantip.com are written in Thai which needs additional 
+        effort for <a href="https://en.wikipedia.org/wiki/Text_segmentation" target="_blank">word segmentation</a>, de facto. Then the segmented topic could 
+        be processed by typical vectorisation algorithms.
+        </p>
+        <p>
+          <!-- TAOTODO: Diagram -->
+          <img class="layout-frame" width="700px" height="200px">
+        </p>
+        <p class="left-align">
+          <a href="http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction" target="_blank">TF-IDF</a>
+           is the selected tool for vectorisation task due to its ability 
+           to highlight the impact of keywords by frequency yet subduing 
+           noisy <a href="https://en.wikipedia.org/wiki/Stop_words" target="_blank">stopwords</a>.
+        </p>
+      </p>
+
+      <h1>Latent Information Decomposition</h1>
+      <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+
+          Choices are made for comparison.
+          <ul class="left-align">
+            <li>SVD</li>
+            <li>LDA</li>
+          </ul>
+
+        </p>
+      </p>
     </div>
 
   </body>
