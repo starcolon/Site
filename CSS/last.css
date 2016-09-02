@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'nikaiaregular';
   src: url('font/nikaia-webfont.woff2') format('woff2'),
        url('font/nikaia-webfont.woff') format('woff');
@@ -12,13 +12,17 @@
        url('webfonts/cloud-light-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+}*/
+
+@font-face {
+  font-family: GochiHand;
+  src: url('font/GochiHand-Regular.ttf') format('truetype');
 }
 
 *
 {
-  /*font-family: 'nikaiaregular',sans serif;*/
-  font-family: cloudx;
-  font-size:16pt;
+  font-family: GochiHand,sans-serif;
+  font-size:18pt;
 }
 
 body
@@ -49,6 +53,12 @@ body
 {
   background-repeat: repeat;
   background-image: url(../PATTERN/skulls.png);
+}
+
+.pattern-vichy
+{
+  background-repeat: repeat;
+  background-image: url(../PATTERN/vichy.png);
 }
 
 .pattern-black-ice-age
