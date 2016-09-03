@@ -13,6 +13,9 @@
     <script type="text/javascript" src="../../JS/skrollr.min.js"></script>
     <script type="text/javascript" src="../../JS/main.js"></script>
     <script type="text/javascript" src="../../JS/2016.js"></script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -70,8 +73,8 @@
             Hundreds thousand of topics are posted on Pantip.com in a variety 
             of categories including sports, health, arts, science, etc. 
           </div>
-          <div class="layout-frame-light float-right" style="width:40%;margin-left:18px">
-            <!-- -->
+          <div class="layout-frame-light float-right clip-content" style="width:40%;height:310px;margin-left:18px">
+            <img src="../../IMG/ARTWORK/pantip-01.png" height="300px"/>
           </div>
         </div>
       </div>
@@ -92,6 +95,15 @@
         with their positive or negative reactions. By this information, 
         we know how people think.
         </p> 
+        <p>
+          <img src="../../IMG/ARTWORK/pantip-03.png" width="700px"/>
+        </p>
+        <p class="bigtext">
+          ⇓
+        </p>
+        <p>
+          <img src="../../IMG/ARTWORK/pantip-02.png" width="500px"/>
+        </p>
         <p class="brown-font bigtext">
         "Number of votes can also measure quality of a post."
         </p>
@@ -109,14 +121,14 @@
         linear classification problem.</a>
         </p> 
         <p class="bigtext">
-          f: X -> y
+          `f: X -> y`
         </p>
         <p class="left-align">
         Where
         </p>
         <p class="bigtext left-align" style="padding-left:40px">
-          y : The reaction of {Adorable, Disgusting, Neutral} <br/>
-          X : The topic vector
+          `y` : The reaction of {Adorable, Disgusting, Neutral} <br/>
+          `X` : The topic vector
         </p>
       </div>
 
@@ -132,8 +144,13 @@
         are designed as follows.
         </p>
         <p>
-          <!-- TAOTODO: Pipeline image -->
-          <img class="layout-frame" width="700px" height="200px">
+          Text paragraph `-> X`
+        </p>
+        <p>
+          <span class="smalltext">เที่ยวไทย ฉบับไปคนเดียว แว๊นเที่ยวเชียงราย </span>`-> [[0.1, 0.2, ..., 0],[0, 0, ..., 0.3],[0.1, 0, ..., 0]]`
+        </p>
+        <p>
+          <img class="box" width="700px" src="../../IMG/ARTWORK/pantip-04.png">
         </p>
       </div>
 
@@ -145,12 +162,8 @@
         effort for <a href="https://en.wikipedia.org/wiki/Text_segmentation" target="_blank">word segmentation</a>, de facto. Then the segmented topic could 
         be processed by typical vectorisation algorithms.
         </p>
-        <p>
-          <!-- TAOTODO: Diagram -->
-          <img class="layout-frame" width="700px" height="200px">
-        </p>
         <p class="left-align">
-          <a href="http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction" target="_blank">TF-IDF</a>
+          <a class="bigtext" href="http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction" target="_blank">TF-IDF</a>
            is the selected tool for vectorisation task due to its ability 
            to highlight the degree of impact of certain keywords by frequency yet subduing noisy <a href="https://en.wikipedia.org/wiki/Stop_words" target="_blank">stopwords</a>.
         </p>
@@ -167,16 +180,20 @@
           Two choices are taken for comparison.
           <ul class="left-align">
             <li>
-              <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition" target="_blank">SVD</a>
+              <a class="bigtext" href="https://en.wikipedia.org/wiki/Singular_value_decomposition" target="_blank">SVD</a>
               : Account for algebraic information.
             </li>
             <li>
-              <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation" target="_blank">LDA</a>
+              <a class="bigtext" href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation" target="_blank">LDA</a>
               : Account for dependencies between information 
               and features.
             </li>
           </ul>
-
+        </p>
+        <p class="left-align">
+          **NOTE: <a href="https://en.wikipedia.org/wiki/Principal_component_analysis" target="_blank">PCA</a> is another good choice which is very close to SVD. However, SVD is chosen over it 
+          for the sake of performance. (SVD computes directly on the matrix 
+          whereas PCA requires a covariance matrix.)
         </p>
       </div>
 
@@ -228,11 +245,17 @@
         <p>
           <img src="https://camo.githubusercontent.com/7b9fcccdff1b45a77ce60f422808f3229bd90745/68747470733a2f2f63646e2e7261776769742e636f6d2f73746172636f6c6f6e2f70616e7469702d6c6962722f6d61737465722f646174612f72616461722e7376673f763d33">
         </p>
+        <p class="left-align bigtext">
+          <span class="brown-font bigtext">Nearest Centroid</span> appears to perform 
+          very outstanding with accuracy of <span class="brown-font bigtext">80% overall</span> under all settings. It works well with unseen dataset too and 
+          this turns out as no surprise. 
+        </p>
         <p class="left-align">
-          <span class="brown-font">Nearest Centroid</span> seems to be 
-          the only classification model which barely suffers from 
-          overfitting despite its parameters. The method yields
-          accurary of prediction as high as <span class="brown-font">80% overall</span>.
+          The diverse of the words used in user-generated content like Pantip.com 
+          is huge and using hyperplanes to divide classes might not be the 
+          best technique to tackle unseen data. Instead, classifying the content 
+          by its likelihood to particular topic contents turns out a 
+          better method.
         </p>
       </div>
 
