@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'nikaiaregular';
   src: url('font/nikaia-webfont.woff2') format('woff2'),
        url('font/nikaia-webfont.woff') format('woff');
@@ -6,15 +6,29 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: cloudx;
+  src: url('webfonts/cloud-light-webfont.woff') format('woff'),
+       url('webfonts/cloud-light-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: GochiHand;
+  src: url('font/GochiHand-Regular.ttf') format('truetype');
+}
+
 *
 {
-  font-family: 'nikaiaregular',sans serif;
-  font-size:16pt;
+  font-family: GochiHand,sans-serif;
+  font-size:18pt;
 }
 
 body
 {
-  background-color:#edeace;
+  background-color: #F3FFEF;
+  /*background-color: #faf3d7;*/
   padding:0;
   margin:0;
   width:100%;
@@ -25,10 +39,27 @@ body
 
 /* ------------ PATTERNS -------------*/
 
+.pattern-pegged
+{
+  background-attachment: scroll;
+}
+
 .pattern-inflicted
 {
   background-repeat: repeat;
   background-image: url(../PATTERN/inflicted.png);
+}
+
+.pattern-skull
+{
+  background-repeat: repeat;
+  background-image: url(../PATTERN/skulls.png);
+}
+
+.pattern-vichy
+{
+  background-repeat: repeat;
+  background-image: url(../PATTERN/vichy.png);
 }
 
 .pattern-black-ice-age
@@ -43,7 +74,17 @@ body
   background-color:black;
 }
 
+.semi-black-bkk
+{
+  background-color: rgba(0,0,0,0.3);
+}
+
 /* ------------ LAYOUT -------------*/
+
+.topmost
+{
+  z-index: 10;
+}
 
 .free-float
 {
@@ -93,10 +134,111 @@ body
   float: right;
 }
 
+.clip-content
+{
+  overflow: hidden;
+}
+
+.top-left-pin
+{
+  position: fixed;
+  top:5px;
+  left:5px;
+}
+
+.left-pin
+{
+  position: fixed;
+  top:43px;
+  left:0;
+}
+
+.left-pin ul
+{
+  list-style: none;
+  padding:0;
+  margin: 0;
+  color: #E0E0E0;
+}
+
+.left-pin ul li
+{
+  width:100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin:0;
+  border-bottom: 1px dotted #101010;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
+
+.left-pin ul li:hover
+{
+  border-left:3px solid orange;
+  color:orange;
+  padding-left:10px;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
+
 /* ------------ SHAPES -------------*/
 .circle
 {
   border-radius: 50% 50%;
+}
+
+.link
+{
+  cursor: pointer;
+}
+
+.black-box
+{
+  background-color: #484848;
+  padding:10px 10px;
+  border:2px solid rgba(0,0,0,0.8);
+  cursor: default;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.box
+{
+  background-color: white;
+  padding:10px 10px;
+  border:2px solid rgba(0,0,0,0.8);
+  cursor: default;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.box:hover
+{
+  background-color:rgba(240,200,200,0.4);
+}
+
+.pressed-box
+{
+  color: #929292;
+  padding:10px 10px;
+  background-color: black;
+  border:2px solid rgba(0,0,0,0.8);
+  cursor: default;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
+}
+
+.pressed-box:hover
+{
+  color: orange;
+}
+
+.pressed-box:hover
+{
+  background-color:#200C00;
 }
 
 .border
@@ -153,17 +295,24 @@ body
 
 .largetext, h1
 {
-  font-size:36pt;
+  font-size:40pt;
+  font-weight: normal;
 }
 
 .bigtext, h2
 {
-  font-size:24pt;
+  font-size:26pt;
+  font-weight: normal;
 }
 
 .smalltext
 {
   font-size:13pt;
+}
+
+.highlighted
+{
+  border:1px solid rgba(10,10,10,0.4);
 }
 
 .white-font
@@ -181,12 +330,62 @@ body
   color: gray;
 }
 
+.brown-font
+{
+  color:brown;
+}
+
 .left-align
 {
   text-align: left;
 }
 
+.rotate-cw
+{
+  transform: rotate(90deg);
+}
+
 /* ---------------- BUTTONS ----------- */
+a, a:visited
+{
+  color: teal;
+  border-bottom: 1px dotted;
+  cursor: default;
+  text-decoration: none;
+}
+
+a:hover, a:hover:visited
+{
+  border-bottom: 1px double;
+}
+
+button.white
+{
+  padding: 8px 12px;
+  border: 1px solid black;
+  background-color:white;
+  color:black;
+  cursor:pointer;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
+
+button.white:hover
+{
+  background-color:#FFF8E0;
+  color:black;
+  cursor:pointer;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+  margin-left:5px;
+}
+
 button.wireframe
 {
   padding: 8px 12px;
@@ -204,6 +403,31 @@ button.wireframe
 button.wireframe:hover
 {
   background:#F3F3F3;
+  color:black;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
+
+button.cyan
+{
+  padding: 8px 12px;
+  border:1px solid cyan;
+  background-color: rgba(0,0,0,0);
+  color:cyan;
+  cursor:pointer;
+  -webkit-transition:all 0.31s ease-out;
+  -moz-transition:all 0.31s ease-out;
+  -o-transition:all 0.31s ease-out;
+  transition-property:all;
+  transition-duration:0.31s;
+}
+
+button.cyan:hover
+{
+  background:cyan;
   color:black;
   -webkit-transition:all 0.31s ease-out;
   -moz-transition:all 0.31s ease-out;
