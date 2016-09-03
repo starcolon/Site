@@ -149,23 +149,79 @@
         <p class="left-align">
           <a href="http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction" target="_blank">TF-IDF</a>
            is the selected tool for vectorisation task due to its ability 
-           to highlight the impact of keywords by frequency yet subduing 
-           noisy <a href="https://en.wikipedia.org/wiki/Stop_words" target="_blank">stopwords</a>.
+           to highlight the degree of impact of certain keywords by frequency yet subduing noisy <a href="https://en.wikipedia.org/wiki/Stop_words" target="_blank">stopwords</a>.
         </p>
-      </p>
+      </div>
 
       <h1>Latent Information Decomposition</h1>
       <div class="layout-frame center" style="width:800px">
         <p class="left-align">
-
-          Choices are made for comparison.
+          It might be a good idea to extract the latent information 
+          or contextual characteristic of such text vectors before 
+          passing them through classification.
+        </p>
+        <p class="left-align">
+          Two choices are taken for comparison.
           <ul class="left-align">
-            <li>SVD</li>
-            <li>LDA</li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition" target="_blank">SVD</a>
+              : Account for algebraic information.
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation" target="_blank">LDA</a>
+              : Account for dependencies between information 
+              and features.
+            </li>
           </ul>
 
         </p>
-      </p>
+      </div>
+
+
+      <h1>Feature Selection</h1>
+      <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+          My input vector after text vectorisation &amp; decomposition 
+          may now represent its contextual characteristic well. 
+          Yet a <a href="https://en.wikipedia.org/wiki/Feature_selection" target="_blank">Feature selection</a> technique is utilised 
+          in favour of more accurate classification.
+        </p>
+      </div>
+
+      <h1>Linear Classification Model!</h1>
+      <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+          There are a number of linear classification models 
+          which may suit this problem. Here is the list of 
+          models I picked for comparison.
+        </p>
+        <p class="left-align">
+          <ul class="left-align">
+            <li>
+              <a href="http://scikit-learn.org/stable/modules/neighbors.html" target="_blank">K Nearest Neighbors</a>
+            </li>
+            <li>
+              <a href="http://scikit-learn.org/stable/modules/svm.html" target="_blank">Support Vector Machine</a>
+            </li>
+            <li>
+              <a href="http://scikit-learn.org/0.16/modules/generated/sklearn.qda.QDA.html" target="_blank">Quadratic Discriminant Analysis</a>
+            </li>
+            <li>
+              <a href="http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.html#sklearn.neighbors.NearestCentroid" target="_blank">Nearest Centroid</a>
+            </li>
+            <li>
+              <a href="http://scikit-learn.org/stable/modules/sgd.html" target="_blank">Stochastic Gradient Descent</a>
+            </li>
+          </ul>
+        </p>
+      </div>
+
+      <h1>Results</h1>
+      <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+        </p>
+      </div>
+
     </div>
 
   </body>
