@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'nikaiaregular';
   src: url('font/nikaia-webfont.woff2') format('woff2'),
        url('font/nikaia-webfont.woff') format('woff');
@@ -6,15 +6,29 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: cloudx;
+  src: url('webfonts/cloud-light-webfont.woff') format('woff'),
+       url('webfonts/cloud-light-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: GochiHand;
+  src: url('font/GochiHand-Regular.ttf') format('truetype');
+}
+
 *
 {
-  font-family: 'nikaiaregular',sans serif;
-  font-size:16pt;
+  font-family: GochiHand,sans-serif;
+  font-size:18pt;
 }
 
 body
 {
-  background-color: #faf3d7;/*#edeace;*/
+  background-color: #F3FFEF;
+  /*background-color: #faf3d7;*/
   padding:0;
   margin:0;
   width:100%;
@@ -40,6 +54,12 @@ body
 {
   background-repeat: repeat;
   background-image: url(../PATTERN/skulls.png);
+}
+
+.pattern-vichy
+{
+  background-repeat: repeat;
+  background-image: url(../PATTERN/vichy.png);
 }
 
 .pattern-black-ice-age
@@ -275,19 +295,24 @@ body
 
 .largetext, h1
 {
-  font-size:36pt;
+  font-size:40pt;
   font-weight: normal;
 }
 
 .bigtext, h2
 {
-  font-size:24pt;
+  font-size:26pt;
   font-weight: normal;
 }
 
 .smalltext
 {
   font-size:13pt;
+}
+
+.highlighted
+{
+  border:1px solid rgba(10,10,10,0.4);
 }
 
 .white-font
@@ -321,14 +346,15 @@ body
 }
 
 /* ---------------- BUTTONS ----------- */
-a
+a, a:visited
 {
   color: teal;
   border-bottom: 1px dotted;
   cursor: default;
+  text-decoration: none;
 }
 
-a:hover
+a:hover, a:hover:visited
 {
   border-bottom: 1px double;
 }
