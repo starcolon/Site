@@ -198,6 +198,12 @@ body
   cursor: pointer;
 }
 
+.textlink-effect:hover
+{
+  text-shadow:0 0 5px rgba(200,200,200,0.6);
+  color:#353535;
+}
+
 .black-box
 {
   background-color: #484848;
@@ -313,6 +319,11 @@ body
 .highlighted
 {
   border:1px solid rgba(10,10,10,0.4);
+}
+
+.highlighted-thick
+{
+  border:3px solid;
 }
 
 .white-font
