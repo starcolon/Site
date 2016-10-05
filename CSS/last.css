@@ -187,6 +187,20 @@ body
   transition-duration:0.31s;
 }
 
+ul.inline
+{
+  display: inline
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.inline li
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* ------------ SHAPES -------------*/
 .circle
 {

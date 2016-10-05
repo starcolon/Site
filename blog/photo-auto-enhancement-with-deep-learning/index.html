@@ -55,6 +55,11 @@
         style="width:300px;height:35px;line-height:1.5em">
           10 Oct 2016 | Tao P.R.
         </div>
+        <div style="margin-top:15px">
+          <button class="white" onclick="window.open('https://github.com/starcolon/photo-auto-balance')">
+            <img height="40px" src="../../IMG/icon-github.png" /> View Code On Github
+          </button>
+        </div>
       </div>
       <div class="fullwidth" style="height:250px">
         <!-- -->
@@ -139,7 +144,25 @@
       <div class="layout-frame fullwidth">
         <h1>Building up ConvNet</h1>
         <div class="layout-frame center" style="width:800px">
-
+          <p class="left-align">
+            Following is the structure of the ConvNet for 
+            extracting spatial features of an image in 3D 
+            (H,S,V channels, each is 2D matrix).
+          </p>
+          <p class="box" style="height:320px">
+            <!-- CNN DIAGRAM -->
+          </p>
+          <p class="left-align">
+          Two convolutional layers with max pooling are placed 
+          at the beginning of the network. The remaining subsequent layers 
+          are much less complicated in terms of computation. 
+          </p>
+          <p class="left-align">
+            As a side note, to getting understand how <span class="brown-font"> Convolutional Neural Network</span> works in just half an hour, I recommand watching this video:
+          </p>
+          <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FmpDIaiMIeA" frameborder="0" allowfullscreen></iframe>
+          </p>
         </div>
       </div>
     </div>
@@ -148,7 +171,68 @@
       <div class="layout-frame fullwidth">
         <h1>Trainset Prep</h1>
         <div class="layout-frame center" style="width:800px">
-
+          <p class="left-align">
+          I've made a simple trick to populate the training set. 
+          As you may know, CNN is a <a href="https://en.wikipedia.org/wiki/Supervised_learning">supervised learning</a> and it needs a labelled training set to learn from.
+          </p>
+          <p class="bigtext left-align" style="padding:15px">
+            "It's more painful to make a trainset of low quality 
+            images and annotate them with hand-crafted 
+            enhancement transformations."
+          </p>
+          <p class="left-align">
+            So, with a quick hack, I downloaded good photos 
+            and generate random <span class="brown-font">filters which degrade quality of those images.</span> The results of 
+            the filters are used as training images along with 
+            the <span class="brown-font">reverse of generated transformations.</span> So we got:
+          </p>
+          <p class="bigtext">
+            <span>Degradation</span> `T: I -> I'`
+          </p>
+          <p>
+            <ul class="inline">
+              <li>
+                <img src="../../IMG/ARTWORK/beach003.jpg" />
+              </li>
+              <li>
+                `T: ->`
+              </li>
+              <li>
+                <img src="../../IMG/ARTWORK/beach003-04.jpg" />
+              </li>
+            </ul>
+          </p>
+          <p class="left-align">
+            Where:
+          </p>
+          <p class="left-align">
+            <ul>
+              <li>`T` is a generated transformation for quality degradation</li>
+              <li>`I` is an input raw image from the downloaded set.</li>
+              <li>`I'` is a degraded image by the transformation.</li>
+            </ul>
+          </p>
+          <p class="left-align">
+            Then I can easily <span class="brown-font">reverse `T`</span> to obtain the <span class="brown-font">enhancement transformation `T'`</span> with respect to the degraded image.
+          </p>
+          <p>
+            <ul class="inline">
+              <li>
+                <img src="../../IMG/ARTWORK/beach003-04.jpg" />
+              </li>
+              <li>
+                `T': ->`
+              </li>
+              <li>
+                <img src="../../IMG/ARTWORK/beach003.jpg" />
+              </li>
+            </ul>
+          </p>
+          <p class="bigtext brown-font" style="padding: 15px">
+            With this simple approach, I can randomly generate a large 
+            trainset of low quality images (`I'`) with the enhancement 
+            transformations (`T'`).
+          </p>
         </div>
       </div>
     </div>
