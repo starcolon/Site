@@ -345,6 +345,11 @@ ul.inline li
   border:3px solid;
 }
 
+.mono
+{
+  font-family: courier;
+}
+
 .white-font
 {
   color: white;

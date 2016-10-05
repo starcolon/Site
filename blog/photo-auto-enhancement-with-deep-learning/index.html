@@ -9,10 +9,12 @@
     <meta property="og:image" content="http://starcolon.com/IMG/SS/ASP.jpg"/>
     <link rel="stylesheet" type="text/css" href="../../CSS/last.css"/>
     <link rel="stylesheet" type="text/css" href="../../CSS/MyFontsWebfontsKit.css"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/prism.css"/>
     <script type="text/javascript" src="../../JS/jquery.min.js"></script>
     <script type="text/javascript" src="../../JS/skrollr.min.js"></script>
     <script type="text/javascript" src="../../JS/main.js"></script>
     <script type="text/javascript" src="../../JS/2016.js"></script>
+    <script type="text/javascript" src="../../JS/prism.js"></script>
     <script type="text/javascript" async
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
@@ -241,7 +243,15 @@
       <div class="layout-frame fullwidth">
         <h1>Training Pipeline</h1>
         <div class="layout-frame center" style="width:800px">
-
+          <p class="left-align">
+            <span class="brown-font">ConvNet</span> is iteratively 
+            and repeatedly trained using the prepared enhancement 
+            transformation vector and the low quality images (as 
+            3-D matrices). Following graph shows the burndown 
+            chart of <a href="https://en.wikipedia.org/wiki/Loss_functions_for_classification">training loss</a> 
+          </p>
+          <p class="box" style="height: 320px">
+          </p>
         </div>
       </div>
     </div>
@@ -249,6 +259,51 @@
     <div>
       <div class="layout-frame fullwidth">
         <h1>AWS for Deep Learning</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            My only computer is just a plain laptop so I set up 
+            an <a href="https://aws.amazon.com/ec2/">AWS EC2</a> 
+            as a powerful computing cluster. ConvNet requires 
+            large amount of computational power and memory 
+            footprint, so I basically choose one of the <span class="brown-font">Compute 
+            optimised instances</span> (<a href="https://aws.amazon.com/ec2/instance-types/">C4</a>).
+          </p>
+          <p class="highlighted lighten" style="padding:15px">
+            GPU instance is a recommended platform though. <br/>But 
+            I haven't chosen it because of budget-first purpose.
+          </p>
+          <p class="left-align">
+            Following is a quick <span class="brown-font">bash script</span> recipe for setting an environment up in one go from scratch. The script is designed for Ubuntu server only.
+          </p>
+          <p class="mono left-align gray-font">
+          <pre>
+          <code class="language-bash left-align smalltext">
+            sudo apt-get update
+            sudo apt-get install gfortran libopenblas-dev liblapack-dev
+            sudo apt-get install python3-dev
+            sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk
+            sudo apt-get install git python3-pip
+            cd /home/ubuntu/
+            git clone https://github.com/starcolon/photo-auto-balance.git
+            cd photo-auto-balance/
+            mkdir -p data/raw
+            mkdir -p data/out
+            mkdir -p data/unfiltered
+            sudo pip3 install -r requirements.txt 
+            cd data/
+            wget http://starcolon.com/data/train.tar.gz
+            tar -xvf train.tar.gz 
+            rm raw/._*
+          </code>
+          </pre>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Common failures during training</h1>
         <div class="layout-frame center" style="width:800px">
 
         </div>
