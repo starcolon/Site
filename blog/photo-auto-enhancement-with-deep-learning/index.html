@@ -13,6 +13,9 @@
     <script type="text/javascript" src="../../JS/skrollr.min.js"></script>
     <script type="text/javascript" src="../../JS/main.js"></script>
     <script type="text/javascript" src="../../JS/2016.js"></script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -65,9 +68,10 @@
         </div>
         <div class="layout-frame-light left-align" style="width:425px;height:370px">
           <h2>Convolutional Neural Network (ConvNet)</h2>
-          <span class="yellow-font">ConvNet</span> is capable 
-          of processing 2D or 3D features spatially. So I 
-          customise it for the project.
+          <span class="yellow-font">ConvNet</span> is a species 
+          of Neural nets which computes local regions of 
+          input with <a href="https://en.wikipedia.org/wiki/Convolution">convolution</a>. It's practically very suitable 
+          for 2D or even 3D input.
           <p>
             <button class="white" onclick="window.open('http://cs231n.github.io/convolutional-networks/')">
               More in-depth details
@@ -87,7 +91,46 @@
       <div class="layout-frame fullwidth">
         <h1>Image Transformation</h1>
         <div class="layout-frame center" style="width:800px">
-
+          <p class="left-align">
+          Fundamentally, image transformation is a
+          function which takes an image as an input, 
+          processes, and returns another image like so:
+          </p>
+          <p class="bigtext">
+          `I(x,y)' = f(I(x,y))`
+          </p>
+          <p class="left-align">
+          De facto, image transformation <span class="brown-font">
+          "`f`"</span> can be any enhancement function, e.g., 
+          brightness scaling, color transformation, 
+          saturisation, etc.
+          </p>
+          <p class="left-align highlighted lighten" style="padding:15px">
+            In this project, the transformation vector is defined as:
+          </p>
+          <p class="bigtext">
+          `T = [c,gamma,phi,k]`
+          </p>
+          <p class="left-align">
+          Where,
+          </p>
+          <p class="bigtext">
+          `f : fr R^3 -> fr R^3`<br/>
+          `f([(h),(s),(v)]) = [(h'),(s'),(v')] =  [(h+phi), (s*k), (255*(v/255)^gamma *c)]`
+          </p>
+          <p class="bigtext left-align">
+            <ul class=" left-align">
+              <li>`c = ` Brightness scaling factor</li>
+              <li>`gamma = ` Gamma transformation factor</li>
+              <li>`phi = ` Hue rotation angle</li>
+              <li>`k = ` Saturation scaling factor</li>
+            </ul>
+          </p>
+          <p class="bigtext brown-font left-align highlighted lighten" style="padding:15px">
+            Thus, the objective of the project is to find 
+            the transformation vector `T` which enhances 
+            the visual components of an image without explicit search.
+          </p>
         </div>
       </div>
     </div>
