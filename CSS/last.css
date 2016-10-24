@@ -14,6 +14,13 @@
   font-style: normal;
 }*/
 
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400i');
+
+/*@font-face {
+  font-family: Ruda;
+  src: url('font/Ruda-Bold.ttf') format('truetype');
+}
+*/
 @font-face {
   font-family: GochiHand;
   src: url('font/GochiHand-Regular.ttf') format('truetype');
@@ -21,7 +28,8 @@
 
 *
 {
-  font-family: GochiHand,sans-serif;
+  /*font-family: GochiHand,sans-serif;*/
+  font-family: Ropa Sans, sans-serif;
   font-size:18pt;
 }
 
@@ -469,4 +477,9 @@ button.cyan:hover
   -o-transition:all 0.31s ease-out;
   transition-property:all;
   transition-duration:0.31s;
+}
+
+button:not(.wireframe)
+{
+  box-shadow: 0 1px 3px black;
 }

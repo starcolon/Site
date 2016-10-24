@@ -42,7 +42,7 @@
         <!-- -->
       </div>
       <div class="layout-frame inline-container fullwidth" style="top:180px;opacity:1;height:150px">
-        <div class="layout-frame largetext" style="width:820px">
+        <div class="layout-frame largetext" style="width:1000px">
           Automated Image Enhancement <br/>
           with Deep Learning
         </div>
@@ -113,7 +113,7 @@
           saturisation, etc.
           </p>
           <p class="left-align highlighted lighten" style="padding:15px">
-            In this project, the transformation vector is defined as:
+            In this project, the 4-dim transformation vector `T` is defined as:
           </p>
           <p class="bigtext">
           `T = [c,gamma,phi,k]`
@@ -135,8 +135,7 @@
           </p>
           <p class="bigtext brown-font left-align highlighted lighten" style="padding:15px">
             Thus, the objective of the project is to find 
-            the transformation vector `T` which enhances 
-            the visual components of an image without explicit search.
+            the best transformation vector `T` without explicit search.
           </p>
         </div>
       </div>
@@ -144,20 +143,21 @@
 
     <div>
       <div class="layout-frame fullwidth">
-        <h1>Building up ConvNet</h1>
+        <h1>Building up ConvNets</h1>
         <div class="layout-frame center" style="width:800px">
           <p class="left-align">
-            Following is the structure of the ConvNet for 
-            extracting spatial features of an image in 3D 
-            (H,S,V channels, each is 2D matrix).
+            Since I want to solve for 4-dimensional vector which 
+            enhances the image quality, 4 separate networks with 
+            exactly the same structure will be created and trained.
           </p>
           <p class="box" style="height:320px">
             <!-- CNN DIAGRAM -->
           </p>
           <p class="left-align">
-          Two convolutional layers with max pooling are placed 
-          at the beginning of the network. The remaining subsequent layers 
-          are much less complicated in terms of computation. 
+          Where each of the network is built from following structure.
+          </p>
+          <p class="box" style="height:320px">
+            <!-- CNN DIAGRAM -->
           </p>
           <p class="left-align">
             As a side note, to getting understand how <span class="brown-font"> Convolutional Neural Network</span> works in just half an hour, I recommand watching this video:
@@ -230,10 +230,13 @@
               </li>
             </ul>
           </p>
-          <p class="bigtext brown-font" style="padding: 15px">
+          <p class="bigtext brown-font left-align" style="padding: 12px">
             With this simple approach, I can randomly generate a large 
             trainset of low quality images (`I'`) with the enhancement 
             transformations (`T'`).
+          </p>
+          <p class="highlighted lighten" style="padding:15px">
+            CAVEAT: Reverse transformation is not lossless.
           </p>
         </div>
       </div>
@@ -269,50 +272,31 @@
             optimised instances</span> (<a href="https://aws.amazon.com/ec2/instance-types/">C4</a>).
           </p>
           <p class="highlighted lighten" style="padding:15px">
-            GPU instance is a recommended platform though. <br/>But 
+            GPU instance is indeed a recommended platform though. <br/>But 
             I haven't chosen it because of budget-first purpose.
           </p>
-          <p class="left-align">
-            Following is a quick <span class="brown-font">bash script</span> recipe for setting an environment up in one go from scratch. The script is designed for Ubuntu server only.
-          </p>
-          <p class="mono left-align gray-font">
-          <pre>
-          <code class="language-bash left-align smalltext">
-            sudo apt-get update
-            sudo apt-get install gfortran libopenblas-dev liblapack-dev
-            sudo apt-get install python3-dev
-            sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk
-            sudo apt-get install git python3-pip
-            cd /home/ubuntu/
-            git clone https://github.com/starcolon/photo-auto-balance.git
-            cd photo-auto-balance/
-            mkdir -p data/raw
-            mkdir -p data/out
-            mkdir -p data/unfiltered
-            sudo pip3 install -r requirements.txt 
-            cd data/
-            wget http://starcolon.com/data/train.tar.gz
-            tar -xvf train.tar.gz 
-            rm raw/._*
-          </code>
-          </pre>
-          </p>
+          
         </div>
       </div>
     </div>
 
     <div>
       <div class="layout-frame fullwidth">
-        <h1>Common failures during training</h1>
+        <h1>Show time!</h1>
         <div class="left-align layout-frame center" style="width:800px">
-          I'm using <a href="https://github.com/Lasagne/Lasagne">Lasagne</a>
-          as a Deep Learning toolkit which is built on top of <a href="http://deeplearning.net/software/theano/introduction.html">Theano</a>. However, the module isn't very difficult to break. 
-          Based on my own experience with the toolkit, it often 
-          produces unstable results like follows:
-          <ul class="left-align">
-            <li>Training process stops silently in the middle.</li>
-            <li>Error rates never converge sometimes.</li>
-          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>What's painful</h1>
+        <div class="left-align layout-frame center" style="width:800px">
+          ConvNet is difficult to tune. Despite the fast fitting error 
+          decrement at the beginning, ConvNet appears to slowly learn 
+          the pattern behind the dataset and the convergence rate 
+          is not so immediate.
         </div>
       </div>
     </div>
