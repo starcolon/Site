@@ -273,11 +273,21 @@
             probed and following is the burndown chart of 
             the RMSE through time.
           </p>
+          <p>
+            <span class="gray-font">Validation Losses</span>
+          </p>
           <p class="box">
             <canvas id="rmse2" style="width:800px;height:420px">
             </canvas>
             <canvas id="rmse1" style="width:800px;height:420px">
             </canvas>
+          </p>
+          <p class="left-align">
+            Three enhancement parameters including <span class="brown-font">
+            Brightness factor, Saturation Factor, and Gamma ratio</span> 
+            appear to be well-trained as you can see error rates are 
+            falling gradually through time. However, my model doesn't 
+            seem to learn the <span class="brown-font">Hue factor</span>.
           </p>
         </div>
       </div>
@@ -299,7 +309,14 @@
             GPU instance is indeed a recommended platform though. <br/>But 
             I haven't chosen it because of budget-first purpose.
           </p>
-          
+          <p class="bigtext brown-font left-align" style="padding: 12px">
+            My C4 takes ~50 minutes per epoch to train ConvNet. 
+          </p>
+          <p class="left-align">
+            So training 50 epochs takes around 41 hours. My C4 AWS was a 
+            spot instance which costs up to $0.5 per hour, so in total, I paid 
+            less than 21 dollars to train my ConvNet model.
+          </p>
         </div>
       </div>
     </div>
