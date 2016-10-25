@@ -15,6 +15,9 @@
     <script type="text/javascript" src="../../JS/main.js"></script>
     <script type="text/javascript" src="../../JS/2016.js"></script>
     <script type="text/javascript" src="../../JS/prism.js"></script>
+    <!-- <script type="text/javascript" src="../../JS/Chart.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <script type="text/javascript" src="photo.js"></script>
     <script type="text/javascript" async
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
@@ -55,7 +58,7 @@
       <div class="fullwidth" style="height:35px;margin-top:20px">
         <div class="center black-filled-white-text" 
         style="width:300px;height:35px;line-height:1.5em">
-          10 Oct 2016 | Tao P.R.
+          27 Oct 2016 | Tao P.R.
         </div>
         <div style="margin-top:15px">
           <button class="white" onclick="window.open('https://github.com/starcolon/photo-auto-balance')">
@@ -261,6 +264,27 @@
 
     <div>
       <div class="layout-frame fullwidth">
+        <h1>Model Training &amp; Measurement</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            <a href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">RMSE</a> is the metric 
+            I measure how accurate the training models perform. 
+            After a training epoch finishes, the models are once 
+            probed and following is the burndown chart of 
+            the RMSE through time.
+          </p>
+          <p class="box">
+            <canvas id="rmse2" style="width:800px;height:420px">
+            </canvas>
+            <canvas id="rmse1" style="width:800px;height:420px">
+            </canvas>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
         <h1>AWS for Deep Learning</h1>
         <div class="layout-frame center" style="width:800px">
           <p class="left-align">
@@ -307,6 +331,13 @@
       </div>
     </div>
 
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // Render burndown charts
+        renderChart()
+      })
+    </script>
 
   </body>
 </html>

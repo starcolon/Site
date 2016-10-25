@@ -244,11 +244,6 @@ ul.inline li
   box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
-.box:hover
-{
-  background-color:rgba(240,200,200,0.4);
-}
-
 .pressed-box
 {
   color: #929292;
@@ -287,7 +282,7 @@ ul.inline li
 
 .layout-frame-light /* DEBUG */
 {
-  border: 1px solid rgba(255,255,255,0.3);
+  /*border: 1px solid rgba(255,255,255,0.3);*/
 }
 
 .black-filled-white-text
