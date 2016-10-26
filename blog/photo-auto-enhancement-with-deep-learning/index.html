@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Automatic Image Enhancement with Deep Learning</title>
+    <link rel="shortcut icon" type="image/ico" href="../../IMG/starcolon-logo.png"></link>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></meta>
+    <meta name="keywords" content="deep learning,neural network,convolutional,dnn,cnn,image,photo,enhancement,auto,tune,adjustment"/>
+    <meta name="description" content="Image auto enhancement with Deep Learning"/>
+    <meta property="og:image" content="http://starcolon.com/IMG/SS/ASP.jpg"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/last.css"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/MyFontsWebfontsKit.css"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/prism.css"/>
+    <script type="text/javascript" src="../../JS/jquery.min.js"></script>
+    <script type="text/javascript" src="../../JS/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../JS/main.js"></script>
+    <script type="text/javascript" src="../../JS/2016.js"></script>
+    <script type="text/javascript" src="../../JS/prism.js"></script>
+    <!-- <script type="text/javascript" src="../../JS/Chart.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <script type="text/javascript" src="photo.js"></script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-35581556-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+    window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+    </script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body class="pattern-skull pattern-pegged">
+    <div id="masterMnu" class="top-left-pin topmost box mega-text rotate-cw" onclick="masterMenu()">
+      ¦¦¦
+    </div>
+    <div class="fullwidth">
+      <div class="fullwidth" style="height:140px">
+        <!-- -->
+      </div>
+      <div class="layout-frame inline-container fullwidth" style="top:180px;opacity:1;height:150px">
+        <div class="layout-frame largetext" style="width:1000px">
+          Automated Image Enhancement <br/>
+          with Deep Learning
+        </div>
+      </div>
+      <div class="fullwidth" style="height:10px">
+        <div class="center" style="width:30%;border-bottom:1px solid black">
+          <!-- DASH LINE -->
+        </div>
+      </div>
+      <div class="fullwidth" style="height:35px;margin-top:20px">
+        <div class="center black-filled-white-text" 
+        style="width:300px;height:35px;line-height:1.5em">
+          26 Oct 2016 | Tao P.R.
+        </div>
+        <div style="margin-top:15px">
+          <button class="white" onclick="window.open('https://github.com/starcolon/photo-auto-balance')">
+            <img height="40px" src="../../IMG/icon-github.png" /> View Code On Github
+          </button>
+        </div>
+      </div>
+      <div class="fullwidth" style="height:250px">
+        <!-- -->
+      </div>
+    </div>
+
+    <div class="fullwidth black-filled-white-text">
+      <div class="center inline-container" style="padding-top:25px;padding-bottom:25px">
+        <div class="layout-frame-light" style="width:520px;height:370px">
+          <img class="fullwidth" src="../../IMG/ARTWORK/convnet03.png"/>
+          <span class="gray-font smalltext">Image courtesy of wikipedia.org/wiki/Artificial_neural_network</span>
+        </div>
+        <div class="layout-frame-light left-align" style="width:425px;height:370px">
+          <h2>Convolutional Neural Network (ConvNet)</h2>
+          <span class="yellow-font">ConvNet</span> is a species 
+          of Neural nets which computes local regions of 
+          input with <a href="https://en.wikipedia.org/wiki/Convolution">convolution</a>. It's practically very suitable 
+          for 2D or even 3D input.
+          <p>
+            <button class="white" onclick="window.open('http://cs231n.github.io/convolutional-networks/')">
+              More in-depth details
+            </button>
+          </p> 
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <!-- FIRST SCOOP -->
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Image Transformation</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+          Fundamentally, image transformation is a
+          function which takes an image as an input, 
+          processes, and returns another image like so:
+          </p>
+          <p class="bigtext">
+          `I(x,y)' = f(I(x,y))`
+          </p>
+          <p class="left-align">
+          De facto, image transformation <span class="brown-font">
+          "`f`"</span> can be any enhancement function, e.g., 
+          brightness scaling, color transformation, 
+          saturisation, etc.
+          </p>
+          <p class="left-align highlighted lighten" style="padding:15px">
+            In this project, the 4-dim transformation vector `T` is defined as:
+          </p>
+          <p class="bigtext">
+          `T = [c,gamma,phi,k]`
+          </p>
+          <p class="left-align">
+          Where,
+          </p>
+          <p class="bigtext">
+          `f : fr R^3 -> fr R^3`<br/>
+          `f([(h),(s),(v)]) = [(h'),(s'),(v')] =  [(h+phi), (s*k), (255*(v/255)^gamma *c)]`
+          </p>
+          <p class="bigtext left-align">
+            <ul class=" left-align">
+              <li>`c = ` Brightness scaling factor</li>
+              <li>`gamma = ` Gamma transformation factor</li>
+              <li>`phi = ` Hue rotation angle</li>
+              <li>`k = ` Saturation scaling factor</li>
+            </ul>
+          </p>
+          <p class="bigtext brown-font left-align highlighted lighten" style="padding:15px">
+            Thus, the objective of the project is to find 
+            the best transformation vector `T` without explicit search.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Building up ConvNets</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            Since I want to solve for 4-dimensional vector which 
+            enhances the image quality, 4 separate networks with 
+            exactly the same structure will be created and trained.
+          </p>
+          <p class="box">
+            <img width="780px" src="../../IMG/ARTWORK/convnet01.png"/>
+          </p>
+          <p class="left-align">
+          Where each of the network is built from following structure.
+          </p>
+          <p class="box">
+            <img width="780px" src="../../IMG/ARTWORK/convnet02.png"/>
+          </p>
+          <p class="left-align">
+            As a side note, to getting understand how <span class="brown-font"> Convolutional Neural Network</span> works in just half an hour, I recommand watching this video:
+          </p>
+          <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FmpDIaiMIeA" frameborder="0" allowfullscreen></iframe>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Trainset Prep</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+          I've made a simple trick to populate the training set. 
+          As you may know, CNN is a <a href="https://en.wikipedia.org/wiki/Supervised_learning">supervised learning</a> and it needs a labelled training set to learn from.
+          </p>
+          <p class="bigtext left-align" style="padding:15px">
+            "It's more painful to make a trainset of low quality 
+            images and annotate them with hand-crafted 
+            enhancement transformations."
+          </p>
+          <p class="left-align">
+            So, with a quick hack, I downloaded good photos 
+            and generate random <span class="brown-font">filters which degrade quality of those images.</span> The results of 
+            the filters are used as training images along with 
+            the <span class="brown-font">reverse of generated transformations.</span> So we got:
+          </p>
+          <p class="bigtext">
+            <span>Degradation</span> `T: I -> I'`
+          </p>
+          <p>
+            <ul class="inline">
+              <li>
+                <img src="../../IMG/ARTWORK/beach003.jpg" />
+              </li>
+              <li>
+                `T: ->`
+              </li>
+              <li>
+                <img src="../../IMG/ARTWORK/beach003-04.jpg" />
+              </li>
+            </ul>
+          </p>
+          <p class="left-align">
+            Where:
+          </p>
+          <p class="left-align">
+            <ul>
+              <li>`T` is a generated transformation for quality degradation</li>
+              <li>`I` is an input raw image from the downloaded set.</li>
+              <li>`I'` is a degraded image by the transformation.</li>
+            </ul>
+          </p>
+          <p class="left-align">
+            Then I can easily <span class="brown-font">reverse `T`</span> to obtain the <span class="brown-font">enhancement transformation `T'`</span> with respect to the degraded image.
+          </p>
+          <p>
+            <ul class="inline">
+              <li>
+                <img src="../../IMG/ARTWORK/beach003-04.jpg" />
+              </li>
+              <li>
+                `T': ->`
+              </li>
+              <li>
+                <img src="../../IMG/ARTWORK/beach003.jpg" />
+              </li>
+            </ul>
+          </p>
+          <p class="bigtext brown-font left-align" style="padding: 12px">
+            With this simple approach, I can randomly generate a large 
+            trainset of low quality images (`I'`) with the enhancement 
+            transformations (`T'`).
+          </p>
+          <p class="highlighted lighten" style="padding:15px">
+            CAVEAT: Reverse transformation is not lossless.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Training Pipeline</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            <span class="brown-font">ConvNet</span> is iteratively 
+            and repeatedly trained using the prepared enhancement 
+            transformation vector and the low quality images (as 
+            3-D matrices). Following graph shows the burndown 
+            chart of <a href="https://en.wikipedia.org/wiki/Loss_functions_for_classification">training loss</a> 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Model Training &amp; Measurement</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            <a href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">RMSE</a> is the metric 
+            I measure how accurate the training models perform. 
+            After a training epoch finishes, the models are once 
+            probed and following is the burndown chart of 
+            the RMSE through time.
+          </p>
+          <p>
+            <span class="gray-font">Validation Losses</span>
+          </p>
+          <p class="box">
+            <canvas id="rmse2" style="width:800px;height:420px">
+            </canvas>
+            <canvas id="rmse1" style="width:800px;height:420px">
+            </canvas>
+          </p>
+          <p class="left-align">
+            Three enhancement parameters including <span class="brown-font">
+            Brightness factor, Saturation Factor, and Gamma ratio</span> 
+            appear to be well-trained as you can see error rates are 
+            falling gradually through time. However, my model doesn't 
+            seem to learn the <span class="brown-font">Hue factor</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>AWS for Deep Learning</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            My only computer is just a plain laptop so I set up 
+            an <a href="https://aws.amazon.com/ec2/">AWS EC2</a> 
+            as a powerful computing cluster. ConvNet requires 
+            large amount of computational power and memory 
+            footprint, so I basically choose one of the <span class="brown-font">Compute 
+            optimised instances</span> (<a href="https://aws.amazon.com/ec2/instance-types/">C4</a>).
+          </p>
+          <p class="highlighted lighten" style="padding:15px">
+            GPU instance is indeed a recommended platform though. <br/>But 
+            I haven't chosen it because of budget-first purpose.
+          </p>
+          <p class="bigtext brown-font left-align" style="padding: 12px">
+            My C4 takes ~50 minutes per epoch to train ConvNet. 
+          </p>
+          <p class="left-align">
+            So training 50 epochs takes around 41 hours. My C4 AWS was a 
+            spot instance which costs up to $0.5 per hour, so in total, I paid 
+            less than 21 dollars to train my ConvNet model.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Show time!</h1>
+        <div class="left-align layout-frame center" style="width:800px">
+          Since <span class="brown-font">Hue correction degree</span> 
+          is not well-trained, I omit this only parameter in the 
+          transformation vector. So now I try other 3 transformation 
+          parameters to enhance images.
+        </div>
+      </div>
+      <div class="layout-frame fullwidth" style="margin-top:25px">
+        <div class="box center" style="width:800px">
+          <p>
+            <ul class="inline">
+              <li class="inline-container">
+                <img class="innerbox" width="250px" height="240px" src="../../IMG/ARTWORK/beach010-01.jpg"/>
+                <div class="bigtext" style="width:40px">⇒</div>
+                <img class="innerbox" width="250px" height="240px" src="../../IMG/ARTWORK/beach010-02.jpg"/>
+              </li>
+
+              <li class="inline-container">
+                <img class="innerbox" width="250px" height="240px" src="../../IMG/ARTWORK/beach031-04.jpg"/>
+                <div class="bigtext" style="width:40px">⇒</div>
+                <img class="innerbox" width="250px" height="240px" src="../../IMG/ARTWORK/beach031-01.jpg"/>
+              </li>
+
+              <li class="inline-container">
+                <img class="innerbox" width="250px" height="240px" src="../../IMG/ARTWORK/beach036-00.jpg"/>
+                <div class="bigtext" style="width:40px">⇒</div>
+                <img class="innerbox" width="250px" height="240px" src="../../IMG/ARTWORK/beach036-01.jpg"/>
+              </li>
+
+              <li class="inline-container">
+                <img class="innerbox" width="250px" height="240px" src="../../IMG/ARTWORK/beach037-05.jpg"/>
+                <div class="bigtext" style="width:40px">⇒</div>
+                <img class="innerbox" width="250px" height="240px" src="../../IMG/ARTWORK/beach037-04.jpg"/>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>What's painful</h1>
+        <div class="left-align layout-frame center" style="width:800px">
+          ConvNet is difficult to tune. Despite the fast fitting error 
+          decrement at the beginning, ConvNet appears to slowly learn 
+          the pattern behind the dataset and the convergence rate 
+          is not so immediate.
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // Render burndown charts
+        renderChart()
+      })
+    </script>
+
+  </body>
+</html>
