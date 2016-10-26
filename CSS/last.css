@@ -14,6 +14,13 @@
   font-style: normal;
 }*/
 
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400i');
+
+/*@font-face {
+  font-family: Ruda;
+  src: url('font/Ruda-Bold.ttf') format('truetype');
+}
+*/
 @font-face {
   font-family: GochiHand;
   src: url('font/GochiHand-Regular.ttf') format('truetype');
@@ -21,7 +28,8 @@
 
 *
 {
-  font-family: GochiHand,sans-serif;
+  /*font-family: GochiHand,sans-serif;*/
+  font-family: Ropa Sans, sans-serif;
   font-size:18pt;
 }
 
@@ -187,6 +195,20 @@ body
   transition-duration:0.31s;
 }
 
+ul.inline
+{
+  display: inline
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.inline li
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* ------------ SHAPES -------------*/
 .circle
 {
@@ -196,6 +218,12 @@ body
 .link
 {
   cursor: pointer;
+}
+
+.textlink-effect:hover
+{
+  text-shadow:0 0 5px rgba(200,200,200,0.6);
+  color:#353535;
 }
 
 .black-box
@@ -216,9 +244,11 @@ body
   box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
-.box:hover
+.innerbox
 {
-  background-color:rgba(240,200,200,0.4);
+  background-color: white;
+  padding: 5px 5px;
+  border:1px solid rbga(30,30,30,0.6);
 }
 
 .pressed-box
@@ -268,6 +298,11 @@ body
   color:white;
 }
 
+.lighten
+{
+  background-color: rgba(255,255,255,0.35)
+}
+
 .darken
 {
   background-color: rgba(0,0,0,0.35);
@@ -313,6 +348,16 @@ body
 .highlighted
 {
   border:1px solid rgba(10,10,10,0.4);
+}
+
+.highlighted-thick
+{
+  border:3px solid;
+}
+
+.mono
+{
+  font-family: courier;
 }
 
 .white-font
@@ -434,4 +479,9 @@ button.cyan:hover
   -o-transition:all 0.31s ease-out;
   transition-property:all;
   transition-duration:0.31s;
+}
+
+button:not(.wireframe)
+{
+  box-shadow: 0 1px 3px black;
 }

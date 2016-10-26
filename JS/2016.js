@@ -20,7 +20,8 @@ function fillMasterMenu(mnu){
   var ul = $('<ul>').appendTo(mnu);
   var menus = [
     ['🏠 Home','http://starcolon.com/'],
-    ['☣ Planet of Cells','http://starcolon.com/planet-of-cells/']
+    ['☣ Planet of Cells','http://starcolon.com/planet-of-cells/'],
+    ['✎ Blog','http://starcolon.com/blog/']
   ];
 
   menus.forEach(function(m){
