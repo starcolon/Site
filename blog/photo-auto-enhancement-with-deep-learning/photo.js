@@ -1,8 +1,7 @@
 var colors = ['rgba(250,90,0,0.6)', 'rgba(0,240,130,0.6)', 'rgba(0,50,250,0.6)', 'rgba(120,30,230,0.6)'];
 var modes = ['Brightness RMSE', 'Gamma RMSE', 'Hue RMSE', 'Saturation RMSE'];
 var data = [
-  // {"V":[67.304326,85.807891,19.973365,105.910347]},
-  {"V":[1.038653,0.849059,14.448322,1.002127]},
+  {"V":[1.038653,0.849059,19.973365,1.002127]},
   {"V":[0.970660,0.708463,14.448322,0.986744]},
   {"V":[0.794265,0.513699,14.448322,0.971203]},
   {"V":[0.745669,0.529256,14.448322,0.953275]},
@@ -91,7 +90,7 @@ function renderChart(){
       labels: data.map(function(_,i){ return 'Epoch ' + i }),
       datasets: dataset
     },
-    lineTension: 1.0,
+    lineTension: 0.0,
     options: {}
   })
 }

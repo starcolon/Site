@@ -244,6 +244,13 @@ ul.inline li
   box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
+.innerbox
+{
+  background-color: white;
+  padding: 5px 5px;
+  border:1px solid rbga(30,30,30,0.6);
+}
+
 .pressed-box
 {
   color: #929292;
