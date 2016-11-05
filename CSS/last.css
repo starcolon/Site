@@ -298,6 +298,11 @@ ul.inline li
   color:white;
 }
 
+.black-filled
+{
+  background-color: black;
+}
+
 .lighten
 {
   background-color: rgba(255,255,255,0.35)
@@ -319,6 +324,11 @@ ul.inline li
   margin-left:2px;
   margin-right:2px;
   padding:5px;
+}
+
+img.stretch
+{
+  width: 100%;
 }
 
 /* ------------ TYPOS -------------*/
