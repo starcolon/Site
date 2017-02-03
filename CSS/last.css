@@ -15,6 +15,7 @@
 }*/
 
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400i');
+@import url('https://fonts.googleapis.com/css?family=Lato:300i');
 
 /*@font-face {
   font-family: Ruda;
@@ -340,12 +341,14 @@ img.stretch
 
 .largetext, h1
 {
+  font-family: Lato;
   font-size:40pt;
   font-weight: normal;
 }
 
 .bigtext, h2
 {
+  font-family: Lato;
   font-size:26pt;
   font-weight: normal;
 }
