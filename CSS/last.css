@@ -29,15 +29,13 @@
 
 *
 {
-  /*font-family: GochiHand,sans-serif;*/
   font-family: Ropa Sans, sans-serif;
   font-size:18pt;
 }
 
 body
 {
-  background-color: #F3FFEF;
-  /*background-color: #faf3d7;*/
+  background-color: #A1C0C0;/*#F3FFEF;*/
   padding:0;
   margin:0;
   width:100%;
@@ -336,7 +334,9 @@ img.stretch
 
 .megatext
 {
+  font-family: Lato;
   font-size:50pt;
+  text-shadow:0 1px 3px white;
 }
 
 .largetext, h1
