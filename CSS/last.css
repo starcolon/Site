@@ -381,7 +381,7 @@ img.stretch
 
 .brown-font
 {
-  color:brown;
+  color:orange;
 }
 
 .navy-font
@@ -402,7 +402,7 @@ img.stretch
 /* ---------------- BUTTONS ----------- */
 a, a:visited
 {
-  color: teal;
+  color: #00ff7f;
   border-bottom: 1px dotted;
   cursor: default;
   text-decoration: none;
