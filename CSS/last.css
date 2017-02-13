@@ -1,27 +1,6 @@
-/*@font-face {
-  font-family: 'nikaiaregular';
-  src: url('font/nikaia-webfont.woff2') format('woff2'),
-       url('font/nikaia-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: cloudx;
-  src: url('webfonts/cloud-light-webfont.woff') format('woff'),
-       url('webfonts/cloud-light-webfont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}*/
-
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400i');
 @import url('https://fonts.googleapis.com/css?family=Lato:300i');
 
-/*@font-face {
-  font-family: Ruda;
-  src: url('font/Ruda-Bold.ttf') format('truetype');
-}
-*/
 @font-face {
   font-family: GochiHand;
   src: url('font/GochiHand-Regular.ttf') format('truetype');
