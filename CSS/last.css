@@ -14,7 +14,7 @@
 
 body
 {
-  background-color: #A1C0C0;/*#F3FFEF;*/
+  background-color: #00131C;/*#A1C0C0;*/
   padding:0;
   margin:0;
   width:100%;
@@ -28,6 +28,12 @@ body
 .pattern-pegged
 {
   background-attachment: scroll;
+}
+
+.pattern-zebra
+{
+  background-repeat: repeat;
+  background-image: url(../PATTERN/subtle-zebra-3d.png);
 }
 
 .pattern-inflicted
@@ -315,7 +321,6 @@ img.stretch
 {
   font-family: Lato;
   font-size:50pt;
-  text-shadow:0 1px 3px white;
 }
 
 .largetext, h1
