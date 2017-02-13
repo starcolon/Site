@@ -211,10 +211,15 @@ ul.inline li
   cursor: pointer;
 }
 
+.textlink-effect
+{
+
+}
+
 .textlink-effect:hover
 {
-  text-shadow:0 0 5px rgba(200,200,200,0.6);
-  color:#353535;
+  /*text-shadow:0 0 5px rgba(200,200,200,0.6);
+  color:#353535;*/
 }
 
 .black-box
@@ -376,7 +381,7 @@ img.stretch
 
 .gray-font
 {
-  color: gray;
+  color: #D0D0D0;
 }
 
 .brown-font
@@ -386,7 +391,7 @@ img.stretch
 
 .navy-font
 {
-  color:navy;
+  color:#87CEEB;
 }
 
 .left-align
