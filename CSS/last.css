@@ -342,14 +342,12 @@ img.stretch
 
 .largetext, h1
 {
-  font-family: Lato;
   font-size:40pt;
   font-weight: normal;
 }
 
 .bigtext, h2
 {
-  font-family: Lato;
   font-size:26pt;
   font-weight: normal;
 }
