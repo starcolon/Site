@@ -200,6 +200,18 @@ ul.inline li
   vertical-align: middle;
 }
 
+ul.bullet
+{
+  list-style: none;
+  margin-left:5 px;
+  padding-left:0;
+}
+
+ul.bullet li::before
+{
+  content: "๛ ";
+}
+
 /* ------------ SHAPES -------------*/
 .circle
 {
@@ -378,6 +390,11 @@ img.stretch
 .mono
 {
   font-family: courier;
+}
+
+.dark-font
+{
+  color:#464646;
 }
 
 .white-font
