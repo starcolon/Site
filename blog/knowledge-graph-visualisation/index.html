@@ -136,28 +136,35 @@
 
     <div>
       <div class="layout-frame fullwidth">
-        <h1>Topics => Keywords</h1>
+        <h1>Round #1 : Topics => Keywords</h1>
         <div class="layout-frame center" style="width:800px">
           <p class="left-align">
             The initial hypothesis of modeling the knowledge 
             is the topic can be represented by finite number 
-            of keywords. Also, the keywords can be shared 
-            among multiple topics. So we define the topic 
-            `T` as a mapping from content title `t` 
-            to a keyword set `K`.
+            of keywords which will be selected from 
+            the words belong to the topic. 
+            Say we have the topic `T` of length `N` which contains 
+            the collection of words `W`.
           </p>
           <p>
-            `T: (t => K), K != ∅`
+            `T = {w_1, w_2, w_3, ... ,w_N}`
           </p>
           <p class="left-align">
-            Each of the keywords `K` may influences the 
+            Each of the keywords `K` may influence the 
             characteristic of the topic to the different 
             degree. So the confidence level is also 
             need to be taken into account. The keyword 
             set `K` then looks like:
           </p>
           <p>
-            `K = {(k,c) : 0 < c <= 1}`
+            `K = {(w,c_w) : 0 < c_w <= 1, w in T}`
+          </p>
+          <p class="left-align">
+            For simplicity, the confidence level `c` of a keyword 
+            is defined by the normalised ratio of appearance.
+          </p>
+          <p>
+            `c_w = (count(w,T))/norm(T)`
           </p>
         </div>
       </div>
@@ -165,7 +172,7 @@
 
     <div>
       <div class="layout-frame fullwidth">
-        <h1>Relationship Model</h1>
+        <h1>Round #2 : Expanding Keywords</h1>
         <div class="layout-frame center" style="width:800px">
           <p class="left-align">
             blah blah blah
