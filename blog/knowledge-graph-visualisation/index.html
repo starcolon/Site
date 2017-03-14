@@ -164,7 +164,18 @@
             is defined by the normalised ratio of appearance.
           </p>
           <p>
-            `c_w = (count(w,T))/norm(T)`
+            `c_w = (count(w))/norm(W)`
+          </p>
+          <p class="left-align">
+            where `W` is the word count vector.
+          </p>
+          <p>
+            `W = [count(w_1), count(w_2), ... ,count(w_N)]`
+          </p>
+          <p class="left-align">
+            By this quick hypothesis, the keywords can be 
+            picked by sort `K` by confidence value `c_w`. 
+            Then we end up picking top `M` keywords.
           </p>
         </div>
       </div>
