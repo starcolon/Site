@@ -136,6 +136,22 @@
 
     <div>
       <div class="layout-frame fullwidth">
+        <h1>Round #0 : Filtering Significant Words</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+          bbbbbb
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
         <h1>Round #1 : Topics => Keywords</h1>
         <div class="layout-frame center" style="width:800px">
           <p class="left-align">
@@ -147,12 +163,12 @@
             the collection of words `W`.
           </p>
           <p>
-            `T = {w_1, w_2, w_3, ... ,w_N}`
+            `T = {w_1, w_2, w_3, cdots ,w_N}, T sub U`
           </p>
           <p class="left-align">
             Each of the keywords `K` may influence the 
-            characteristic of the topic to the different 
-            degree. So the confidence level is also 
+            characteristic of the topic by some degree.
+            So the confidence level is also 
             need to be taken into account. The keyword 
             set `K` then looks like:
           </p>
@@ -174,10 +190,16 @@
           </p>
           <p class="left-align">
             By this quick hypothesis, the keywords can be 
-            picked by sort `K` by confidence value `c_w`. 
-            Then we end up picking top `M` keywords.
+            picked by sorting `K` with confidence value `c_w`,
+            in descending order. 
+            Then we end up picking top keywords (any numbers 
+            we want).
           </p>
-        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
       </div>
     </div>
 
@@ -186,8 +208,82 @@
         <h1>Round #2 : Expanding Keywords</h1>
         <div class="layout-frame center" style="width:800px">
           <p class="left-align">
-            blah blah blah
+            Only collecting keywords from the topic alone 
+            might not be sufficient to build a more 
+            comprehensive model. I ended up expanding 
+            the synonyms of all keywords with 
+            <span class="brown-font">Word2Vec</span>.
           </p>
+          <p class="left-align">
+            For example, the keyword `w` with confidence of 
+            `c_w`, I'll expand its similar words with 
+            <span class="brown-font">cosine similarity</span>
+            learned from <span class="brown-font">Word2Vec model.</span>
+          </p>
+          <p class="left-align">
+            So let's define the set of similar words of 
+            the keyword `w` as `S_w`.
+          </p>
+          <p>
+            `S_w = {w' | ∀w' in U, |w*w'| > 0.93}`
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <p class="brown-font">
+          We can also adjust the appropriate threshold of 
+          acceptable cosine similarity.
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <p class="left-align">
+            The newly expanded keywords inside `S_w` 
+            also need their confidence score. I calculate 
+            the relative confidence score as.
+          </p>
+          <p>
+            `c_w' = c_w * |w*w'|`
+          </p>
+          <p class="left-align">
+            So for the ideal case, `w = w'`, the score is 1.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Exploring the Model</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            Find the visualisation of the knowledge network 
+            model below. I rendered only a limited number 
+            of nodes and edges selected from the universe 
+            of data. My machine could not make it to run 
+            and visualise the entire bulk.
+          </p>
+        </div>
+        <div class="center" style="width:800px">
+          <img src="../../IMG/ARTWORK/vor-graph-03.png"/>
+        </div>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align brown-font bigtext">
+            Each of the bigger red nodes represent 
+            the "topic". Links between any two topics 
+            effectively imply <span class="yellow-font bigtext">
+              shared keywords.
+            </span>
+          </p>
+          <p class="left-align">
+            And definitely, any two topics sharing strong 
+            common information are supposed to be connected 
+            with more edges.
+          </p>
+        </div>
+        <div class="center" style="width:800px">
+          <img src="../../IMG/ARTWORK/vor-graph-01.png"/>
         </div>
       </div>
     </div>
@@ -197,9 +293,30 @@
         <h1>Future Work</h1>
         <div class="layout-frame center" style="width:800px">
           <p class="left-align">
-            blah blah blah
+            Bunch of ideas pop in my mind after playing 
+            around with the project. This includes estimating 
+            the "closest" topics using the graph connection 
+            to be taken into account.
           </p>
         </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth center">
+        <button class="white" onclick="window.open('https://github.com/starcolon/vor-knowledge-graph')">
+          <img height="30px" src="../../IMG/icon-github.png" /> View Code On Github
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:100px">
       </div>
     </div>
 
