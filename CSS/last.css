@@ -1,27 +1,6 @@
-/*@font-face {
-  font-family: 'nikaiaregular';
-  src: url('font/nikaia-webfont.woff2') format('woff2'),
-       url('font/nikaia-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: cloudx;
-  src: url('webfonts/cloud-light-webfont.woff') format('woff'),
-       url('webfonts/cloud-light-webfont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}*/
-
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400i');
 @import url('https://fonts.googleapis.com/css?family=Lato:300i');
 
-/*@font-face {
-  font-family: Ruda;
-  src: url('font/Ruda-Bold.ttf') format('truetype');
-}
-*/
 @font-face {
   font-family: GochiHand;
   src: url('font/GochiHand-Regular.ttf') format('truetype');
@@ -33,15 +12,22 @@
   font-size:18pt;
 }
 
+html
+{
+  height:100%;
+}
+
 body
 {
-  background-color: #A1C0C0;/*#F3FFEF;*/
+  background-color: #00131C;/*#A1C0C0;*/
   padding:0;
   margin:0;
   width:100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x:hidden;
+  color: white;
 }
 
 /* ------------ PATTERNS -------------*/
@@ -49,6 +35,12 @@ body
 .pattern-pegged
 {
   background-attachment: scroll;
+}
+
+.pattern-zebra
+{
+  background-repeat: repeat;
+  background-image: url(../PATTERN/subtle-zebra-3d.png);
 }
 
 .pattern-inflicted
@@ -208,6 +200,18 @@ ul.inline li
   vertical-align: middle;
 }
 
+ul.bullet
+{
+  list-style: none;
+  margin-left:5 px;
+  padding-left:0;
+}
+
+ul.bullet li::before
+{
+  content: "๛ ";
+}
+
 /* ------------ SHAPES -------------*/
 .circle
 {
@@ -219,10 +223,15 @@ ul.inline li
   cursor: pointer;
 }
 
+.textlink-effect
+{
+
+}
+
 .textlink-effect:hover
 {
-  text-shadow:0 0 5px rgba(200,200,200,0.6);
-  color:#353535;
+  /*text-shadow:0 0 5px rgba(200,200,200,0.6);
+  color:#353535;*/
 }
 
 .black-box
@@ -232,6 +241,11 @@ ul.inline li
   border:2px solid rgba(0,0,0,0.8);
   cursor: default;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+div.wireframe
+{
+  border:1px solid white;
 }
 
 .box
@@ -252,9 +266,8 @@ ul.inline li
 
 .pressed-box
 {
-  color: #929292;
   padding:10px 10px;
-  background-color: black;
+  background-color: #555555;
   border:2px solid rgba(0,0,0,0.8);
   cursor: default;
   box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
@@ -267,7 +280,7 @@ ul.inline li
 
 .pressed-box:hover
 {
-  background-color:#200C00;
+  border:2px solid rgba(100,0,0,0.8);
 }
 
 .border
@@ -319,10 +332,11 @@ ul.inline li
 
 .tagged-wireframe
 {
-  border:1px dotted rgba(255,255,255,0.3);
+  border:1px dashed rgba(255,255,255,0.3);
   margin-left:2px;
   margin-right:2px;
   padding:5px;
+  box-shadow:0 1px 2px black;
 }
 
 img.stretch
@@ -330,25 +344,28 @@ img.stretch
   width: 100%;
 }
 
+.stretch 
+{
+  width: 100%;
+  height:100%;
+  margin: 0;
+}
+
 /* ------------ TYPOS -------------*/
 
 .megatext
 {
-  font-family: Lato;
   font-size:50pt;
-  text-shadow:0 1px 3px white;
 }
 
 .largetext, h1
 {
-  font-family: Lato;
   font-size:40pt;
   font-weight: normal;
 }
 
 .bigtext, h2
 {
-  font-family: Lato;
   font-size:26pt;
   font-weight: normal;
 }
@@ -375,6 +392,11 @@ img.stretch
   font-family: courier;
 }
 
+.dark-font
+{
+  color:#464646;
+}
+
 .white-font
 {
   color: white;
@@ -387,17 +409,17 @@ img.stretch
 
 .gray-font
 {
-  color: gray;
+  color: #D0D0D0;
 }
 
 .brown-font
 {
-  color:brown;
+  color:orange;
 }
 
 .navy-font
 {
-  color:navy;
+  color:#87CEEB;
 }
 
 .left-align
@@ -413,7 +435,7 @@ img.stretch
 /* ---------------- BUTTONS ----------- */
 a, a:visited
 {
-  color: teal;
+  color: #00ff7f;
   border-bottom: 1px dotted;
   cursor: default;
   text-decoration: none;
@@ -467,7 +489,7 @@ button.wireframe
 
 button.wireframe:hover
 {
-  background:#F3F3F3;
+  background:rgba(255,255,255,0.6);
   color:black;
   -webkit-transition:all 0.31s ease-out;
   -moz-transition:all 0.31s ease-out;
@@ -504,4 +526,8 @@ button.cyan:hover
 button:not(.wireframe)
 {
   box-shadow: 0 1px 1px black;
+}
+
+#masterMnu {
+  color: black;
 }

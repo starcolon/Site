@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Visualising Knowledge Graph</title>
+    <link rel="shortcut icon" type="image/ico" href="../../IMG/starcolon-logo.png"></link>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></meta>
+    <meta name="keywords" content="graph,visualisation,visualization,graph theory,knowledge,knowledge model,modeling,graph model,word2vec,word vector,NLP,natural language"/>
+    <meta name="description" content="Render knowledge model into graph. This is how the relationships among knowledge topics look like."/>
+    <meta property="og:image" content="http://starcolon.com/IMG/ARTWORK/vor-graph-03.png"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/last.css"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/MyFontsWebfontsKit.css"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/prism.css"/>
+    <script type="text/javascript" src="../../JS/jquery.min.js"></script>
+    <script type="text/javascript" src="../../JS/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../JS/main.js"></script>
+    <script type="text/javascript" src="../../JS/2016.js"></script>
+    <script type="text/javascript" src="../../JS/prism.js"></script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-35581556-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+    window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+    </script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  </head>
+  <body class="pattern-skull pattern-pegged">
+    <div id="masterMnu" class="top-left-pin topmost box mega-text rotate-cw" onclick="masterMenu()">
+      ¦¦¦
+    </div>
+    <div class="fullwidth">
+      <div class="fullwidth" style="height:140px">
+        <!-- -->
+      </div>
+      <div class="layout-frame inline-container fullwidth" style="top:180px;opacity:1;height:150px">
+        <div class="layout-frame largetext" style="width:1000px">
+          Knowledge Graph Analysis &amp; Visualisation
+        </div>
+      </div>
+      <div class="fullwidth" style="height:10px">
+        <div class="center" style="width:30%;border-bottom:1px solid black">
+          <!-- DASH LINE -->
+        </div>
+      </div>
+      <div class="fullwidth" style="height:35px;margin-top:20px">
+        <div class="center black-filled-white-text" 
+        style="width:300px;height:35px;line-height:1.5em">
+          18 Mar 2017 | Tao P.R.
+        </div>
+      </div>
+      <div class="fullwidth" style="height:120px">
+        <!-- -->
+      </div>
+    </div>
+
+    <div class="fullwidth clip-content black-filled" style="height:275px;box-shadow:0 1px 4px black">
+      <div class="center">
+        <img height="275px" src="../../IMG/ARTWORK/vor-graph-00.png"/>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Prelude:*</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            The project was started when I wanted to crawl 
+            Wikipedia and analyses the information linkage 
+            among them. Rather than just crawling through 
+            the page links, I also want to know how the 
+            distribution of the keywords look like.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Technology involved</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            To build such prototype, I ended up using:
+            <ul class="bullet left-align" 
+            style="margin-left:25px">
+              <li>
+                <a href="http://orientdb.com/">OrientDB</a> 
+                : For storing the topics and keywords.
+              </li>
+              <li>
+                <a href="http://www.nltk.org/">NLTK</a>
+                : For sentence breaker and 
+                <a href="https://en.wikipedia.org/wiki/Part-of-speech_tagging">POS tagging</a>.
+              </li>
+              <li>
+                <a href="https://www.tensorflow.org/tutorials/word2vec">Word2Vec</a> 
+                : For vectorisation of keyword and 
+                morphological operation.
+              </li>
+              <li>
+                <a href="http://visjs.org/">VisJS</a>
+                : For rendering graph on web browser.
+              </li>
+            </ul>
+          </p>
+          <p class="left-align">
+          The crawler script and analysis script 
+          are all written with Python 3.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Round #1 : Topics => Keywords</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            The initial hypothesis of modeling the knowledge 
+            is the topic can be represented by finite number 
+            of keywords which will be selected from 
+            the words belong to the topic. 
+            Say we have the topic `T` of length `N` which contains 
+            the collection of words `W`.
+          </p>
+          <p>
+            `T = {w_1, w_2, w_3, cdots ,w_N}, T sub U`
+          </p>
+          <p class="left-align">
+            Each of the keywords `K` may influence the 
+            characteristic of the topic by some degree.
+            So the confidence level is also 
+            need to be taken into account. The keyword 
+            set `K` then looks like:
+          </p>
+          <p>
+            `K = {(w,c_w) : 0 < c_w <= 1, w in T}`
+          </p>
+          <p class="left-align">
+            For simplicity, the confidence level `c` of a keyword 
+            is defined by the normalised ratio of appearance.
+          </p>
+          <p>
+            `c_w = (count(w))/norm(W)`
+          </p>
+          <p class="left-align">
+            where `W` is the word count vector.
+          </p>
+          <p>
+            `W = [count(w_1), count(w_2), ... ,count(w_N)]`
+          </p>
+          <p class="left-align">
+            By this quick hypothesis, the keywords can be 
+            picked by sorting `K` with confidence value `c_w`,
+            in descending order. 
+            Then we end up picking top keywords (any numbers 
+            we want).
+          </p>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Round #2 : Expanding Keywords</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            Only collecting keywords from the topic alone 
+            might not be sufficient to build a more 
+            comprehensive model. I ended up expanding 
+            the synonyms of all keywords with 
+            <span class="brown-font">Word2Vec</span>.
+          </p>
+          <p class="left-align">
+            For example, the keyword `w` with confidence of 
+            `c_w`, I'll expand its similar words with 
+            <span class="brown-font">cosine similarity</span>
+            learned from <span class="brown-font">Word2Vec model.</span>
+          </p>
+          <p class="left-align">
+            So let's define the set of similar words of 
+            the keyword `w` as `S_w`.
+          </p>
+          <p>
+            `S_w = {w' | ∀w' in U, |w*w'| > 0.93}`
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <p class="brown-font">
+          We can also adjust the appropriate threshold of 
+          acceptable cosine similarity.
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <p class="left-align">
+            The newly expanded keywords inside `S_w` 
+            also need their confidence score. I calculate 
+            the relative confidence score as.
+          </p>
+          <p>
+            `c_w' = c_w * |w*w'|`
+          </p>
+          <p class="left-align">
+            So for the ideal case, `w = w'`, the score is 1.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Exploring the Model</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            Find the visualisation of the knowledge network 
+            model below. I rendered only a limited number 
+            of nodes and edges selected from the universe 
+            of data. My machine could not make it to run 
+            and visualise the entire bulk.
+          </p>
+        </div>
+        <div class="center" style="width:800px">
+          <img src="../../IMG/ARTWORK/vor-graph-03.png"/>
+        </div>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align brown-font bigtext">
+            Each of the bigger red nodes represent 
+            the "topic". Links between any two topics 
+            effectively imply <span class="yellow-font bigtext">
+              shared keywords.
+            </span>
+          </p>
+          <p class="left-align">
+            And definitely, any two topics sharing strong 
+            common information are supposed to be connected 
+            with more edges.
+          </p>
+        </div>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align brown-font largetext">
+          Now try adding more density
+          </p>
+        </div>
+        <div class="center" style="width:800px">
+          <img src="../../IMG/ARTWORK/vor-graph-04.png"/>
+        </div>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align brown-font bigtext">
+          Closer look
+          </p>
+        </div>
+        <div class="center" style="width:800px">
+          <img src="../../IMG/ARTWORK/vor-graph-01.png"/>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h1>Future Work</h1>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align">
+            Bunch of ideas pop in my mind after playing 
+            around with the project. This includes estimating 
+            the "closest" topics using the graph connection 
+            to be taken into account.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth center">
+        <button class="white" onclick="window.open('https://github.com/starcolon/vor-knowledge-graph')">
+          <img height="30px" src="../../IMG/icon-github.png" /> View Code On Github
+        </button>
+        <button class="white" onclick="window.open('graph-index.html')">
+          <img height="30px" src="../../IMG/icon-graph.png" /> View Visualisation
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:100px">
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400i');
+@import url('https://fonts.googleapis.com/css?family=Lato:300i');
+
 @font-face{
 	font-family: "dpsd";
 	src: url('font/DPSDbeyond.otf') format("opentype");
@@ -29,7 +32,8 @@
 
 *
 {
-	font-family: 'nikaiaregular','CoreSansA35Light';
+	font-family: Ropa Sans, sans-serif;
+	/*font-family: 'nikaiaregular','CoreSansA35Light';*/
 	font-size:15pt;
 }
 
