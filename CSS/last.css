@@ -355,18 +355,18 @@ img.stretch
 
 .megatext
 {
-  font-size:42pt;
+  font-size:38pt;
 }
 
 .largetext, h1
 {
-  font-size:32pt;
+  font-size:28pt;
   font-weight: normal;
 }
 
 .bigtext, h2
 {
-  font-size:24pt;
+  font-size:20pt;
   font-weight: normal;
 }
 
