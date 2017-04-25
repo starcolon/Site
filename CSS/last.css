@@ -9,7 +9,7 @@
 *
 {
   font-family: Ropa Sans, sans-serif;
-  font-size:18pt;
+  font-size:15pt;
 }
 
 html
@@ -355,18 +355,18 @@ img.stretch
 
 .megatext
 {
-  font-size:50pt;
+  font-size:42pt;
 }
 
 .largetext, h1
 {
-  font-size:40pt;
+  font-size:32pt;
   font-weight: normal;
 }
 
 .bigtext, h2
 {
-  font-size:26pt;
+  font-size:24pt;
   font-weight: normal;
 }
 
