@@ -1,15 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400i');
+/*@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400i');
 @import url('https://fonts.googleapis.com/css?family=Lato:300i');
-
-@font-face {
+*/
+/*@font-face {
   font-family: GochiHand;
   src: url('font/GochiHand-Regular.ttf') format('truetype');
 }
+*/
+
+@font-face {
+  font-family: 'GillSansMT-Italic';
+  src: url('webfonts/GillSansMT-Italic.eot?#iefix') format('embedded-opentype'),  url('GillSansMT-Italic.woff') format('woff'), url('GillSansMT-Italic.ttf')  format('truetype'), url('GillSansMT-Italic.svg#GillSansMT-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GillSansMT-Italic';
+  src: url('webfonts/GillSansMT-BoldItalic.eot?#iefix') format('embedded-opentype'),  url('GillSansMT-BoldItalic.woff') format('woff'), url('GillSansMT-BoldItalic.ttf')  format('truetype'), url('GillSansMT-BoldItalic.svg#GillSansMT-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 *
 {
-  font-family: Ropa Sans, sans-serif;
-  font-size:15pt;
+  font-family: 'GillSansMT-Italic', sans-serif;
+  font-size:17pt;
+  letter-spacing: 0.02em;
 }
 
 html
@@ -355,24 +372,26 @@ img.stretch
 
 .megatext
 {
-  font-size:38pt;
+  font-size:48pt;
+  font-weight: bold;
+  letter-spacing: 0.02em;
 }
 
 .largetext, h1
 {
-  font-size:28pt;
-  font-weight: normal;
+  font-size:40pt;
+  font-weight: bold;
 }
 
 .bigtext, h2
 {
-  font-size:20pt;
-  font-weight: normal;
+  font-size:28pt;
+  font-weight: bold;
 }
 
 .smalltext
 {
-  font-size:13pt;
+  font-size:14pt;
 }
 
 .highlighted
