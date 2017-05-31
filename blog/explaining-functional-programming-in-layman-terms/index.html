@@ -229,10 +229,10 @@
           </div>
           <p class="left-align highlighted lighten"></p>
           <p class="left-align">
-            Example, <bold>List is a functor.</bold>
+            Example, <bold>List is a functor. Maybe is also a functor.</bold>
           </p>
           <p class="left-align">
-            So we can <bold>"map"</bold> it into another list.
+            So we can <bold>"map"</bold> a list into another list.
           </p>
           <p>
             <pre class="language-haskell">
@@ -241,11 +241,56 @@
 
               -- map into another list
               -- by multiplying each element with 10
-              map(*10, v) -- [10,20,30,40]
+              fmap (*10) (v) -- [10,20,30,40]
             </code>
             </pre>
           </p>
+          <p class="left-align">
+            Also, we can <bold>"map"</bold> a Maybe into another Maybe.
+          </p>
+          <p>
+            <pre class="language-haskell">
+            <code class="language-haskell">
+              -- map into another Maybe
+              -- by multiplying the value with 10
+              fmap (*10) (Just 10) -- Just 100
+              fmap (*10) (Nothing) -- Nothing
+            </code>
+            </pre>
+          </p>
+          <p class="left-align">
+            As above, the output is wrapped 
+            automatically into a new Functor.
+          </p>
         </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h2>[4] Applicative</h2>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align highlighted lighten"></p>
+          <p class="brown-font">
+            Applicative is a more advanced Functor. <br/>
+            It also accepts the mapping function which is 
+            <bold>wrapped as another Applicative!</bold>
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <div class="lighten" style="height:200px">
+            <!-- TAOTODO: -->
+          </div>
+        </div>
+
+
+
+        <!-- TAOTODO: -->
+
       </div>
     </div>
 
