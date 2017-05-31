@@ -166,10 +166,66 @@
 
     <div>
       <div class="layout-frame fullwidth">
-        <h2>[2] Functors</h2>
+        <h2>[2] Algebraic Data Types</h2>
+        <div class="layout-frame center" style="width:800px">
+        <p class="left-align">
+          For simpler notation, Algebraic data types are:
+        </p>
+        <ul class="left-align">
+          <li>
+            <span class="yellow-font">A categorical data. </span>
+            Think of enum of Colors 
+            which the value can be <bold>one of</bold> red, yellow, etc. 
+            So the datatype can be expressed as 
+            <pre class="language-haskell">
+            <code class="language-haskell">
+              data Color c = Red | Yellow | White | Custom c
+            </code>
+            </pre>
+            A variable can represent one single category 
+            at a time. It can't be red and yellow simulteneously.
+            We call this behaviour an <span class="brown-font">Addition.</span> So this data type is called 
+            <span class="navy-font">Sum type.</span>
+            <p></p>
+          </li>
+          <li>
+            <span class="yellow-font">A composition of values.</span> Think of tuples, struct, etc. where one variable 
+            can hold multiple attributes at a time.
+            <pre class="language-haskell">
+            <code class="language-haskell">
+            data NameAndAge name age = NameAndAge name age
+            
+            -- So we can have variables like so
+            let a = NameAndAge "Peter" 20
+            let b = NameAndAge "Joe" 31
+            </code>
+            </pre>
+            We call this behaviour a <span class="brown-font">Multiplication</span>. So this data type is called 
+            <span class="navy-font">Product type.</span>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h2>[3] Functors</h2>
         <div class="layout-frame center" style="width:800px">
           <p class="left-align highlighted lighten"></p>
           <p class="brown-font">
+            Functors are not functions. Simply, they're 
+            a data type which you can apply "map" to produce 
+            another Functor of the output.
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <p class="left-align">
+          aaaaaa
           </p>
         </div>
       </div>
