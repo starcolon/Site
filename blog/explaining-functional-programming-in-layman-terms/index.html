@@ -219,13 +219,31 @@
         <div class="layout-frame center" style="width:800px">
           <p class="left-align highlighted lighten"></p>
           <p class="brown-font">
-            Functors are not functions. Simply, they're 
-            a data type which you can apply "map" to produce 
-            another Functor of the output.
+            Functors are algebraic type which you can 
+            <bold>"map"</bold> the value inside into 
+            an output. Functor will automatically wrap 
+            the output as a new Functor.
           </p>
+          <div class="lighten" style="height:200px">
+            <!-- TAOTODO: -->
+          </div>
           <p class="left-align highlighted lighten"></p>
           <p class="left-align">
-          aaaaaa
+            Example, <bold>List is a functor.</bold>
+          </p>
+          <p class="left-align">
+            So we can <bold>"map"</bold> it into another list.
+          </p>
+          <p>
+            <pre class="language-haskell">
+            <code class="language-haskell">
+              let v = [1,2,3,4] 
+
+              -- map into another list
+              -- by multiplying each element with 10
+              map(*10, v) -- [10,20,30,40]
+            </code>
+            </pre>
           </p>
         </div>
       </div>
