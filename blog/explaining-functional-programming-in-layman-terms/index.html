@@ -204,6 +204,20 @@
             <span class="navy-font">Product type.</span>
           </li>
         </ul>
+        <p class="left-align">
+          In <span class="brown-font">Haskell</span>, one of 
+          the famous algebraic types is called <bold>Maybe</bold> 
+          which holds a <bold>nullable value</bold>.
+          <pre class="language-haskell">
+          <code class="language-haskell">
+            data Maybe a = Nothing | Just a
+
+            let x = Just 10 -- valued
+            let y = Nothing -- or null
+            let z = if blahblah then Nothing else Just "work"
+          </code>
+          </pre>
+        </p>
         </div>
       </div>
     </div>
@@ -285,12 +299,147 @@
           <div class="lighten" style="height:200px">
             <!-- TAOTODO: -->
           </div>
+          <p class="left-align">
+            Example, <bold>List is an Applicative.</bold>
+            <br/>So you can apply a <bold>List of function</bold> 
+            to produce a new list.
+          </p>
+          <p>
+            <pre class="language-haskell">
+            <code class="language-haskell">
+            let v = [0, pi/2, pi]
+            let f = [sin, cos]
+
+            -- Apply list of functions onto a list
+
+            f <*> v
+
+            -- result : [sin(0), sin(pi/2), sin(pi), cos(0), cos(pi/2), cos(pi)]
+            </code>
+            </pre>
+          </p>
+          <p class="left-align">
+            <bold>Maybe is also an Applicative.</bold>
+            <br/>Likewise, you therefore can apply a <bold>Maybe of 
+            function to create a new Maybe value.</bold>
+          </p>
+          <p>
+            <pre class="language-haskell">
+            <code class="language-haskell">
+            let m = Just pi
+            let f = Just sin
+
+            -- Apply
+
+            f <*> m -- result : Just 0
+
+            -- What if Nothing:
+
+            f <*> Nothing -- result : Nothing
+            </code>
+            </pre>
+            <p>
+              Applicative operator <span class="brown-font"><*></span> is like a <span class="brown-font">cross product of two operands.</span>
+            </p>
+          </p>
         </div>
+      </div>
+    </div>
 
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
 
+    <div>
+      <div class="layout-frame fullwidth">
+        <h2>[5] Monad</h2>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align highlighted lighten"></p>
+          <p class="brown-font">
+            Monad is an Applicative which accepts a 
+            function which takes the value and produce 
+            a new Monad of the output, aka. <bold>flatMap.</bold>
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <div class="lighten" style="height:200px">
+            <!-- TAOTODO: -->
+          </div>
+          <p class="left-align">
+            <bold>Again, List is a Monad!</bold>
+            Thus, if you have a List of Int, you can apply 
+            a function which takes an Int and produces 
+            another List of Int ... yes, it's definitely a FlatMap.
+          </p>
+          <p>
+            <pre class="language-haskell">
+            <code class="language-haskell">
+            let v   = [1,2,3]
+            let f x = [x, x*10]
 
-        <!-- TAOTODO: -->
+            -- flatMap!
 
+            v >>= f
+
+            -- Result : [1,10,2,20,3,30]
+
+            -- Or chain even further!
+
+            v >>= f >>= f
+
+            -- Result : [1,10,10,100,2,20,20,200,3,30,30,300]
+
+            let g x = if x<10 then [] else [x+1]
+            v >>= f >>= g
+
+            -- Result : [11,21,31]
+            </code>
+            </pre>
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <p>
+            The operator <bold class="yellow-font">&gt;&gt;=</bold> of Monad is widely known as a <bold>flatMap</bold>.
+          </p>
+          <p class="left-align highlighted lighten"></p>
+          <p class="left-align">
+            Yet another example, <bold>Maybe is also a Monad.</bold>
+            <br/>So you can flatMap it and create another Maybe!
+          </p>
+          <p>
+            <pre class="language-haskell">
+            <code class="language-haskell">
+            let f n = if n<5 then Nothing else Just (n+1)
+
+            -- Try out on some cases
+
+            (Just 5) >>= f -- Get Just 6
+
+            (Just 9) >>= f -- Get Just 10
+
+            (Just 0) >>= f -- Get Nothing
+            </code>
+            </pre>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
+      </div>
+    </div>
+
+    <div>
+      <div class="layout-frame fullwidth">
+        <h2>Functor vs Applicative vs Monad ?</h2>
+        <div class="layout-frame center" style="width:800px">
+          <p class="left-align highlighted lighten"></p>
+          <p class="brown-font">
+            Let's wrap up again and highlight the 
+            differences among them.
+          </p>
+          <p class="left-align highlighted lighten"></p>
+        </div>
       </div>
     </div>
 
