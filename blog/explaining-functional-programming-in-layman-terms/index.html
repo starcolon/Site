@@ -238,8 +238,8 @@
             an output. Functor will automatically wrap 
             the output as a new Functor.
           </p>
-          <div class="lighten" style="height:200px">
-            <!-- TAOTODO: -->
+          <div>
+            <img class="fullwidth" alt="Functor diagram" src="../../IMG/ARTWORK/diagram-functor.png"/>
           </div>
           <p class="left-align highlighted lighten"></p>
           <p class="left-align">
@@ -296,8 +296,9 @@
             <bold>wrapped as another Applicative!</bold>
           </p>
           <p class="left-align highlighted lighten"></p>
-          <div class="lighten" style="height:200px">
-            <!-- TAOTODO: -->
+          <div>
+            <img class="fullwidth" alt="Applicative diagram" src="../../IMG/ARTWORK/diagram-applicative.png" 
+            style="clip:rect(0,0,1730px,636px)"/>
           </div>
           <p class="left-align">
             Example, <bold>List is an Applicative.</bold>
@@ -362,8 +363,8 @@
             a new Monad of the output, aka. <bold>flatMap.</bold>
           </p>
           <p class="left-align highlighted lighten"></p>
-          <div class="lighten" style="height:200px">
-            <!-- TAOTODO: -->
+          <div>
+            <img class="fullwidth" alt="Monad diagram" src="../../IMG/ARTWORK/diagram-monad.png"/>
           </div>
           <p class="left-align">
             <bold>Again, List is a Monad!</bold>
@@ -479,19 +480,19 @@
                 <td>Operator Output</td>
               </tr>
               <tr>
-                <td>Functor List[Int]</td>
+                <td>List[Int]</td>
                 <td class="navy-font">map</td>
                 <td class="yellow-font">f(a: Int): Int</td>
                 <td>List[Int]</td>
               </tr>
               <tr>
-                <td>Applicative List[Int]</td>
+                <td>List[Int]</td>
                 <td class="navy-font">&lt;*&gt;</td>
                 <td class="yellow-font"><bold>List</bold>[ f(a: Int): Int ]</td>
                 <td>List[Int]</td>
               </tr>
               <tr>
-                <td>Monad List[Int]</td>
+                <td>List[Int]</td>
                 <td class="navy-font">&gt;&gt;=</td>
                 <td class="yellow-font">f(a: Int): <bold>List</bold>[Int]</td>
                 <td>List[Int]</td>
@@ -510,19 +511,19 @@
                 <td>Operator Output</td>
               </tr>
               <tr>
-                <td>Functor Maybe[Int]</td>
+                <td>Maybe[Int]</td>
                 <td class="navy-font">map</td>
                 <td class="yellow-font">f(a: Int): Int</td>
                 <td>Maybe[Int]</td>
               </tr>
               <tr>
-                <td>Applicative Maybe[Int]</td>
+                <td>Maybe[Int]</td>
                 <td class="navy-font">&lt;*&gt;</td>
                 <td class="yellow-font"><bold>Maybe</bold>[ f(a: Int): Int ]</td>
                 <td>Maybe[Int]</td>
               </tr>
               <tr>
-                <td>Monad Maybe[Int]</td>
+                <td>Maybe[Int]</td>
                 <td class="navy-font">&gt;&gt;=</td>
                 <td class="yellow-font">f(a: Int): <bold>Maybe</bold>[Int]</td>
                 <td>Maybe[Int]</td>
