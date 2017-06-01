@@ -439,7 +439,90 @@
             differences among them.
           </p>
           <p class="left-align highlighted lighten"></p>
+          <p class="left-align">
+            <table class="fullwidth">
+              <tr>
+                <td style="width:150px">&nbsp;</td>
+                <td>Key Operator</td>
+                <td>Operand Function</td>
+              </tr>
+              <tr>
+                <td>Functor</td>
+                <td class="navy-font">map</td>
+                <td>`f: a -> b`</td>
+              </tr>
+              <tr>
+                <td>Applicative</td>
+                <td class="navy-font">&lt;*&gt;</td>
+                <td>Applicative of `f: a -> b`</td>
+              </tr>
+              <tr>
+                <td>Monad</td>
+                <td class="navy-font">&gt;&gt;=</td>
+                <td>`f: a ->` Monad `b`</td>
+              </tr>
+            </table>
+          </p>
+          <p class="left-align">
+            Example with <span class="brown-font">List!</span>
+          </p>
+          <p class="left-align">
+            <table class="fullwidth">
+              <tr>
+                <td style="width:160px">&nbsp;</td>
+                <td>Key Operator</td>
+                <td>Operand Function​ (Sample)</td>
+              </tr>
+              <tr>
+                <td>Functor List[Int]</td>
+                <td class="navy-font">map</td>
+                <td class="yellow-font">f(a: Int): Int</td>
+              </tr>
+              <tr>
+                <td>Applicative List[Int]</td>
+                <td class="navy-font">&lt;*&gt;</td>
+                <td class="yellow-font"><bold>List</bold>[ f(a: Int): Int ]</td>
+              </tr>
+              <tr>
+                <td>Monad List[Int]</td>
+                <td class="navy-font">&gt;&gt;=</td>
+                <td class="yellow-font">f(a: Int): <bold>List</bold>[Int]</td>
+              </tr>
+            </table>
+          </p>
+          <p class="left-align">
+            Another example with <span class="brown-font">Maybe!</span>
+          </p>
+          <p class="left-align">
+            <table class="fullwidth">
+              <tr>
+                <td style="width:160px">&nbsp;</td>
+                <td>Key Operator</td>
+                <td>Operand Function​ (Sample)</td>
+              </tr>
+              <tr>
+                <td>Functor Maybe[Int]</td>
+                <td class="navy-font">map</td>
+                <td class="yellow-font">f(a: Int): Int</td>
+              </tr>
+              <tr>
+                <td>Applicative Maybe[Int]</td>
+                <td class="navy-font">&lt;*&gt;</td>
+                <td class="yellow-font"><bold>Maybe</bold>[ f(a: Int): Int ]</td>
+              </tr>
+              <tr>
+                <td>Monad Maybe[Int]</td>
+                <td class="navy-font">&gt;&gt;=</td>
+                <td class="yellow-font">f(a: Int): <bold>Maybe</bold>[Int]</td>
+              </tr>
+            </table>
+          </p>
         </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="fullwidth" style="height:20px">
       </div>
     </div>
 
