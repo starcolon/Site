@@ -18,6 +18,8 @@
 html
 {
   height:100%;
+  overflow: scroll;
+  webkit-overflow-scrolling: touch;
 }
 
 body
@@ -31,6 +33,8 @@ body
   background-attachment: fixed;
   overflow-x:hidden;
   color: white;
+  overflow: scroll;
+  webkit-overflow-scrolling: touch;
 }
 
 bold
